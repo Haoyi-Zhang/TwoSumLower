@@ -1,0 +1,17 @@
+{
+  "assembled_instructions": 8,
+  "assembled_bytes": 30,
+  "certificate_bytes_match": true,
+  "instruction_lengths": [
+    3,
+    3,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4
+  ],
+  "target_executed": false,
+  "interpretation": "static assembler cross-check, not hardware testing or performance evidence"
+}

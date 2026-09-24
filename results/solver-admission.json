@@ -1,0 +1,8 @@
+{
+  "input": "inputs/solver-smoke.smt2",
+  "input_bytes": 132,
+  "status": "unsat",
+  "solver_output": "unsat\n",
+  "cpu_seconds": 0.03796823500000002,
+  "independently_replayed_certificate": false
+}

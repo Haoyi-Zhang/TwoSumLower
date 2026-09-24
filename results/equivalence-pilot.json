@@ -1,0 +1,8 @@
+{
+  "input": "inputs/equivalence-pilot.smt2",
+  "input_bytes": 2985,
+  "status": "unknown",
+  "solver_output": "unknown\n(:reason-unknown \"timeout\")\n",
+  "cpu_seconds": 12.542393810999998,
+  "independently_replayed_certificate": false
+}

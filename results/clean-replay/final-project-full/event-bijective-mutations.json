@@ -1,0 +1,7 @@
+{
+  "mutations": 46,
+  "rejected": 46,
+  "accepted_corruptions": [],
+  "all_corruptions_rejected": true,
+  "interpretation": "Directed certificate-integrity checks, not independent proof or a statistical reliability estimate."
+}

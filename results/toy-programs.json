@@ -1,0 +1,366 @@
+{
+  "candidate_cost": [
+    8,
+    30
+  ],
+  "first_examples": {
+    "negative_control": {
+      "a": 0,
+      "b": 7,
+      "candidate_trace": [
+        {
+          "a": 0,
+          "b": 7,
+          "dst": 2,
+          "imm": 0,
+          "mask": 0,
+          "op": "ORPS",
+          "raised": 0,
+          "result": 7,
+          "src": 1,
+          "sticky": 0
+        },
+        {
+          "a": 0,
+          "b": 0,
+          "dst": 3,
+          "imm": 0,
+          "mask": 0,
+          "op": "ORPS",
+          "raised": 0,
+          "result": 0,
+          "src": 0,
+          "sticky": 0
+        },
+        {
+          "a": 0,
+          "b": 7,
+          "dst": 0,
+          "imm": 0,
+          "mask": 0,
+          "op": "ADDSS",
+          "raised": 0,
+          "result": 7,
+          "src": 1,
+          "sticky": 0
+        },
+        {
+          "a": 7,
+          "b": 7,
+          "dst": 2,
+          "imm": 0,
+          "mask": 7,
+          "op": "ADDSS",
+          "raised": 0,
+          "result": 14,
+          "src": 0,
+          "sticky": 0
+        },
+        {
+          "a": 0,
+          "b": 14,
+          "dst": 3,
+          "imm": 0,
+          "mask": 7,
+          "op": "ADDSS",
+          "raised": 0,
+          "result": 14,
+          "src": 2,
+          "sticky": 0
+        },
+        {
+          "a": 14,
+          "b": 7,
+          "dst": 2,
+          "imm": 0,
+          "mask": 7,
+          "op": "ADDSS",
+          "raised": 16,
+          "result": 18,
+          "src": 0,
+          "sticky": 16
+        },
+        {
+          "a": 7,
+          "b": 18,
+          "dst": 1,
+          "imm": 0,
+          "mask": 7,
+          "op": "SUBSS",
+          "raised": 0,
+          "result": 141,
+          "src": 2,
+          "sticky": 16
+        },
+        {
+          "a": 14,
+          "b": 141,
+          "dst": 3,
+          "imm": 0,
+          "mask": 7,
+          "op": "ADDSS",
+          "raised": 0,
+          "result": 1,
+          "src": 1,
+          "sticky": 16
+        }
+      ],
+      "observed": [
+        7,
+        1,
+        16
+      ],
+      "reference": [
+        7,
+        0,
+        0
+      ],
+      "source_trace": [
+        {
+          "a": 0,
+          "b": 7,
+          "name": "s",
+          "op": "ADDSS",
+          "raised": 0,
+          "result": 7,
+          "sticky": 0
+        },
+        {
+          "a": 7,
+          "b": 7,
+          "name": "xeff",
+          "op": "SUBSS",
+          "raised": 0,
+          "result": 0,
+          "sticky": 0
+        },
+        {
+          "a": 7,
+          "b": 0,
+          "name": "yeff",
+          "op": "SUBSS",
+          "raised": 0,
+          "result": 7,
+          "sticky": 0
+        },
+        {
+          "a": 0,
+          "b": 0,
+          "name": "dx",
+          "op": "SUBSS",
+          "raised": 0,
+          "result": 0,
+          "sticky": 0
+        },
+        {
+          "a": 7,
+          "b": 7,
+          "name": "dy",
+          "op": "SUBSS",
+          "raised": 0,
+          "result": 0,
+          "sticky": 0
+        },
+        {
+          "a": 0,
+          "b": 0,
+          "name": "e",
+          "op": "ADDSS",
+          "raised": 0,
+          "result": 0,
+          "sticky": 0
+        }
+      ]
+    },
+    "swapped": {
+      "a": 92,
+      "b": 247,
+      "candidate_trace": [
+        {
+          "a": 0,
+          "b": 92,
+          "dst": 2,
+          "imm": 0,
+          "mask": 92,
+          "op": "ORPS",
+          "raised": 0,
+          "result": 92,
+          "src": 0,
+          "sticky": 0
+        },
+        {
+          "a": 0,
+          "b": 92,
+          "dst": 3,
+          "imm": 0,
+          "mask": 92,
+          "op": "ORPS",
+          "raised": 0,
+          "result": 92,
+          "src": 0,
+          "sticky": 0
+        },
+        {
+          "a": 92,
+          "b": 247,
+          "dst": 0,
+          "imm": 0,
+          "mask": 92,
+          "op": "ADDSS",
+          "raised": 16,
+          "result": 246,
+          "src": 1,
+          "sticky": 16
+        },
+        {
+          "a": 92,
+          "b": 246,
+          "dst": 2,
+          "imm": 0,
+          "mask": 246,
+          "op": "SUBSS",
+          "raised": 20,
+          "result": 120,
+          "src": 0,
+          "sticky": 20
+        },
+        {
+          "a": 247,
+          "b": 120,
+          "dst": 1,
+          "imm": 0,
+          "mask": 246,
+          "op": "ADDSS",
+          "raised": 0,
+          "result": 120,
+          "src": 2,
+          "sticky": 20
+        },
+        {
+          "a": 120,
+          "b": 246,
+          "dst": 2,
+          "imm": 0,
+          "mask": 246,
+          "op": "ADDSS",
+          "raised": 0,
+          "result": 120,
+          "src": 0,
+          "sticky": 20
+        },
+        {
+          "a": 92,
+          "b": 120,
+          "dst": 3,
+          "imm": 0,
+          "mask": 246,
+          "op": "SUBSS",
+          "raised": 0,
+          "result": 248,
+          "src": 2,
+          "sticky": 20
+        },
+        {
+          "a": 248,
+          "b": 120,
+          "dst": 3,
+          "imm": 0,
+          "mask": 246,
+          "op": "ADDSS",
+          "raised": 1,
+          "result": 252,
+          "src": 1,
+          "sticky": 21
+        }
+      ],
+      "observed": [
+        246,
+        252,
+        21
+      ],
+      "reference": [
+        246,
+        80,
+        16
+      ],
+      "source_trace": [
+        {
+          "a": 92,
+          "b": 247,
+          "name": "s",
+          "op": "ADDSS",
+          "raised": 16,
+          "result": 246,
+          "sticky": 16
+        },
+        {
+          "a": 246,
+          "b": 247,
+          "name": "xeff",
+          "op": "SUBSS",
+          "raised": 0,
+          "result": 88,
+          "sticky": 16
+        },
+        {
+          "a": 246,
+          "b": 88,
+          "name": "yeff",
+          "op": "SUBSS",
+          "raised": 0,
+          "result": 247,
+          "sticky": 16
+        },
+        {
+          "a": 92,
+          "b": 88,
+          "name": "dx",
+          "op": "SUBSS",
+          "raised": 0,
+          "result": 80,
+          "sticky": 16
+        },
+        {
+          "a": 247,
+          "b": 247,
+          "name": "dy",
+          "op": "SUBSS",
+          "raised": 0,
+          "result": 0,
+          "sticky": 16
+        },
+        {
+          "a": 80,
+          "b": 0,
+          "name": "e",
+          "op": "ADDSS",
+          "raised": 0,
+          "result": 80,
+          "sticky": 16
+        }
+      ]
+    }
+  },
+  "format": {
+    "exponent_bits": 4,
+    "fraction_bits": 3
+  },
+  "interpretation": "finite exhaustive experiment; no unrestricted synthesis lower bound",
+  "literal_cost": [
+    9,
+    33
+  ],
+  "literal_within_length_cap": false,
+  "mismatches_and_events": {
+    "finite_sum_internal_overflow": 6,
+    "negative_control": 52042,
+    "negative_control_finite": 52042,
+    "swapped": 12,
+    "swapped_finite": 12
+  },
+  "pair_counts": {
+    "all": 65536,
+    "finite": 57600,
+    "nonfinite": 7936
+  }
+}

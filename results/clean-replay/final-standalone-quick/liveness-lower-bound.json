@@ -1,0 +1,33 @@
+{
+  "certificate_accepted": true,
+  "declared_entry_auxiliary_lower_bound": 2,
+  "declared_entry_instruction_lower_bound": 8,
+  "forced_prefix_derived": [
+    "s",
+    "x"
+  ],
+  "independent_algorithm": "independent symbolic forced-prefix derivation plus zero-one breadth-first search and explicit witness replay",
+  "interpretation": "A mechanically replayed analytic lower bound for the declared class; it is neither a full-ten-opcode lower bound nor independent human review.",
+  "live_sets_derived": [
+    [
+      "a",
+      "b",
+      "s"
+    ],
+    [
+      "a",
+      "b",
+      "s",
+      "x"
+    ]
+  ],
+  "reference_descriptors_distinct": true,
+  "schema": "liveness-check-result-v1",
+  "scope": "strong event-bijective six-register destructive two-address class only",
+  "variant_minima": {
+    "declared-entry": 2,
+    "duplicate-a-control": 1,
+    "duplicate-b-control": 1,
+    "duplicate-both-control": 0
+  }
+}

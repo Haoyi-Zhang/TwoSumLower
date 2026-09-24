@@ -1,0 +1,95 @@
+{
+  "all_comparisons_passed": true,
+  "binary32_case_pairs": 1000,
+  "complete_blocks": {
+    "first_hardware_candidate_model_mismatches": [],
+    "first_hardware_candidate_reference_mismatches": [],
+    "first_hardware_reference_model_mismatches": [],
+    "hardware_candidate_model_mismatch_count": 0,
+    "hardware_candidate_reference_mismatch_count": 0,
+    "hardware_reference_model_mismatch_count": 0,
+    "observations": 32000
+  },
+  "coverage": {
+    "interpretation": "Deterministic coverage accounting for the existing frozen 1,000-pair pool. Flag counts are model-predicted fresh contributions, not additional hardware observations or a statistical workload sample. Divide-by-zero remains zero because the frozen instruction grammar contains no division instruction.",
+    "operand_class_counts": {
+      "a": {
+        "negative_inf": 24,
+        "negative_normal": 348,
+        "negative_qnan": 24,
+        "negative_snan": 25,
+        "negative_subnormal": 48,
+        "negative_zero": 24,
+        "positive_inf": 24,
+        "positive_normal": 361,
+        "positive_qnan": 24,
+        "positive_snan": 26,
+        "positive_subnormal": 48,
+        "positive_zero": 24
+      },
+      "b": {
+        "negative_inf": 24,
+        "negative_normal": 359,
+        "negative_qnan": 25,
+        "negative_snan": 24,
+        "negative_subnormal": 49,
+        "negative_zero": 24,
+        "positive_inf": 24,
+        "positive_normal": 349,
+        "positive_qnan": 24,
+        "positive_snan": 24,
+        "positive_subnormal": 50,
+        "positive_zero": 24
+      }
+    },
+    "pair_feature_counts": {
+      "any_infinity": 92,
+      "any_nan": 180,
+      "any_negative_zero": 47,
+      "any_signaling_nan": 95,
+      "any_subnormal": 179,
+      "any_zero": 92,
+      "both_nan": 16
+    },
+    "primitive_model_fresh_flag_observation_counts": {
+      "divide_by_zero": 0,
+      "inexact": 1770,
+      "invalid": 1757,
+      "overflow": 91,
+      "underflow": 121
+    },
+    "primitive_operation_observation_counts": {
+      "ADDSS": 1000,
+      "ANDPS": 1000,
+      "BLENDVPS": 2000,
+      "CMPSS": 8000,
+      "MAXSS": 1000,
+      "MINSS": 1000,
+      "MULSS": 1000,
+      "ORPS": 1000,
+      "SUBSS": 1000,
+      "XORPS": 1000
+    },
+    "reference_model_fresh_flag_pair_counts": {
+      "divide_by_zero": 0,
+      "inexact": 610,
+      "invalid": 179,
+      "overflow": 8,
+      "underflow": 0
+    },
+    "selection": "24 edge words squared, followed by 424 distinct seeded word pairs; diagnostics, not a held-out benchmark",
+    "stratum_pair_counts": {
+      "edge-product": 576,
+      "seeded-word-pair": 424
+    }
+  },
+  "host_architecture": "x86_64",
+  "host_cpu_vendor": "AuthenticAMD",
+  "interpretation": "Finite conformance on the current x86-64 SSE4.1 host: 18 primitive observations per frozen pair and 32 initial-flag observations per complete block. This is diagnostic hardware evidence, not all-input proof, an Intel-specific certification, or a timing experiment.",
+  "primitive": {
+    "first_mismatches": [],
+    "mismatch_count": 0,
+    "observations": 18000
+  },
+  "required_instruction_set": "legacy SSE through SSE4.1"
+}

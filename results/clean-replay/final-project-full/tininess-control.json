@@ -1,0 +1,85 @@
+{
+  "counts": {
+    "stored-result-tininess_disagreements": 168
+  },
+  "toy_examples": [
+    {
+      "a": 1,
+      "b": 79,
+      "result": 8,
+      "intel_flags": 24,
+      "stored_result_rule_flags": 16
+    },
+    {
+      "a": 1,
+      "b": 207,
+      "result": 136,
+      "intel_flags": 24,
+      "stored_result_rule_flags": 16
+    },
+    {
+      "a": 2,
+      "b": 71,
+      "result": 8,
+      "intel_flags": 24,
+      "stored_result_rule_flags": 16
+    },
+    {
+      "a": 2,
+      "b": 199,
+      "result": 136,
+      "intel_flags": 24,
+      "stored_result_rule_flags": 16
+    },
+    {
+      "a": 3,
+      "b": 66,
+      "result": 8,
+      "intel_flags": 24,
+      "stored_result_rule_flags": 16
+    },
+    {
+      "a": 3,
+      "b": 194,
+      "result": 136,
+      "intel_flags": 24,
+      "stored_result_rule_flags": 16
+    },
+    {
+      "a": 4,
+      "b": 63,
+      "result": 8,
+      "intel_flags": 24,
+      "stored_result_rule_flags": 16
+    },
+    {
+      "a": 4,
+      "b": 191,
+      "result": 136,
+      "intel_flags": 24,
+      "stored_result_rule_flags": 16
+    }
+  ],
+  "binary32_exact_boundary_controls": [
+    {
+      "n": 67108861,
+      "exponent": -152,
+      "word": 8388608,
+      "flags": 24
+    },
+    {
+      "n": 33554431,
+      "exponent": -151,
+      "word": 8388608,
+      "flags": 16
+    },
+    {
+      "n": 67108863,
+      "exponent": -152,
+      "word": 8388608,
+      "flags": 16
+    }
+  ],
+  "source": "Intel SDM volume 1 sections 4.9.1.5 and 11.5.2.5",
+  "interpretation": "Both independently coded rounding algorithms require the same correctly read ISA contract; agreement alone does not establish that contract."
+}

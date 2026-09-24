@@ -1,0 +1,154 @@
+{
+  "all_input_equivalence_certificate_replayed": true,
+  "all_selected_stages_passed": true,
+  "analytic_liveness_lower_bound_replayed": true,
+  "bibliography_metadata_and_citation_ledger_audited": true,
+  "checker_dependency_boundary_audited": true,
+  "checks": [
+    {
+      "command_passed": true,
+      "execution": "verified-existing",
+      "name": "bibliography-audit",
+      "retained_result_matches": true
+    },
+    {
+      "command_passed": true,
+      "execution": "verified-existing",
+      "name": "symbolic-replay",
+      "retained_result_matches": true
+    },
+    {
+      "command_passed": true,
+      "execution": "verified-existing",
+      "name": "liveness-lower-bound",
+      "retained_result_matches": true
+    },
+    {
+      "command_passed": true,
+      "execution": "verified-existing",
+      "name": "event-bijective-minimality",
+      "retained_result_matches": true
+    },
+    {
+      "command_passed": true,
+      "execution": "verified-existing",
+      "name": "checker-independence",
+      "retained_result_matches": true
+    },
+    {
+      "command_passed": true,
+      "execution": "verified-existing",
+      "name": "evidence-integrity",
+      "retained_result_matches": true
+    },
+    {
+      "command_passed": true,
+      "execution": "verified-existing",
+      "name": "assembly",
+      "retained_result_matches": true
+    },
+    {
+      "command_passed": true,
+      "execution": "verified-existing",
+      "name": "binary32",
+      "retained_result_matches": true
+    },
+    {
+      "command_passed": true,
+      "execution": "verified-existing",
+      "name": "mutations",
+      "retained_result_matches": true
+    },
+    {
+      "command_passed": true,
+      "execution": "verified-existing",
+      "name": "toy-arithmetic",
+      "retained_result_matches": true
+    },
+    {
+      "command_passed": true,
+      "execution": "verified-existing",
+      "name": "toy-selection",
+      "retained_result_matches": true
+    },
+    {
+      "command_passed": true,
+      "execution": "verified-existing",
+      "name": "toy-bitwise",
+      "retained_result_matches": true
+    },
+    {
+      "command_passed": true,
+      "execution": "verified-existing",
+      "name": "toy-blend",
+      "retained_result_matches": true
+    },
+    {
+      "command_passed": true,
+      "execution": "verified-existing",
+      "name": "toy-programs",
+      "retained_result_matches": true
+    },
+    {
+      "command_passed": true,
+      "execution": "verified-existing",
+      "name": "tininess-control",
+      "retained_result_matches": true
+    },
+    {
+      "command_passed": true,
+      "execution": "verified-existing",
+      "name": "residual-exploration",
+      "retained_result_matches": true
+    },
+    {
+      "command_passed": true,
+      "execution": "ran",
+      "name": "guarded-copies",
+      "retained_result_matches": true
+    },
+    {
+      "command_passed": true,
+      "execution": "ran",
+      "name": "liveness-mutations",
+      "retained_result_matches": true
+    },
+    {
+      "command_passed": true,
+      "execution": "ran",
+      "name": "event-bijective-mutations",
+      "retained_result_matches": true
+    }
+  ],
+  "cross_file_evidence_integrity_audited": true,
+  "event_bijective_class_minimum_cost_proved": true,
+  "event_bijective_class_search_space_exhausted": true,
+  "full_ten_opcode_minimum_cost_proved": false,
+  "full_ten_opcode_search_space_exhausted": false,
+  "hardware_diagnostic_conformance_passed": false,
+  "interpretation": "Deterministic, resumable replay of the selected retained evidence. Quick/full mode checks the bibliography ledger, all-input equivalence certificate, analytic liveness lower bound, and complete finite exhaustion of the declared event-bijective class. Hardware mode is a finite host diagnostic. None of these is independent peer review or a proof of optimality in the full ten-opcode grammar.",
+  "mode": "full",
+  "mode_complete": true,
+  "resume_supported": true,
+  "selected_stages": [
+    "bibliography-audit",
+    "symbolic-replay",
+    "liveness-lower-bound",
+    "event-bijective-minimality",
+    "checker-independence",
+    "evidence-integrity",
+    "assembly",
+    "binary32",
+    "mutations",
+    "toy-arithmetic",
+    "toy-selection",
+    "toy-bitwise",
+    "toy-blend",
+    "toy-programs",
+    "tininess-control",
+    "residual-exploration",
+    "guarded-copies",
+    "liveness-mutations",
+    "event-bijective-mutations"
+  ]
+}

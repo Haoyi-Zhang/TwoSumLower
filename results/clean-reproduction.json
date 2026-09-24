@@ -1,0 +1,115 @@
+{
+  "all_documented_stages_passed": true,
+  "all_input_equivalence_certificate_replayed": true,
+  "all_results_match_retained_evidence": true,
+  "analytic_liveness_lower_bound_replayed": true,
+  "artifact_local_paths_required": 70,
+  "bibliography_audit_passed": true,
+  "checker_dependency_boundary_audited": true,
+  "claim_ledger_rows": 26,
+  "cross_file_evidence_integrity_audited": true,
+  "event_bijective_class_minimum_cost_proved": true,
+  "event_bijective_class_search_space_exhausted": true,
+  "full": {
+    "cpu_seconds": 66.403314,
+    "nonzero_exit_codes": 0,
+    "observed_swap_kib": 0,
+    "peak_child_rss_kib": 126580,
+    "stage_count": 19,
+    "timeouts": 0,
+    "wall_seconds": 67.198414
+  },
+  "full_ten_opcode_minimum_cost_proved": false,
+  "full_ten_opcode_search_space_exhausted": false,
+  "hardware": {
+    "cpu_seconds": 3.204052,
+    "nonzero_exit_codes": 0,
+    "observed_swap_kib": 0,
+    "peak_child_rss_kib": 94124,
+    "stage_count": 1,
+    "timeouts": 0,
+    "wall_seconds": 3.213455
+  },
+  "hardware_complete_block_observations": 32000,
+  "hardware_coverage": {
+    "boundary": "Coverage accounting for the unchanged finite pool; no additional inputs and no workload-distribution or universal inference.",
+    "pair_feature_counts": {
+      "any_infinity": 92,
+      "any_nan": 180,
+      "any_negative_zero": 47,
+      "any_signaling_nan": 95,
+      "any_subnormal": 179,
+      "any_zero": 92,
+      "both_nan": 16
+    },
+    "primitive_model_fresh_flag_observation_counts": {
+      "divide_by_zero": 0,
+      "inexact": 1770,
+      "invalid": 1757,
+      "overflow": 91,
+      "underflow": 121
+    },
+    "reference_model_fresh_flag_pair_counts": {
+      "divide_by_zero": 0,
+      "inexact": 610,
+      "invalid": 179,
+      "overflow": 8,
+      "underflow": 0
+    }
+  },
+  "hardware_diagnostic_conformance_passed": true,
+  "hardware_mismatches": 0,
+  "hardware_primitive_observations": 18000,
+  "interpretation": "Deterministic resumable replay, dual paper rebuild, page-by-page visual inspection, static checker-boundary audit, package-integrity audit, coverage-accounted finite host conformance, and class-relative lower bound. This is an artifact-side self-check, not independent peer review, all-input processor certification, performance evidence, or proof of optimality in the full ten-opcode grammar.",
+  "ledger_paths_declared": 77,
+  "paper_embedded_raster_images": 0,
+  "paper_font_objects_each": 17,
+  "paper_rebuild_passed": true,
+  "paper_targets": {
+    "main": {
+      "format": "acmsmall,review,nonacm",
+      "pages": 50,
+      "render_dpi": 180,
+      "visually_reviewed_pages": 50
+    },
+    "submission": {
+      "format": "manuscript,review",
+      "pages": 51,
+      "render_dpi": 150,
+      "visually_reviewed_pages": 51
+    }
+  },
+  "performed_from_clean_working_extractions": true,
+  "project_side_paths_required_when_present": 7,
+  "quick": {
+    "cpu_seconds": 16.155268,
+    "nonzero_exit_codes": 0,
+    "observed_swap_kib": 0,
+    "peak_child_rss_kib": 126920,
+    "stage_count": 9,
+    "timeouts": 0,
+    "wall_seconds": 16.792438
+  },
+  "resumable_driver_exercised": true,
+  "resume_validation": "The 19-stage full run was interrupted by the outer tool twice and completed with --resume; every existing result was parsed and compared with retained JSON before skipping.",
+  "schema": "clean-reproduction-v5",
+  "solver_controls": {
+    "cpu_seconds": 3.384423,
+    "nonzero_exit_codes": 0,
+    "observed_swap_kib": 0,
+    "peak_child_rss_kib": 117040,
+    "stage_count": 3,
+    "timeouts": 0,
+    "wall_seconds": 3.516182
+  },
+  "source_packages": "Working extractions used before final packaging; final named-archive replay is recorded in the separately delivered reproduction JSON.",
+  "standalone_quick": {
+    "cpu_seconds": 15.741022,
+    "nonzero_exit_codes": 0,
+    "observed_swap_kib": 0,
+    "peak_child_rss_kib": 126576,
+    "stage_count": 9,
+    "timeouts": 0,
+    "wall_seconds": 16.070554
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "selection": "Fixed three-case pilot: a rounding tie, small-positive plus large-negative internal-overflow discriminator, and unequal quiet NaN payloads. Diagnostic classes, not universal input coverage.",
+  "cases": [
+    {"id":"C001", "a":"0x3f800001", "b":"0x33800000"},
+    {"id":"C002", "a":"0x73800000", "b":"0xff7fffff"},
+    {"id":"C003", "a":"0x7fc00001", "b":"0x7fc00002"}
+  ]
+}

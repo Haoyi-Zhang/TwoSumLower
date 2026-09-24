@@ -1,0 +1,142 @@
+{
+  "declared_entry_auxiliary_lower_bound": 2,
+  "declared_entry_instruction_lower_bound": 8,
+  "forced_events": [
+    {
+      "live_after": [
+        "a",
+        "b",
+        "s"
+      ],
+      "result": "s",
+      "sources": [
+        "a",
+        "b"
+      ]
+    },
+    {
+      "live_after": [
+        "a",
+        "b",
+        "s",
+        "x"
+      ],
+      "result": "x",
+      "sources": [
+        "s",
+        "b"
+      ]
+    }
+  ],
+  "reference_arithmetic_events": 6,
+  "register_count": 6,
+  "relaxed_auxiliary": "copy any current nonzero value into an unused zero register at unit cost",
+  "schema": "two-address-liveness-barriers-v2",
+  "scope": "strong event-bijective six-register destructive two-address class only",
+  "variants": [
+    {
+      "expected_minimum_relaxed_auxiliaries": 2,
+      "initial_multiset": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "a",
+        "b"
+      ],
+      "minimum_relaxed_auxiliaries": 2,
+      "name": "declared-entry",
+      "terminal_multiset": [
+        "0",
+        "0",
+        "a",
+        "b",
+        "s",
+        "x"
+      ],
+      "witness": [
+        "copy a into zero",
+        "s=op(a,b); overwrite a",
+        "copy b into zero",
+        "x=op(s,b); overwrite b"
+      ]
+    },
+    {
+      "expected_minimum_relaxed_auxiliaries": 1,
+      "initial_multiset": [
+        "0",
+        "0",
+        "0",
+        "a",
+        "a",
+        "b"
+      ],
+      "minimum_relaxed_auxiliaries": 1,
+      "name": "duplicate-a-control",
+      "terminal_multiset": [
+        "0",
+        "0",
+        "a",
+        "b",
+        "s",
+        "x"
+      ],
+      "witness": [
+        "s=op(a,b); overwrite a",
+        "copy b into zero",
+        "x=op(s,b); overwrite b"
+      ]
+    },
+    {
+      "expected_minimum_relaxed_auxiliaries": 1,
+      "initial_multiset": [
+        "0",
+        "0",
+        "0",
+        "a",
+        "b",
+        "b"
+      ],
+      "minimum_relaxed_auxiliaries": 1,
+      "name": "duplicate-b-control",
+      "terminal_multiset": [
+        "0",
+        "0",
+        "a",
+        "b",
+        "s",
+        "x"
+      ],
+      "witness": [
+        "s=op(a,b); overwrite b",
+        "copy b into zero",
+        "x=op(s,b); overwrite b"
+      ]
+    },
+    {
+      "expected_minimum_relaxed_auxiliaries": 0,
+      "initial_multiset": [
+        "0",
+        "0",
+        "a",
+        "a",
+        "b",
+        "b"
+      ],
+      "minimum_relaxed_auxiliaries": 0,
+      "name": "duplicate-both-control",
+      "terminal_multiset": [
+        "0",
+        "0",
+        "a",
+        "b",
+        "s",
+        "x"
+      ],
+      "witness": [
+        "s=op(a,b); overwrite a",
+        "x=op(s,b); overwrite b"
+      ]
+    }
+  ]
+}

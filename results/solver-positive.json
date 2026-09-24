@@ -1,0 +1,8 @@
+{
+  "input": "inputs/solver-positive.smt2",
+  "input_bytes": 29932,
+  "status": "sat",
+  "solver_output": "sat\n(:reason-unknown \"\")\n",
+  "cpu_seconds": 0.039026555000000185,
+  "independently_replayed_certificate": false
+}

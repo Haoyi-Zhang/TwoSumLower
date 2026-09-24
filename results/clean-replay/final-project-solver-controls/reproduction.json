@@ -1,0 +1,42 @@
+{
+  "all_input_equivalence_certificate_replayed": false,
+  "all_selected_stages_passed": true,
+  "analytic_liveness_lower_bound_replayed": false,
+  "bibliography_metadata_and_citation_ledger_audited": false,
+  "checker_dependency_boundary_audited": false,
+  "checks": [
+    {
+      "command_passed": true,
+      "execution": "ran",
+      "name": "solver-positive",
+      "retained_result_matches": true
+    },
+    {
+      "command_passed": true,
+      "execution": "ran",
+      "name": "solver-negative",
+      "retained_result_matches": true
+    },
+    {
+      "command_passed": true,
+      "execution": "ran",
+      "name": "lazy-controls",
+      "retained_result_matches": true
+    }
+  ],
+  "cross_file_evidence_integrity_audited": false,
+  "event_bijective_class_minimum_cost_proved": false,
+  "event_bijective_class_search_space_exhausted": false,
+  "full_ten_opcode_minimum_cost_proved": false,
+  "full_ten_opcode_search_space_exhausted": false,
+  "hardware_diagnostic_conformance_passed": false,
+  "interpretation": "Deterministic, resumable replay of the selected retained evidence. Quick/full mode checks the bibliography ledger, all-input equivalence certificate, analytic liveness lower bound, and complete finite exhaustion of the declared event-bijective class. Hardware mode is a finite host diagnostic. None of these is independent peer review or a proof of optimality in the full ten-opcode grammar.",
+  "mode": "solver-controls",
+  "mode_complete": true,
+  "resume_supported": true,
+  "selected_stages": [
+    "solver-positive",
+    "solver-negative",
+    "lazy-controls"
+  ]
+}

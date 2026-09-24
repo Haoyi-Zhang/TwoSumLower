@@ -1,0 +1,8 @@
+{
+  "input": "inputs/lower-bound-canonical.smt2",
+  "input_bytes": 39323,
+  "status": "unknown",
+  "solver_output": "unknown\n(:reason-unknown \"out of memory\")\n",
+  "cpu_seconds": 95.776606605,
+  "independently_replayed_certificate": false
+}

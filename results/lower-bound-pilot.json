@@ -1,0 +1,8 @@
+{
+  "input": "inputs/lower-bound-pilot.smt2",
+  "input_bytes": 20638,
+  "status": "unknown",
+  "solver_output": "unknown\n(:reason-unknown \"timeout\")\n",
+  "cpu_seconds": 15.180479919,
+  "independently_replayed_certificate": false
+}

@@ -1,0 +1,237 @@
+{
+  "schema": "exception-bijective-two-address-minimality-v1",
+  "scope": "Two-address ADDSS/SUBSS reorientations with a bijection to the six reference arithmetic-event descriptors and only certified quotient copy/identity auxiliaries",
+  "reference_event_count": 6,
+  "search_relaxations": [
+    "NaN provenance constraints omitted",
+    "signed-zero constraints omitted",
+    "exact invalid-union constraints omitted",
+    "register names quotiented by permutation",
+    "removable quotient no-ops omitted"
+  ],
+  "declared_entry_minimum_instructions": 8,
+  "declared_entry_minimum_bytes": 30,
+  "byte_argument": "Every class member consumes all six four-byte arithmetic-event instructions.  The length lower bound leaves two auxiliaries, and the shortest admitted auxiliary encoding is three bytes.",
+  "variants": [
+    {
+      "initial_multiset": [
+        "i:a",
+        "i:b",
+        "z",
+        "z",
+        "z",
+        "z"
+      ],
+      "maximum_length": 8,
+      "frontier_counts": [
+        1,
+        11,
+        81,
+        320,
+        806,
+        2159,
+        2130,
+        276,
+        552
+      ],
+      "goal_counts": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        34
+      ],
+      "generated_transition_counts": [
+        13,
+        146,
+        1251,
+        5324,
+        14594,
+        39281,
+        39910,
+        6348
+      ],
+      "admitted_new_state_counts_before_feasibility_pruning": [
+        11,
+        81,
+        563,
+        2658,
+        8409,
+        24385,
+        27149,
+        5176
+      ],
+      "unique_states_seen_including_feasibility_pruned": 68433,
+      "minimum_relaxed_goal_length": 8,
+      "name": "declared-entry"
+    },
+    {
+      "initial_multiset": [
+        "i:a",
+        "i:a",
+        "i:b",
+        "z",
+        "z",
+        "z"
+      ],
+      "maximum_length": 7,
+      "frontier_counts": [
+        1,
+        11,
+        34,
+        60,
+        209,
+        168,
+        48,
+        96
+      ],
+      "goal_counts": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        17
+      ],
+      "generated_transition_counts": [
+        13,
+        165,
+        567,
+        1204,
+        3950,
+        3283,
+        1104
+      ],
+      "admitted_new_state_counts_before_feasibility_pruning": [
+        11,
+        86,
+        324,
+        787,
+        2615,
+        2341,
+        907
+      ],
+      "unique_states_seen_including_feasibility_pruned": 7072,
+      "minimum_relaxed_goal_length": 7,
+      "name": "duplicate-a-control"
+    },
+    {
+      "initial_multiset": [
+        "i:a",
+        "i:b",
+        "i:b",
+        "z",
+        "z",
+        "z"
+      ],
+      "maximum_length": 7,
+      "frontier_counts": [
+        1,
+        11,
+        36,
+        102,
+        275,
+        332,
+        60,
+        120
+      ],
+      "goal_counts": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        6
+      ],
+      "generated_transition_counts": [
+        13,
+        167,
+        626,
+        1915,
+        5256,
+        6297,
+        1380
+      ],
+      "admitted_new_state_counts_before_feasibility_pruning": [
+        11,
+        88,
+        366,
+        1218,
+        3484,
+        4388,
+        1131
+      ],
+      "unique_states_seen_including_feasibility_pruned": 10687,
+      "minimum_relaxed_goal_length": 7,
+      "name": "duplicate-b-control"
+    },
+    {
+      "initial_multiset": [
+        "i:a",
+        "i:a",
+        "i:b",
+        "i:b",
+        "z",
+        "z"
+      ],
+      "maximum_length": 6,
+      "frontier_counts": [
+        1,
+        2,
+        4,
+        12,
+        10,
+        6,
+        12
+      ],
+      "goal_counts": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        3
+      ],
+      "generated_transition_counts": [
+        13,
+        36,
+        81,
+        234,
+        215,
+        138
+      ],
+      "admitted_new_state_counts_before_feasibility_pruning": [
+        11,
+        30,
+        68,
+        190,
+        172,
+        114
+      ],
+      "unique_states_seen_including_feasibility_pruned": 586,
+      "minimum_relaxed_goal_length": 6,
+      "name": "duplicate-both-control"
+    }
+  ],
+  "candidate": {
+    "program_hex": "0f56d10f56d8f30f58c1f30f5cd0f30f58daf30f58d0f30f5ccaf30f58d9",
+    "output_registers": [
+      0,
+      3
+    ],
+    "cost": [
+      8,
+      30
+    ]
+  },
+  "interpretation": "Complete finite exhaustion for the declared event-bijective class; not a lower bound for the full ten-opcode grammar."
+}

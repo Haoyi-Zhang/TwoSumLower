@@ -1,0 +1,169 @@
+{
+  "accepted": 0,
+  "interpretation": "directed integrity attacks on the liveness certificate, not a proof of the checker itself",
+  "rejected": 32,
+  "rows": [
+    {
+      "id": "schema",
+      "reason": "wrong liveness schema",
+      "rejected": true
+    },
+    {
+      "id": "register-count",
+      "reason": "wrong register count",
+      "rejected": true
+    },
+    {
+      "id": "event-count",
+      "reason": "wrong event count",
+      "rejected": true
+    },
+    {
+      "id": "scope",
+      "reason": "wrong scope",
+      "rejected": true
+    },
+    {
+      "id": "relaxation",
+      "reason": "wrong relaxation",
+      "rejected": true
+    },
+    {
+      "id": "top-field",
+      "reason": "unexpected top-level liveness fields",
+      "rejected": true
+    },
+    {
+      "id": "drop-event",
+      "reason": "two forced events required",
+      "rejected": true
+    },
+    {
+      "id": "first-result",
+      "reason": "forced-event or live-set mismatch",
+      "rejected": true
+    },
+    {
+      "id": "first-source",
+      "reason": "forced-event or live-set mismatch",
+      "rejected": true
+    },
+    {
+      "id": "first-live",
+      "reason": "forced-event or live-set mismatch",
+      "rejected": true
+    },
+    {
+      "id": "second-result",
+      "reason": "forced-event or live-set mismatch",
+      "rejected": true
+    },
+    {
+      "id": "second-source",
+      "reason": "forced-event or live-set mismatch",
+      "rejected": true
+    },
+    {
+      "id": "second-live",
+      "reason": "forced-event or live-set mismatch",
+      "rejected": true
+    },
+    {
+      "id": "drop-variant",
+      "reason": "four entry variants required",
+      "rejected": true
+    },
+    {
+      "id": "rename-variant",
+      "reason": "entry variants mismatch",
+      "rejected": true
+    },
+    {
+      "id": "initial",
+      "reason": "wrong initial multiset for declared-entry",
+      "rejected": true
+    },
+    {
+      "id": "variant-field",
+      "reason": "unexpected variant fields",
+      "rejected": true
+    },
+    {
+      "id": "expected-min",
+      "reason": "wrong expected minimum for declared-entry",
+      "rejected": true
+    },
+    {
+      "id": "computed-min",
+      "reason": "wrong computed minimum for declared-entry",
+      "rejected": true
+    },
+    {
+      "id": "empty-witness",
+      "reason": "witness does not execute both forced events",
+      "rejected": true
+    },
+    {
+      "id": "extra-copy",
+      "reason": "nonminimal witness for declared-entry",
+      "rejected": true
+    },
+    {
+      "id": "bad-copy-source",
+      "reason": "witness copies an unavailable value",
+      "rejected": true
+    },
+    {
+      "id": "bad-event",
+      "reason": "witness event does not match forced prefix",
+      "rejected": true
+    },
+    {
+      "id": "terminal",
+      "reason": "wrong terminal multiset for declared-entry",
+      "rejected": true
+    },
+    {
+      "id": "control-a-min",
+      "reason": "wrong computed minimum for duplicate-a-control",
+      "rejected": true
+    },
+    {
+      "id": "control-b-min",
+      "reason": "wrong computed minimum for duplicate-b-control",
+      "rejected": true
+    },
+    {
+      "id": "control-both-min",
+      "reason": "wrong computed minimum for duplicate-both-control",
+      "rejected": true
+    },
+    {
+      "id": "aux-bound",
+      "reason": "wrong auxiliary lower bound",
+      "rejected": true
+    },
+    {
+      "id": "instruction-bound",
+      "reason": "wrong instruction lower bound",
+      "rejected": true
+    },
+    {
+      "id": "non-string-state",
+      "reason": "'<' not supported between instances of 'str' and 'int'",
+      "rejected": true
+    },
+    {
+      "id": "short-state",
+      "reason": "every liveness state must contain six registers",
+      "rejected": true
+    },
+    {
+      "id": "unknown-value",
+      "reason": "unknown symbolic value in liveness state",
+      "rejected": true
+    }
+  ],
+  "schema": "liveness-mutation-result-v1",
+  "total": 32
+}

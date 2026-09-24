@@ -1,0 +1,19 @@
+{
+  "replayed_arithmetic_observations": 449,
+  "fixed_program_controls": [
+    {
+      "control": "positive",
+      "verdict": "sat",
+      "expected": "sat",
+      "ground_arithmetic_cells": 22
+    },
+    {
+      "control": "negative",
+      "verdict": "unsat",
+      "expected": "unsat",
+      "ground_arithmetic_cells": 22
+    }
+  ],
+  "duplicate_cell_regression": true,
+  "interpretation": "Finite encoding and ground-observation checks; no global synthesis lower bound or proof replay."
+}

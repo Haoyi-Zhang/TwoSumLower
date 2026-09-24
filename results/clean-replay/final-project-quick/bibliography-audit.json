@@ -1,0 +1,33 @@
+{
+  "bibtex_entries": 70,
+  "calibration_counts": {
+    "adjacent": 5,
+    "foundational": 5,
+    "none": 48,
+    "toplas": 12
+  },
+  "identifier_counts": {
+    "doi": 63,
+    "isbn": 1,
+    "url": 6
+  },
+  "interpretation": "Offline replay of a source-verified bibliography snapshot and ledger. It checks retained metadata, identifiers, citation coverage, and calibration counts; it does not perform live DOI resolution. Inside the complete project it also requires exact agreement with the paper sources.",
+  "known_corrections_locked": [
+    "Handbook second-edition author list",
+    "Souper arXiv authors and DOI",
+    "Intel SDM Version 092 (2026)",
+    "SMT-LIB Version 2.7 (2026)"
+  ],
+  "ledger_rows": 70,
+  "passed": true,
+  "schema": "bibliography-audit-result-v1",
+  "uncited_entries": [],
+  "unique_cited_keys": 70,
+  "unknown_citations": [],
+  "verification_levels": {
+    "authoritative-book-record": 2,
+    "official-current-document": 5,
+    "primary-preprint": 3,
+    "publisher-or-primary-metadata": 60
+  }
+}

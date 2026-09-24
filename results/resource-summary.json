@@ -1,0 +1,63 @@
+{
+  "historical_campaign": {
+    "recorded_chunks": 61,
+    "measured_child_cpu_seconds": 445.25722,
+    "unmeasured_run_count": 2,
+    "additional_conservative_cpu_charge_seconds": 240,
+    "measured_plus_charged_cpu_seconds": 685.25722,
+    "largest_recorded_child_peak_rss_kib": 1542996,
+    "observed_nonzero_swap_records": 0,
+    "scientific_campaign_cpu_ceiling_seconds": 21600,
+    "global_swap_disabled_verified": false,
+    "complete_aggregate_session_memory_accounting": false,
+    "complete_all_activity_cpu_accounting": false,
+    "binary32_frozen_pairs": 1000,
+    "binary32_historical_distinct_pairs": 1002,
+    "declared_entry_unique_states_seen_including_feasibility_pruned": 68433,
+    "provisional_synthesis_prefix_quantity": 50000,
+    "resource_contract_pass": false,
+    "reason": "Two historical diagnostic pairs exceed the provisional cumulative input-class ceiling, the proof replay visits more states than the provisional prefix quantity, and two canceled runs lack exact child accounting. These qualifications do not invalidate the mathematical result."
+  },
+  "final_clean_reproduction": {
+    "project_full": {
+      "stage_count": 17,
+      "cpu_seconds": 68.223104,
+      "wall_seconds": 69.282697,
+      "peak_child_rss_kib": 126656,
+      "observed_swap_kib": 0,
+      "timeouts": 0,
+      "nonzero_exit_codes": 0
+    },
+    "project_solver_controls": {
+      "stage_count": 3,
+      "cpu_seconds": 3.563169,
+      "wall_seconds": 3.71836,
+      "peak_child_rss_kib": 117032,
+      "observed_swap_kib": 0,
+      "timeouts": 0,
+      "nonzero_exit_codes": 0
+    },
+    "project_hardware": {
+      "stage_count": 1,
+      "cpu_seconds": 3.446697,
+      "wall_seconds": 3.512493,
+      "peak_child_rss_kib": 94508,
+      "observed_swap_kib": 0,
+      "timeouts": 0,
+      "nonzero_exit_codes": 0
+    },
+    "standalone_quick": {
+      "stage_count": 7,
+      "cpu_seconds": 14.507528,
+      "wall_seconds": 14.960978,
+      "peak_child_rss_kib": 126556,
+      "observed_swap_kib": 0,
+      "timeouts": 0,
+      "nonzero_exit_codes": 0
+    },
+    "workers_per_stage": 1,
+    "all_stages_passed": true,
+    "resumable_driver_exercised": true
+  },
+  "interpretation": "The final replay is bounded and resumable, and the optional finite host-conformance stage also passes. Historical campaign holds remain explicit rather than being relabeled as an unconditional resource-contract pass."
+}

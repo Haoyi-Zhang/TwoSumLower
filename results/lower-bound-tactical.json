@@ -1,0 +1,8 @@
+{
+  "input": "inputs/lower-bound-tactical.smt2",
+  "input_bytes": 26194,
+  "status": "unknown",
+  "solver_output": "unknown\n(:reason-unknown \"canceled\")\n",
+  "cpu_seconds": 90.425962285,
+  "independently_replayed_certificate": false
+}

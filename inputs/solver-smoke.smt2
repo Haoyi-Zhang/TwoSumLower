@@ -1,0 +1,5 @@
+(set-option :timeout 2000)
+(set-logic QF_BV)
+(declare-fun x () (_ BitVec 32))
+(assert (not (= (bvxor x x) #x00000000)))
+(check-sat)
