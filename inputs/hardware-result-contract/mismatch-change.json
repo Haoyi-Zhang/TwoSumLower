@@ -1,0 +1,17 @@
+{
+  "all_comparisons_passed": false,
+  "binary32_case_pairs": 1000,
+  "complete_blocks": {
+    "hardware_candidate_model_mismatch_count": 0,
+    "hardware_candidate_reference_mismatch_count": 1,
+    "hardware_reference_model_mismatch_count": 0,
+    "observations": 32000
+  },
+  "host_architecture": "x86_64",
+  "host_cpu_vendor": "AuthenticAMD",
+  "primitive": {
+    "mismatch_count": 0,
+    "observations": 18000
+  },
+  "required_instruction_set": "legacy SSE through SSE4.1"
+}

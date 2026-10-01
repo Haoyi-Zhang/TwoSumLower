@@ -38,6 +38,18 @@
     {
       "command_passed": true,
       "execution": "verified-existing",
+      "name": "hardware-result-contract",
+      "retained_result_matches": true
+    },
+    {
+      "command_passed": true,
+      "execution": "verified-existing",
+      "name": "rounding-boundaries",
+      "retained_result_matches": true
+    },
+    {
+      "command_passed": true,
+      "execution": "verified-existing",
       "name": "evidence-integrity",
       "retained_result_matches": true
     },
@@ -136,6 +148,8 @@
     "liveness-lower-bound",
     "event-bijective-minimality",
     "checker-independence",
+    "hardware-result-contract",
+    "rounding-boundaries",
     "evidence-integrity",
     "assembly",
     "binary32",

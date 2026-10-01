@@ -20,6 +20,21 @@ def normalized(name: str, value: object) -> object:
     # logical verdict and exact retained input size remain compared.
     if name.startswith("solver-") and isinstance(value, dict):
         return {k: v for k, v in value.items() if k not in ("cpu_seconds", "input")}
+    # Hardware vendor and architecture labels are retained as provenance in the
+    # produced JSON, but a compatible x86-64/SSE4.1 host must not fail replay
+    # solely because those labels differ.  Observation counts, mismatch counts,
+    # coverage, instruction-set contract, and verdict remain load-bearing.
+    if name == "hardware-conformance" and isinstance(value, dict):
+        return {k: v for k, v in value.items()
+                if k not in ("host_architecture", "host_cpu_vendor")}
+    # The same artifact root can be replayed inside the full project (where paper
+    # anchors are checked) or as the standalone repository (where paper/ is
+    # intentionally absent).  This provenance-of-context field is reported but
+    # is not a scientific-result mismatch; all artifact-local anchors and counts
+    # remain load-bearing in both contexts.
+    if name == "evidence-integrity" and isinstance(value, dict):
+        return {k: v for k, v in value.items()
+                if k != "paper_anchor_content_checked_in_this_run"}
     return value
 
 
@@ -30,6 +45,8 @@ def stage_groups() -> dict[str, list[tuple[str, list[str]]]]:
         ("liveness-lower-bound", ["src/liveness_checker.py", "proofs/liveness-lower-bound.json"]),
         ("event-bijective-minimality", ["src/event_bijective_checker.py", "proofs/event-bijective-minimality.json"]),
         ("checker-independence", ["tests/checker_independence.py"]),
+        ("hardware-result-contract", ["tests/hardware_result_contract.py"]),
+        ("rounding-boundaries", ["tests/rounding_boundaries.py"]),
         ("evidence-integrity", ["tests/evidence_integrity.py"]),
         ("assembly", ["tests/assembly.py"]),
         ("binary32", ["tests/binary32.py"]),

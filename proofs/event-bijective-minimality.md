@@ -148,9 +148,10 @@ declared entry state.
 ## Integrity attacks
 
 The liveness mutation suite makes 32 directed changes to every load-bearing field
-family, and every altered object is rejected. The finite-search mutation suite
-changes each retained frontier count, terminal goal counts, both declared minima,
-class scope, event count, relaxation inventory, byte argument, interpretation,
-candidate bytes, candidate output selectors, and candidate cost. All 46 altered
-objects are rejected. These tests attack certificate plumbing and field coverage;
-they are not independent mathematical proofs or statistical reliability estimates.
+family, and every altered object is rejected. The finite-search mutation suite has
+46 directed corruptions: 32 retained frontier counts, four terminal goal counts,
+two declared minima, and eight other fields (class scope, event count, relaxation
+inventory, byte argument, interpretation, candidate bytes, candidate output
+selectors, and candidate cost). All 46 altered objects are rejected. These tests
+attack certificate plumbing and field coverage; they are not independent
+mathematical proofs or statistical reliability estimates.

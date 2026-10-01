@@ -1,5 +1,11 @@
 {
   "mutations": 46,
+  "breakdown": {
+    "frontier_counts": 32,
+    "terminal_goal_counts": 4,
+    "declared_minima": 2,
+    "other_load_bearing_fields": 8
+  },
   "rejected": 46,
   "accepted_corruptions": [],
   "all_corruptions_rejected": true,

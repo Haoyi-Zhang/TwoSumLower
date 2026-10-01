@@ -14,7 +14,7 @@ From the standalone artifact root:
 python reproduce.py --mode quick --output ../replay-quick
 ```
 
-The quick mode replays the all-input certificate, analytic liveness lower bound, complete event-bijective class search, checker-dependency audit, cross-file evidence audit, static assembly, binary32 diagnostics, and directed equivalence mutations. Full mode adds the complete reduced-format and lower-bound mutation campaigns. Solver controls and native hardware diagnostics remain separate because neither is a theorem dependency.
+The quick mode replays the all-input certificate, analytic liveness lower bound, complete event-bijective class search, checker-dependency audit, host-provenance comparison fixtures, exact overflow-boundary regressions, cross-file evidence audit, static assembly, binary32 diagnostics, and directed equivalence mutations. Full mode adds the complete reduced-format and lower-bound mutation campaigns. Solver controls and native hardware diagnostics remain separate because neither is a theorem dependency.
 
 ## Nine-perspective gate
 
@@ -42,9 +42,11 @@ The all-input checker does not import the executable floating-point model or cer
 
 1. **Why is the class scientifically meaningful?** It is the exact lowering problem for a fixed six-event effectful source graph when the backend may schedule and orient events but may not replace them with qualitatively different mask-synthesis computations. The theorem measures destructive register-preservation overhead.
 2. **Why does the lower bound not prove the original ten-opcode minimum?** The full grammar permits mask construction, selection, min/max, multiplication, and programs that do not preserve the source event multiset. The retained quotient does not conservatively cover those mechanisms.
-3. **Why are finite tests present if the theorem is symbolic?** They test implementations, models, certificate corruption handling, and hardware interpretation. They are never used as the universal equivalence argument. The frozen-pool report also exposes category and flag coverage rather than implying it: the primitive corpus exercises underflow 121 times, but none of the 1,000 complete reference pairs raises underflow, so full-block underflow equivalence is supported by the proof, not by extrapolation from the host campaign.
-4. **What remains trusted?** The stated SSE semantics, mathematical lemmas, Python runtime and checker code, decoder-to-ISA interpretation, and human inspection of the research claims.
-5. **What would strengthen the work further?** A proof-assistant formalization or a replayable full-grammar absence certificate would reduce the trusted base or broaden scope, respectively. Neither exists in this package.
+3. **Why are finite tests present if the theorem is symbolic?** They test implementations, models, certificate corruption handling, and hardware interpretation. They are never used as the universal equivalence argument. The primitive corpus's 121 underflow contributions arise in MULSS. The accepted TwoSum graph contains only ADDSS/SUBSS, and the finite-lattice lemma proves those operations cannot freshly raise underflow; final underflow and divide-by-zero equality still requires preservation of arbitrary incoming sticky bits. The multiplication tininess campaign tests the general rounding helper, not dynamic underflow in the accepted graph.
+4. **Where is the overflow boundary?** For RNE binary32, the threshold is the midpoint $T_O=M+2^{103}=2^{128}-2^{103}$ between maximum finite $M$ and the next unbounded-exponent precision-24 grid point. The exact regression checks both rounding implementations at $M+2^{102}$ and $T_O$ and separately replays the finite-sum/internal-overflow witness. It does not change either rounding implementation or replace the proof.
+5. **Why may hardware replay run on a different vendor?** The produced JSON retains host vendor and architecture as provenance, but replay comparison excludes only those two labels. Observation counts, mismatch counts, coverage, instruction-set requirement, and verdict remain load-bearing. Small JSON fixtures verify that a provenance-only change is accepted and that altered observations or mismatches are rejected; the fixture test itself performs no hardware execution.
+6. **What remains trusted?** The stated SSE semantics, mathematical lemmas, Python runtime and checker code, decoder-to-ISA interpretation, and human inspection of the research claims.
+7. **What would strengthen the work further?** A proof-assistant formalization or a replayable full-grammar absence certificate would reduce the trusted base or broaden scope, respectively. Neither exists in this package.
 
 ## External-use holds
 

@@ -1,53 +1,60 @@
 {
-  "boundary": "Artifact-side visual and structural self-inspection, not accessibility certification, independent peer review, or an acceptance judgment.",
+  "schema": "paper-inspection-v6",
+  "performed": true,
+  "boundary": "Artifact-side structural and visual self-inspection, not accessibility certification, independent peer review, or an acceptance judgment.",
+  "method": "Both final PDFs were rebuilt from the shared source, opened by PyMuPDF, checked by pdfinfo, rendered to a null device by Ghostscript, inspected with pdffonts/pdfimages, rendered in full, reviewed by contact sheets, and inspected at full size on amended B.3/B.4, D.4, H.3/H.4, Table 9, L.1, and Figure 4 pages. Figure 4 was re-rendered in both formats after routing changes.",
+  "structural_checks": {
+    "pymupdf_opened_both": true,
+    "pdfinfo_passed_both": true,
+    "ghostscript_nullpage_passed_both": true,
+    "qpdf_available": false
+  },
   "figures": {
-    "all_have_description_text": true,
     "count": 4,
+    "latex_native_tikz_or_pgfplots": 4,
     "embedded_raster_images": 0,
-    "latex_native_tikz_or_pgfplots": 4
+    "all_have_description_text": true,
+    "figure_4_routes_clear_of_third_row_and_text_boxes": true
   },
   "fonts": {
+    "main_font_objects": 17,
+    "submission_font_objects": 17,
     "all_embedded": true,
     "all_subset": true,
-    "all_unicode_mapped": true,
-    "main_font_objects": 17,
-    "submission_font_objects": 17
+    "all_unicode_mapped": true
   },
-  "method": "Fresh structural inspection of the final PDFs. All pages were rendered and reviewed after the diagnostic-coverage revision; the two pages changed by the final claim-ledger count correction were re-rendered at full size and inspected separately.",
-  "performed": true,
-  "schema": "paper-inspection-v5",
   "targets": {
     "main": {
-      "all_pages_have_extractable_text": true,
-      "embedded_raster_image_rows": 0,
+      "pdf": "paper/main.pdf",
       "format": "acmsmall,review,nonacm",
-      "minimum_page_text_characters": 1759,
+      "pages": 50,
+      "page_size_points": "486 x 720",
+      "all_pages_have_extractable_text": true,
+      "minimum_page_text_characters": 2109,
+      "embedded_raster_image_rows": 0,
+      "render_dpi": 180,
+      "rendered_pages_reviewed": 50,
       "observed_blank_pages": 0,
       "observed_broken_glyphs": false,
       "observed_clipping": false,
       "observed_missing_figures": false,
-      "observed_overlap": false,
-      "page_size_points": "486 x 720",
-      "pages": 50,
-      "pdf": "paper/main.pdf",
-      "render_dpi": 180,
-      "rendered_pages_reviewed": 50
+      "observed_overlap": false
     },
     "submission": {
-      "all_pages_have_extractable_text": true,
-      "embedded_raster_image_rows": 0,
+      "pdf": "paper/submission.pdf",
       "format": "manuscript,review",
-      "minimum_page_text_characters": 1732,
+      "pages": 51,
+      "page_size_points": "612 x 792",
+      "all_pages_have_extractable_text": true,
+      "minimum_page_text_characters": 1901,
+      "embedded_raster_image_rows": 0,
+      "render_dpi": 160,
+      "rendered_pages_reviewed": 51,
       "observed_blank_pages": 0,
       "observed_broken_glyphs": false,
       "observed_clipping": false,
       "observed_missing_figures": false,
-      "observed_overlap": false,
-      "page_size_points": "612 x 792",
-      "pages": 51,
-      "pdf": "paper/submission.pdf",
-      "render_dpi": 150,
-      "rendered_pages_reviewed": 51
+      "observed_overlap": false
     }
   }
 }

@@ -3,113 +3,278 @@
   "all_input_equivalence_certificate_replayed": true,
   "all_results_match_retained_evidence": true,
   "analytic_liveness_lower_bound_replayed": true,
-  "artifact_local_paths_required": 70,
-  "bibliography_audit_passed": true,
-  "checker_dependency_boundary_audited": true,
-  "claim_ledger_rows": 26,
-  "cross_file_evidence_integrity_audited": true,
+  "archive_integrity": {
+    "build_cache_or_latex_debris": 0,
+    "nested_archives": 0,
+    "path_traversal_entries": 0,
+    "single_project_root": true,
+    "single_standalone_root": true,
+    "symbolic_links": 0,
+    "zip_crc_passed": true
+  },
+  "bibliography_audit": {
+    "bibtex_entries": 70,
+    "calibration_counts": {
+      "adjacent": 5,
+      "foundational": 5,
+      "none": 48,
+      "toplas": 12
+    },
+    "identifier_counts": {
+      "doi": 63,
+      "isbn": 1,
+      "url": 6
+    },
+    "passed": true,
+    "uncited_entries": 0,
+    "unique_cited_keys": 70,
+    "unknown_citations": 0
+  },
+  "claim_evidence_audit": {
+    "artifact_local_paths_required": 75,
+    "claim_anchor_labels_checked": 85,
+    "claim_anchor_rows_checked": 26,
+    "claim_ledger_rows": 26,
+    "ledger_paths_declared": 82,
+    "passed": true,
+    "project_side_paths_required_when_present": 7
+  },
+  "equivalent_opcode_survivors": 4,
   "event_bijective_class_minimum_cost_proved": true,
   "event_bijective_class_search_space_exhausted": true,
+  "exact_overflow_boundary_regression": {
+    "cases": [
+      {
+        "dyadic": {
+          "flags": 16,
+          "word": "0x7f7fffff"
+        },
+        "exact_integer": "340282351709131260724621789471329746944",
+        "expected": {
+          "flags": 16,
+          "word": "0x7f7fffff"
+        },
+        "name": "M_plus_2^102",
+        "rational": {
+          "flags": 16,
+          "word": "0x7f7fffff"
+        }
+      },
+      {
+        "dyadic": {
+          "flags": 20,
+          "word": "0x7f800000"
+        },
+        "exact_integer": "340282356779733661637539395458142568448",
+        "expected": {
+          "flags": 20,
+          "word": "0x7f800000"
+        },
+        "name": "M_plus_2^103_threshold",
+        "rational": {
+          "flags": 20,
+          "word": "0x7f800000"
+        }
+      }
+    ],
+    "execution_scope": "Two exact binary32 rounding-helper inputs and one retained program trace. This regression checks the written boundary and implementations; it is not a new universal proof.",
+    "finite_sum_internal_overflow_witness": {
+      "a": "0x7f7fffff",
+      "b": "0xf3c00000",
+      "candidate_matches_reference": true,
+      "final_flags": 21,
+      "final_residual": "0xffc00000",
+      "reference_x": "0x7f800000",
+      "reference_x_flags": 20,
+      "sum": "0x7f7ffffe"
+    },
+    "maximum_finite": "2^128-2^104",
+    "overflow_threshold": "M+2^103=2^128-2^103",
+    "passed": true
+  },
   "full": {
-    "cpu_seconds": 66.403314,
+    "cpu_seconds": 67.512761,
     "nonzero_exit_codes": 0,
     "observed_swap_kib": 0,
-    "peak_child_rss_kib": 126580,
-    "stage_count": 19,
+    "peak_child_rss_kib": 126668,
+    "stage_count": 21,
     "timeouts": 0,
-    "wall_seconds": 67.198414
+    "wall_seconds": 68.563737
   },
   "full_ten_opcode_minimum_cost_proved": false,
   "full_ten_opcode_search_space_exhausted": false,
   "hardware": {
-    "cpu_seconds": 3.204052,
+    "cpu_seconds": 3.346326,
     "nonzero_exit_codes": 0,
     "observed_swap_kib": 0,
-    "peak_child_rss_kib": 94124,
+    "peak_child_rss_kib": 94764,
     "stage_count": 1,
     "timeouts": 0,
-    "wall_seconds": 3.213455
+    "wall_seconds": 3.411837
   },
-  "hardware_complete_block_observations": 32000,
-  "hardware_coverage": {
-    "boundary": "Coverage accounting for the unchanged finite pool; no additional inputs and no workload-distribution or universal inference.",
-    "pair_feature_counts": {
-      "any_infinity": 92,
-      "any_nan": 180,
-      "any_negative_zero": 47,
-      "any_signaling_nan": 95,
-      "any_subnormal": 179,
-      "any_zero": 92,
-      "both_nan": 16
+  "hardware_finite_conformance": {
+    "binary32_case_pairs": 1000,
+    "complete_block_mismatches": 0,
+    "complete_block_observations": 32000,
+    "host_architecture": "x86_64",
+    "host_cpu_vendor": "AuthenticAMD",
+    "passed": true,
+    "primitive_mismatches": 0,
+    "primitive_observations": 18000,
+    "provenance_policy": "Host architecture and vendor are retained provenance, not scientific-result equality fields; observations, mismatch counts, instruction-set contract, coverage, and verdict remain load-bearing."
+  },
+  "hardware_result_comparison_contract": {
+    "execution_scope": "Four small JSON fixtures test comparison semantics only. No processor instructions are executed and no new hardware observations are claimed.",
+    "load_bearing_examples": [
+      "primitive.observations",
+      "complete_blocks.observations",
+      "mismatch counts"
+    ],
+    "mismatch_change_rejected": true,
+    "observation_count_change_rejected": true,
+    "passed": true,
+    "provenance_fields": [
+      "host_architecture",
+      "host_cpu_vendor"
+    ],
+    "provenance_only_change_accepted": true
+  },
+  "interpretation": "Deterministic artifact-side replay, exact boundary regressions, content-aware claim-anchor checks, dual-paper rebuild, and rendered-page self-inspection. This is not independent peer review, a proof-assistant formalization, all-input processor certification, performance evidence, or proof of optimality in the complete ten-opcode grammar.",
+  "minimality_mutation_breakdown": {
+    "declared_minima": 2,
+    "frontier_counts": 32,
+    "other_load_bearing_fields": 8,
+    "terminal_goal_counts": 4
+  },
+  "minimality_mutations_rejected": 46,
+  "paper_inspection": {
+    "boundary": "Artifact-side structural and visual self-inspection, not accessibility certification, independent peer review, or an acceptance judgment.",
+    "figures": {
+      "all_have_description_text": true,
+      "count": 4,
+      "embedded_raster_images": 0,
+      "figure_4_routes_clear_of_third_row_and_text_boxes": true,
+      "latex_native_tikz_or_pgfplots": 4
     },
-    "primitive_model_fresh_flag_observation_counts": {
-      "divide_by_zero": 0,
-      "inexact": 1770,
-      "invalid": 1757,
-      "overflow": 91,
-      "underflow": 121
+    "fonts": {
+      "all_embedded": true,
+      "all_subset": true,
+      "all_unicode_mapped": true,
+      "main_font_objects": 17,
+      "submission_font_objects": 17
     },
-    "reference_model_fresh_flag_pair_counts": {
-      "divide_by_zero": 0,
-      "inexact": 610,
-      "invalid": 179,
-      "overflow": 8,
-      "underflow": 0
+    "method": "Both final PDFs were rebuilt from the shared source, opened by PyMuPDF, checked by pdfinfo, rendered to a null device by Ghostscript, inspected with pdffonts/pdfimages, rendered in full, reviewed by contact sheets, and inspected at full size on amended B.3/B.4, D.4, H.3/H.4, Table 9, L.1, and Figure 4 pages. Figure 4 was re-rendered in both formats after routing changes.",
+    "performed": true,
+    "schema": "paper-inspection-v6",
+    "structural_checks": {
+      "ghostscript_nullpage_passed_both": true,
+      "pdfinfo_passed_both": true,
+      "pymupdf_opened_both": true,
+      "qpdf_available": false
+    },
+    "targets": {
+      "main": {
+        "all_pages_have_extractable_text": true,
+        "embedded_raster_image_rows": 0,
+        "format": "acmsmall,review,nonacm",
+        "minimum_page_text_characters": 2109,
+        "observed_blank_pages": 0,
+        "observed_broken_glyphs": false,
+        "observed_clipping": false,
+        "observed_missing_figures": false,
+        "observed_overlap": false,
+        "page_size_points": "486 x 720",
+        "pages": 50,
+        "pdf": "paper/main.pdf",
+        "render_dpi": 180,
+        "rendered_pages_reviewed": 50
+      },
+      "submission": {
+        "all_pages_have_extractable_text": true,
+        "embedded_raster_image_rows": 0,
+        "format": "manuscript,review",
+        "minimum_page_text_characters": 1901,
+        "observed_blank_pages": 0,
+        "observed_broken_glyphs": false,
+        "observed_clipping": false,
+        "observed_missing_figures": false,
+        "observed_overlap": false,
+        "page_size_points": "612 x 792",
+        "pages": 51,
+        "pdf": "paper/submission.pdf",
+        "render_dpi": 160,
+        "rendered_pages_reviewed": 51
+      }
     }
   },
-  "hardware_diagnostic_conformance_passed": true,
-  "hardware_mismatches": 0,
-  "hardware_primitive_observations": 18000,
-  "interpretation": "Deterministic resumable replay, dual paper rebuild, page-by-page visual inspection, static checker-boundary audit, package-integrity audit, coverage-accounted finite host conformance, and class-relative lower bound. This is an artifact-side self-check, not independent peer review, all-input processor certification, performance evidence, or proof of optimality in the full ten-opcode grammar.",
-  "ledger_paths_declared": 77,
-  "paper_embedded_raster_images": 0,
-  "paper_font_objects_each": 17,
-  "paper_rebuild_passed": true,
-  "paper_targets": {
-    "main": {
-      "format": "acmsmall,review,nonacm",
-      "pages": 50,
-      "render_dpi": 180,
-      "visually_reviewed_pages": 50
+  "paper_rebuild": {
+    "archive_pdfs_byte_equal_to_separate_deliveries_before_rebuild": true,
+    "main_pages": 50,
+    "passed": true,
+    "rebuilt_pdf_extracted_text_equal_to_delivered_pdfs": true,
+    "submission_pages": 51
+  },
+  "performed_from_clean_named_archive_extractions": true,
+  "post_record_repack_validation": {
+    "project_quick": {
+      "all_results_match_retained_evidence": true,
+      "cpu_seconds": 17.185388,
+      "nonzero_exit_codes": 0,
+      "observed_swap_kib": 0,
+      "peak_child_rss_kib": 126572,
+      "stage_count": 11,
+      "timeouts": 0,
+      "wall_seconds": 17.580205
     },
-    "submission": {
-      "format": "manuscript,review",
-      "pages": 51,
-      "render_dpi": 150,
-      "visually_reviewed_pages": 51
+    "scope": "Post-record-repack validation. The repack changed only retained clean-replay/reproduction records, not the manuscript, proof objects, checkers, tests, or scientific result JSON.",
+    "standalone_quick": {
+      "all_results_match_retained_evidence": true,
+      "cpu_seconds": 17.393104,
+      "nonzero_exit_codes": 0,
+      "observed_swap_kib": 0,
+      "peak_child_rss_kib": 126572,
+      "stage_count": 11,
+      "timeouts": 0,
+      "wall_seconds": 17.971472
     }
   },
-  "performed_from_clean_working_extractions": true,
-  "project_side_paths_required_when_present": 7,
   "quick": {
-    "cpu_seconds": 16.155268,
+    "cpu_seconds": 17.743597,
     "nonzero_exit_codes": 0,
     "observed_swap_kib": 0,
-    "peak_child_rss_kib": 126920,
-    "stage_count": 9,
+    "peak_child_rss_kib": 127084,
+    "stage_count": 11,
     "timeouts": 0,
-    "wall_seconds": 16.792438
+    "wall_seconds": 18.268102
   },
   "resumable_driver_exercised": true,
-  "resume_validation": "The 19-stage full run was interrupted by the outer tool twice and completed with --resume; every existing result was parsed and compared with retained JSON before skipping.",
-  "schema": "clean-reproduction-v5",
+  "resume_validation": "The 21-stage full run from the named archive was interrupted by the outer launcher twice and completed with --resume; every existing result was parsed and compared with retained JSON before skipping.",
+  "schema": "clean-reproduction-v6",
   "solver_controls": {
-    "cpu_seconds": 3.384423,
+    "cpu_seconds": 3.142483,
     "nonzero_exit_codes": 0,
     "observed_swap_kib": 0,
     "peak_child_rss_kib": 117040,
     "stage_count": 3,
     "timeouts": 0,
-    "wall_seconds": 3.516182
+    "wall_seconds": 3.316169
   },
-  "source_packages": "Working extractions used before final packaging; final named-archive replay is recorded in the separately delivered reproduction JSON.",
+  "source_packages": "Full scientific replay and dual-paper rebuild were run from clean extractions of the named archives; after writing those replay records back, both repacked project and standalone archives passed 11-stage quick replay.",
   "standalone_quick": {
-    "cpu_seconds": 15.741022,
+    "cpu_seconds": 17.345676,
     "nonzero_exit_codes": 0,
     "observed_swap_kib": 0,
-    "peak_child_rss_kib": 126576,
-    "stage_count": 9,
+    "peak_child_rss_kib": 126560,
+    "stage_count": 11,
     "timeouts": 0,
-    "wall_seconds": 16.070554
+    "wall_seconds": 17.87157
+  },
+  "status": "PASS",
+  "total_directed_mutations": 206,
+  "underflow_boundary": {
+    "accepted_graph_can_freshly_raise_underflow": false,
+    "initial_underflow_and_divide_by_zero_sticky_bits_preserved": true,
+    "multiplication_tininess_control_is_separate": true,
+    "reference_model_fresh_underflow_pair_count": 0
   }
 }

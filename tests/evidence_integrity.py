@@ -9,10 +9,42 @@ from __future__ import annotations
 import argparse
 import csv
 import json
+import re
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 PROJECT = ROOT.parent
+
+
+EXPECTED_PAPER_LABELS: dict[str, set[str]] = {
+    "C01": {"thm:main", "sec:proof", "app:semantics", "app:proofledger", "fig:proof", "tab:nans"},
+    "C02": {"tab:block", "app:encoding", "tab:decode"},
+    "C03": {"sec:minimality", "app:search", "app:controls", "app:checklist", "tab:frontier", "fig:frontiers"},
+    "C04": {"thm:minimum", "app:membership", "tab:eventmap"},
+    "C05": {"thm:minimum", "sec:liveness-lower", "eq:byteslower", "tab:frontier", "tab:block"},
+    "C06": {"tab:duplicates", "app:controls", "fig:frontiers"},
+    "C07": {"sec:solver", "sec:related", "app:pilots", "fig:dependencies"},
+    "C08": {"sec:validation", "tab:primitive", "app:validation"},
+    "C09": {"sec:validation", "app:validation", "tab:ledger"},
+    "C10": {"sec:validation", "app:validation", "tab:ledger"},
+    "C11": {"sec:validation", "app:certificates", "tab:ledger"},
+    "C12": {"app:certificates", "tab:ledger"},
+    "C13": {"cor:family", "sec:copies", "app:validation"},
+    "C14": {"sec:validation", "app:validation", "app:cases", "app:arithmetic", "tab:ledger"},
+    "C15": {"sec:validation", "app:validation", "tab:ledger"},
+    "C16": {"sec:witness", "app:proofledger", "app:validation", "tab:ledger"},
+    "C17": {"sec:solver", "app:pilots"},
+    "C18": {"sec:solver", "app:methodology", "app:pilots"},
+    "C19": {"sec:validation", "app:methodology", "tab:ledger"},
+    "C20": set(),
+    "C21": {"sec:liveness-lower", "lem:barrier", "eq:livenesslower", "app:controls", "tab:duplicates"},
+    "C22": {"sec:related"},
+    "C23": {"sec:validation", "app:validation", "tab:ledger"},
+    "C24": {"sec:validation", "app:certificates", "app:dependencies", "tab:ledger"},
+    "C25": {"sec:validation", "app:artifact", "app:acceptance"},
+    "C26": {"sec:validation", "app:validation"},
+}
+LABEL_PATTERN = re.compile(r"\b(?:sec|app|thm|lem|cor|tab|fig|eq):[A-Za-z0-9-]+\b")
 
 
 def load(relative: str) -> object:
@@ -24,6 +56,8 @@ def split_paths(field: str) -> list[str]:
 
 
 def resolve_recorded(path: str) -> Path:
+    if path in ("research-plan.md", "CURRENT-STATE.md"):
+        return PROJECT / "paper" / "provenance" / path
     if path.startswith("paper/") or path in ("research-plan.md", "CURRENT-STATE.md"):
         return PROJECT / path
     if path.startswith("artifact/"):
@@ -70,6 +104,7 @@ def main() -> None:
     with ledger_path.open(newline="", encoding="utf-8") as handle:
         rows = list(csv.DictReader(handle))
     assert rows and len({row["claim_id"] for row in rows}) == len(rows)
+    assert len(rows) == 26 and {row["claim_id"] for row in rows} == set(EXPECTED_PAPER_LABELS)
     required = {
         "claim_id", "claim", "maturity", "theorem_or_manuscript",
         "checker_or_experiment", "source_or_input", "raw_result",
@@ -81,7 +116,35 @@ def main() -> None:
     artifact_local_paths: set[str] = set()
     project_side_paths: set[str] = set()
     full_project_present = (PROJECT / "paper").is_dir()
+    paper_text = ""
+    paper_labels: set[str] = set()
+    if full_project_present:
+        paper_files = [PROJECT / "paper" / "main.tex", *(PROJECT / "paper" / "figures").glob("*.tex")]
+        paper_text = "\n".join(path.read_text(encoding="utf-8") for path in paper_files)
+        paper_labels = set(re.findall(r"\\label\{([^}]+)\}", paper_text))
+    stale_anchors = ("Section 6.5", "Section 6.6", "Appendix G.4")
+    anchor_rows_checked = 0
+    anchor_labels_checked = 0
     for row in rows:
+        combined_anchor = row["theorem_or_manuscript"] + "; " + row["figure_or_table"]
+        if any(stale in combined_anchor for stale in stale_anchors):
+            raise AssertionError({"claim_id": row["claim_id"], "stale_anchor": combined_anchor})
+        recorded_labels = set(LABEL_PATTERN.findall(combined_anchor))
+        expected_labels = EXPECTED_PAPER_LABELS[row["claim_id"]]
+        if not expected_labels <= recorded_labels:
+            raise AssertionError({
+                "claim_id": row["claim_id"],
+                "missing_expected_labels": sorted(expected_labels - recorded_labels),
+                "recorded": sorted(recorded_labels),
+            })
+        if row["claim_id"] == "C20" and "whole document" not in row["theorem_or_manuscript"]:
+            raise AssertionError("C20 must anchor the build claim to the whole manuscript, not a fictitious section")
+        if full_project_present:
+            missing_labels = expected_labels - paper_labels
+            if missing_labels:
+                raise AssertionError({"claim_id": row["claim_id"], "labels_not_in_paper": sorted(missing_labels)})
+        anchor_rows_checked += 1
+        anchor_labels_checked += len(expected_labels)
         for field in ("theorem_or_manuscript", "checker_or_experiment", "source_or_input", "raw_result"):
             for recorded in split_paths(row[field]):
                 # A value may contain a section suffix after a real filename.
@@ -118,6 +181,10 @@ def main() -> None:
         "ledger_paths_declared": len(declared_paths),
         "artifact_local_paths_required": len(artifact_local_paths),
         "project_side_paths_required_when_present": len(project_side_paths),
+        "claim_anchor_rows_checked": anchor_rows_checked,
+        "claim_anchor_labels_checked": anchor_labels_checked,
+        "paper_anchor_content_check_enabled_when_present": True,
+        "paper_anchor_content_checked_in_this_run": full_project_present,
         "boundary": (
             "Internal cross-file consistency only. Every artifact-local path is required in both "
             "packages; paper/ and project-root paths are additionally required when the audit runs "

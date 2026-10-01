@@ -1,5 +1,5 @@
 {
-  "artifact_local_paths_required": 70,
+  "artifact_local_paths_required": 75,
   "boundary": "Internal cross-file consistency only. Every artifact-local path is required in both packages; paper/ and project-root paths are additionally required when the audit runs inside the full project. The audit does not validate mathematical lemmas, bibliographic truth, or the open full-ten-opcode minimum.",
   "candidate_cost_consistent": [
     8,
@@ -7,12 +7,16 @@
   ],
   "candidate_outputs_consistent": true,
   "candidate_program_hex_consistent": true,
+  "claim_anchor_labels_checked": 85,
+  "claim_anchor_rows_checked": 26,
   "claim_ledger_rows": 26,
-  "ledger_paths_declared": 77,
+  "ledger_paths_declared": 82,
   "minimum_frontier_consistent": {
     "depth_eight_goals": 34,
     "first_goal_depth": 8
   },
+  "paper_anchor_content_check_enabled_when_present": true,
+  "paper_anchor_content_checked_in_this_run": false,
   "passed": true,
   "project_side_paths_required_when_present": 7,
   "schema": "evidence-integrity-audit-v1",

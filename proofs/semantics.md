@@ -8,6 +8,12 @@ The dyadic implementation stores an exact finite quantity as integer `n` times `
 
 The rational oracle independently converts finite words to exact `Fraction` values. For the toy format it searches an enumerated sorted table of representable nonnegative values; for binary32 it searches the monotone encoding range without enumerating that range. Nearest neighbors and exact rational distances determine rounding. NaN/infinity/zero dispatch is separately implemented. Both implementations use the same written ISA contract; agreement cannot validate a shared misunderstanding of that contract.
 
+## Overflow boundary
+
+For binary32, the largest finite magnitude is `M=(2-2^-23)2^127 = 2^128-2^104`. The next point on the unbounded-exponent precision-24 grid is `2^128`; therefore the round-to-nearest overflow threshold is their midpoint, `T_O=M+2^103=2^128-2^103`. Exact magnitudes in `(M,T_O)` are outside the stored finite range but still round back to `M` with inexact only. At `T_O`, ties-to-even selects the upper grid point and the stored result is infinity with overflow and inexact. In particular, `M+2^102` is `2^102` from `M` and `3*2^102` from `2^128`, so both exact rounding implementations must return word `0x7f7fffff` with only inexact.
+
+`tests/rounding_boundaries.py` checks this case and the exact threshold against both implementations without changing either rounding algorithm. It also replays the finite-sum/internal-overflow witness `a=0x7f7fffff`, `b=0xf3c00000`. These are exact helper and program-trace regressions, not a new universal proof.
+
 ## Tininess: a contract-level negative control
 
 Intel SDM Volume 1 section 4.9.1.5 specifies tininess after rounding to destination precision with an *unbounded exponent range*. It is not equivalent to testing whether the final stored result is subnormal.
@@ -15,6 +21,8 @@ Intel SDM Volume 1 section 4.9.1.5 specifies tininess after rounding to destinat
 Let `p=f+1`, `mu=2^(emin-f)`, and `m=2^emin`. Immediately below `m`, the unbounded-exponent p-bit grid has spacing `mu/2`; its nearest predecessor is `m-mu/2`. Its midpoint with `m` is `T=m-mu/4`, and at that midpoint ties-to-even selects `m`. Thus a positive exact result is tiny precisely when it is smaller than `T`. Under masked exceptions the underflow bit is raised only when this tininess condition and final inexactness both hold. A result can therefore store the minimum normal while raising both underflow and inexact.
 
 The test intentionally compares this rule against a wrong stored-subnormal-only rule for every toy MULSS operand pair. The current result contains 168 differences. This detects a shared-contract error that an integer-versus-rational agreement check alone would not reveal. Direct rational binary32 rounding boundary tests use exact dyadics; these are rounding-helper tests, not additional binary32 operand-pair classes or hardware observations.
+
+This multiplication control must not be conflated with the accepted TwoSum graph. That graph contains only ADDSS and SUBSS. For finite binary32 sources, every exact sum or difference is an integer multiple of the minimum subnormal `mu`; a nonzero result below the minimum normal is therefore an exactly representable subnormal, and a zero result is exact. Hence this ADDSS/SUBSS graph cannot freshly raise underflow. Underflow and divide-by-zero remain in the observation because either bit may be set initially and must be preserved by sticky-state equivalence.
 
 ## Non-arithmetic opcodes
 

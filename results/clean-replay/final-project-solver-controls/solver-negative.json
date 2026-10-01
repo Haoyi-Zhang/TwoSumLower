@@ -3,6 +3,6 @@
   "input_bytes": 29932,
   "status": "unsat",
   "solver_output": "unsat\n(:reason-unknown \"\")\n",
-  "cpu_seconds": 0.020596908000000025,
+  "cpu_seconds": 0.020939053000000096,
   "independently_replayed_certificate": false
 }

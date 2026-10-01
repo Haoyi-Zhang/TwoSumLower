@@ -91,7 +91,7 @@ per stage. Every completed result is compared with retained JSON, and partial
 progress is recorded atomically. Do not run with `python -O`, because assertions
 are part of the finite tests.
 
-Quick mode contains nine stages and full mode contains nineteen. Direct audit
+Quick mode contains eleven stages and full mode contains twenty-one. Direct audit
 and certificate commands are:
 
 ```sh
@@ -100,6 +100,8 @@ python src/certificate_checker.py proofs/equivalence.json --output /tmp/equivale
 python src/liveness_checker.py proofs/liveness-lower-bound.json --output /tmp/liveness.json
 python src/event_bijective_checker.py proofs/event-bijective-minimality.json --output /tmp/minimality.json
 python tests/checker_independence.py --output /tmp/checker-independence.json
+python tests/hardware_result_contract.py --output /tmp/hardware-result-contract.json
+python tests/rounding_boundaries.py --output /tmp/rounding-boundaries.json
 python tests/evidence_integrity.py --output /tmp/evidence-integrity.json
 ```
 
@@ -130,7 +132,9 @@ proof-assistant kernel.
 | Toy full programs | All 65,536 input pairs agree | `results/toy-programs.json` |
 | Binary32 software diagnostics | 1,000 frozen pairs; zero reported mismatches | `inputs/binary32-cases.json`, `results/binary32.json` |
 | Host SSE4.1 conformance | 18,000 primitive and 32,000 complete-block observations; zero mismatches on the recorded host | `src/sse_*_probe.c`, `tests/hardware_conformance.py`, `results/hardware-conformance.json` |
-| Frozen-pool coverage accounting | 180 any-NaN pairs (95 any-sNaN), 92 any-infinity, 179 any-subnormal, 92 any-zero; 121 primitive underflow contributions but zero full-reference underflow pairs | `inputs/binary32-cases.json`, `tests/hardware_conformance.py`, `results/hardware-conformance.json` |
+| Hardware result-comparison contract | Host vendor/architecture are provenance-only; changed observation or mismatch fields remain rejecting | `tests/hardware_result_contract.py`, `inputs/hardware-result-contract/*.json`, `results/hardware-result-contract.json` |
+| Exact overflow boundary | Both exact implementations return $M$ with inexact only for $M+2^{102}$ and infinity with overflow+inexact at $M+2^{103}$ | `tests/rounding_boundaries.py`, `results/rounding-boundaries.json` |
+| Frozen-pool coverage accounting | 180 any-NaN pairs (95 any-sNaN), 92 any-infinity, 179 any-subnormal, 92 any-zero; 121 MULSS primitive underflow contributions, while the ADDSS/SUBSS TwoSum graph freshly raises none | `inputs/binary32-cases.json`, `tests/hardware_conformance.py`, `results/hardware-conformance.json` |
 | Equivalence mutations | 96 bad objects rejected; 28 wrong programs refuted; 4 equivalent mutants accepted | `results/mutations.json` |
 | Guarded-copy family | 9 variants; 589,824 toy evaluations; zero mismatches | `results/guarded-copies.json` |
 | Tininess control | 168 toy disagreements with an incorrect rule | `results/tininess-control.json` |

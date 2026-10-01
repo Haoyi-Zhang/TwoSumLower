@@ -57,8 +57,16 @@ def main() -> None:
     m["candidate"]["program_hex"] = raw.hex(); mutants.append(("candidate-opcode", m))
 
     failures = [name for name, document in mutants if not rejected(document)]
+    breakdown = {
+        "frontier_counts": sum(len(v["frontier_counts"]) for v in base["variants"]),
+        "terminal_goal_counts": len(base["variants"]),
+        "declared_minima": 2,
+        "other_load_bearing_fields": 8,
+    }
+    assert sum(breakdown.values()) == len(mutants) == 46
     result = {
         "mutations": len(mutants),
+        "breakdown": breakdown,
         "rejected": len(mutants) - len(failures),
         "accepted_corruptions": failures,
         "all_corruptions_rejected": not failures,

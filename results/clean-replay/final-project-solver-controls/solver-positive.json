@@ -3,6 +3,6 @@
   "input_bytes": 29932,
   "status": "sat",
   "solver_output": "sat\n(:reason-unknown \"\")\n",
-  "cpu_seconds": 0.023188656999999946,
+  "cpu_seconds": 0.021384544000000005,
   "independently_replayed_certificate": false
 }
