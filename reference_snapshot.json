@@ -260,7 +260,7 @@
     "Daisy": {
       "author": "Eva Darulova and Einar Horn and Saksham Sharma",
       "booktitle": "Proceedings of the 9th ACM/IEEE International Conference on Cyber-Physical Systems",
-      "doi": "10.1109/ICCPS.2018.00029",
+      "doi": "10.1109/ICCPS.2018.00028",
       "entry_type": "inproceedings",
       "pages": "208--219",
       "title": "Sound Mixed-Precision Optimization with Rewriting",

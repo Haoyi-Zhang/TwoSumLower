@@ -163,8 +163,8 @@ retained as failed feasibility evidence and never reclassified as UNSAT.
 
 The frozen binary32 set has exactly 1,000 pairs, while two earlier diagnostic pairs
 outside it remain preserved; strict cumulative compliance with a 1,000-class
-historical ceiling is therefore not claimed. See `../CURRENT-STATE.md` in the full
-project package for the complete research and external-use holds.
+historical ceiling is therefore not claimed. The manuscript in `../paper/`
+states the research scope; the retained provenance records are in `../paper/provenance/`.
 
 ## Layout
 

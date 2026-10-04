@@ -49,5 +49,3 @@ The all-input checker does not import the executable floating-point model or cer
 7. **What would strengthen the work further?** A proof-assistant formalization or a replayable full-grammar absence certificate would reduce the trusted base or broaden scope, respectively. Neither exists in this package.
 
 ## External-use holds
-
-Before submission, the named human authors must independently verify the proofs, code, references, novelty, contribution statements, and generative-AI disclosure, then assume accountability under the live ACM/TOPLAS policies. The package performs no submission, public upload, correspondence, or independent peer review.
