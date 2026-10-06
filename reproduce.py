@@ -46,6 +46,7 @@ def stage_groups() -> dict[str, list[tuple[str, list[str]]]]:
         ("event-bijective-minimality", ["src/event_bijective_checker.py", "proofs/event-bijective-minimality.json"]),
         ("checker-independence", ["tests/checker_independence.py"]),
         ("hardware-result-contract", ["tests/hardware_result_contract.py"]),
+        ("evidence-contracts", ["tests/evidence_contracts.py"]),
         ("rounding-boundaries", ["tests/rounding_boundaries.py"]),
         ("evidence-integrity", ["tests/evidence_integrity.py"]),
         ("assembly", ["tests/assembly.py"]),
@@ -225,7 +226,6 @@ def main() -> None:
         save_progress()
 
     completed = {check["name"] for check in checks}
-    common_names = {name for name, _ in groups["quick"]}
     mode_complete = set(selected_names) == set(available_names)
     report = {
         "mode": args.mode,
@@ -238,7 +238,11 @@ def main() -> None:
         "all_input_equivalence_certificate_replayed": "symbolic-replay" in completed,
         "analytic_liveness_lower_bound_replayed": "liveness-lower-bound" in completed,
         "event_bijective_class_search_space_exhausted": "event-bijective-minimality" in completed,
-        "event_bijective_class_minimum_cost_proved": "event-bijective-minimality" in completed,
+        # A relaxed search goal does not establish strong-class attainment.
+        # Report the combined theorem only when raw refinement also replays.
+        "event_bijective_class_minimum_cost_proved": {
+            "symbolic-replay", "event-bijective-minimality"
+        } <= completed,
         "checker_dependency_boundary_audited": "checker-independence" in completed,
         "cross_file_evidence_integrity_audited": "evidence-integrity" in completed,
         "hardware_diagnostic_conformance_passed": "hardware-conformance" in completed,
@@ -246,7 +250,9 @@ def main() -> None:
         "full_ten_opcode_minimum_cost_proved": False,
         "interpretation": (
             "Deterministic, resumable replay of the selected retained evidence. "
-            "Quick/full mode checks the bibliography ledger, all-input equivalence "
+            "The flags above describe only completed selected stages; the class "
+            "minimum combines raw refinement with the relaxed class lower bound. "
+            "Complete quick/full mode checks the bibliography ledger, all-input equivalence "
             "certificate, analytic liveness lower bound, and complete finite "
             "exhaustion of the declared event-bijective class. Hardware mode is a "
             "finite host diagnostic. None of these is independent peer review or a "

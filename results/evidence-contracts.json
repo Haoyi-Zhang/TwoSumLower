@@ -1,0 +1,152 @@
+{
+  "passed": true,
+  "rows": [
+    {
+      "expected_combined_minimum": false,
+      "id": "report-0",
+      "observed_combined_minimum": false,
+      "passed": true,
+      "selected": []
+    },
+    {
+      "expected_combined_minimum": false,
+      "id": "report-1",
+      "observed_combined_minimum": false,
+      "passed": true,
+      "selected": [
+        "event-bijective-minimality"
+      ]
+    },
+    {
+      "expected_combined_minimum": false,
+      "id": "report-2",
+      "observed_combined_minimum": false,
+      "passed": true,
+      "selected": [
+        "liveness-lower-bound"
+      ]
+    },
+    {
+      "expected_combined_minimum": false,
+      "id": "report-3",
+      "observed_combined_minimum": false,
+      "passed": true,
+      "selected": [
+        "liveness-lower-bound",
+        "event-bijective-minimality"
+      ]
+    },
+    {
+      "expected_combined_minimum": false,
+      "id": "report-4",
+      "observed_combined_minimum": false,
+      "passed": true,
+      "selected": [
+        "symbolic-replay"
+      ]
+    },
+    {
+      "expected_combined_minimum": true,
+      "id": "report-5",
+      "observed_combined_minimum": true,
+      "passed": true,
+      "selected": [
+        "symbolic-replay",
+        "event-bijective-minimality"
+      ]
+    },
+    {
+      "expected_combined_minimum": false,
+      "id": "report-6",
+      "observed_combined_minimum": false,
+      "passed": true,
+      "selected": [
+        "symbolic-replay",
+        "liveness-lower-bound"
+      ]
+    },
+    {
+      "expected_combined_minimum": true,
+      "id": "report-7",
+      "observed_combined_minimum": true,
+      "passed": true,
+      "selected": [
+        "symbolic-replay",
+        "liveness-lower-bound",
+        "event-bijective-minimality"
+      ]
+    },
+    {
+      "coverage_rejected": false,
+      "id": "primitives-control",
+      "passed": true
+    },
+    {
+      "coverage_rejected": true,
+      "id": "primitives-empty",
+      "passed": true
+    },
+    {
+      "coverage_rejected": true,
+      "id": "primitives-missing",
+      "passed": true
+    },
+    {
+      "coverage_rejected": true,
+      "id": "primitives-duplicate",
+      "passed": true
+    },
+    {
+      "coverage_rejected": true,
+      "id": "primitives-wrong-pair",
+      "passed": true
+    },
+    {
+      "coverage_rejected": true,
+      "id": "primitives-bad-domain",
+      "passed": true
+    },
+    {
+      "coverage_rejected": false,
+      "id": "primitives-wrong-result",
+      "passed": true
+    },
+    {
+      "coverage_rejected": false,
+      "id": "blocks-control",
+      "passed": true
+    },
+    {
+      "coverage_rejected": true,
+      "id": "blocks-empty",
+      "passed": true
+    },
+    {
+      "coverage_rejected": true,
+      "id": "blocks-missing",
+      "passed": true
+    },
+    {
+      "coverage_rejected": true,
+      "id": "blocks-duplicate",
+      "passed": true
+    },
+    {
+      "coverage_rejected": true,
+      "id": "blocks-wrong-pair",
+      "passed": true
+    },
+    {
+      "coverage_rejected": true,
+      "id": "blocks-bad-domain",
+      "passed": true
+    },
+    {
+      "coverage_rejected": false,
+      "id": "blocks-wrong-result",
+      "passed": true
+    }
+  ],
+  "scope": "Eight synthetic partial-replay reports and fourteen model-generated CSV controls; no native instructions or additional input classes.",
+  "tests": 22
+}

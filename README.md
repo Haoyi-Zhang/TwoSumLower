@@ -91,7 +91,7 @@ per stage. Every completed result is compared with retained JSON, and partial
 progress is recorded atomically. Do not run with `python -O`, because assertions
 are part of the finite tests.
 
-Quick mode contains eleven stages and full mode contains twenty-one. Direct audit
+Quick mode contains twelve stages and full mode contains twenty-two. Direct audit
 and certificate commands are:
 
 ```sh
@@ -101,6 +101,7 @@ python src/liveness_checker.py proofs/liveness-lower-bound.json --output /tmp/li
 python src/event_bijective_checker.py proofs/event-bijective-minimality.json --output /tmp/minimality.json
 python tests/checker_independence.py --output /tmp/checker-independence.json
 python tests/hardware_result_contract.py --output /tmp/hardware-result-contract.json
+python tests/evidence_contracts.py --output /tmp/evidence-contracts.json
 python tests/rounding_boundaries.py --output /tmp/rounding-boundaries.json
 python tests/evidence_integrity.py --output /tmp/evidence-integrity.json
 ```
@@ -114,6 +115,18 @@ snapshot must agree field-for-field with `paper/references.bib` and the cited-ke
 in `paper/main.tex`; in this standalone repository, the same audit runs without a
 paper-side dependency. These checks are neither independent peer review nor a
 proof-assistant kernel.
+
+`evidence_contracts.py` runs 22 synthetic regressions. It rejects incomplete,
+duplicate, out-of-contract, and substituted-input native CSVs, and checks that
+a search-only replay does not report the combined strong-class minimum. Its
+observations are model-generated on the unchanged frozen pool; it executes no
+native instruction and leaves its fixtures beside the requested output.
+
+The `scientific-checks.yml` workflow replays full mode from this flat artifact
+root on Ubuntu 24.04, with bounded stages and a bounded whole run. It neither
+runs hardware mode nor retries the historical unrestricted solver searches.
+Raw output is uploaded even after failure. A workflow definition is not evidence
+that a remote run has occurred.
 
 ## Evidence map
 

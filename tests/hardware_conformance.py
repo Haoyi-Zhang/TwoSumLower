@@ -165,17 +165,39 @@ def coverage_summary(data: dict, cases: list[dict]) -> dict:
     }
 
 
+def trace_case(row: dict, cases: list[dict]) -> tuple[int, int, int]:
+    """Bind each observation to its exact position in the frozen input pool."""
+    index = int(row["case"])
+    if not 0 <= index < len(cases):
+        raise ValueError("observation case is outside the frozen pool")
+    a, b = int(row["a"], 0), int(row["b"], 0)
+    expected = cases[index]
+    if (a, b) != (int(expected["a"], 0), int(expected["b"], 0)):
+        raise ValueError("observation operands differ from the frozen case")
+    return index, a, b
+
+
 def compare_primitives(path: Path) -> dict:
+    _, cases = load_cases()
+    seen: set[tuple[int, int, int]] = set()
     mismatches: list[dict] = []
     mismatch_count = 0
     records = 0
     with path.open(newline="") as src:
         for row in csv.DictReader(src):
+            case_index, a, b = trace_case(row, cases)
             op_index = int(row["op"])
+            if not 0 <= op_index < len(OPS):
+                raise ValueError("observation opcode is outside the probe contract")
             op, imm = OPS[op_index]
-            a = int(row["a"], 0)
-            b = int(row["b"], 0)
             mask = int(row["mask"], 0)
+            masks = (0, BINARY32.sign) if op == "BLENDVPS" else (0,)
+            if mask not in masks:
+                raise ValueError("observation mask is outside the probe contract")
+            key = (case_index, op_index, mask)
+            if key in seen:
+                raise ValueError("duplicate primitive observation")
+            seen.add(key)
             got = (int(row["out"], 0), int(row["flags"]))
             expected = BINARY32.operation(op, a, b, imm, mask)
             want = (expected.word, expected.flags)
@@ -190,11 +212,15 @@ def compare_primitives(path: Path) -> dict:
                     "hardware": [f"0x{got[0]:08x}", got[1]],
                     "model": [f"0x{want[0]:08x}", want[1]],
                 })
+    if len(seen) != len(cases) * (len(OPS) + 1):
+        raise ValueError("incomplete primitive coverage: every operation/mask is required once per frozen pair")
     return {"observations": records, "mismatch_count": mismatch_count,
             "first_mismatches": mismatches}
 
 
 def compare_blocks(path: Path) -> dict:
+    _, cases = load_cases()
+    seen: set[tuple[int, int]] = set()
     hardware_pair_mismatches: list[dict] = []
     reference_model_mismatches: list[dict] = []
     candidate_model_mismatches: list[dict] = []
@@ -204,9 +230,14 @@ def compare_blocks(path: Path) -> dict:
     records = 0
     with path.open(newline="") as src:
         for row in csv.DictReader(src):
-            a = int(row["a"], 0)
-            b = int(row["b"], 0)
+            case_index, a, b = trace_case(row, cases)
             initial = int(row["initial"])
+            if not 0 <= initial < 32:
+                raise ValueError("observation initial flag mask is outside 0..31")
+            key = (case_index, initial)
+            if key in seen:
+                raise ValueError("duplicate complete-block observation")
+            seen.add(key)
             hw_reference = (int(row["ref_s"], 0), int(row["ref_e"], 0), int(row["ref_f"]))
             hw_candidate = (int(row["cand_s"], 0), int(row["cand_e"], 0), int(row["cand_f"]))
             model_reference_raw = reference(BINARY32, a, b)
@@ -234,6 +265,8 @@ def compare_blocks(path: Path) -> dict:
                 candidate_model_mismatches.append({**base,
                     "hardware": [f"0x{hw_candidate[0]:08x}", f"0x{hw_candidate[1]:08x}", hw_candidate[2]],
                     "model": [f"0x{model_candidate[0]:08x}", f"0x{model_candidate[1]:08x}", model_candidate[2]]})
+    if len(seen) != len(cases) * 32:
+        raise ValueError("incomplete block coverage: every initial flag mask is required once per frozen pair")
     return {
         "observations": records,
         "hardware_candidate_reference_mismatch_count": hardware_pair_mismatch_count,

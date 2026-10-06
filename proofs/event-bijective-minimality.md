@@ -72,12 +72,15 @@ relaxed graph, while a missing relaxed path rules out a strong path. This is the
 one-way implication required for a lower bound; the relaxed search is never used
 to prove the attaining block correct.
 
-A state is `(R,M)`, where `R` is a sorted multiset of six normalized symbolic
+A state is `(R,M)`, where `R` is a sorted multiset of six raw symbolic
 register expressions and `M` is a six-bit mask of consumed reference-event
 descriptors. One destructive instruction replaces one occurrence of a
 destination expression. A nonzero arithmetic instruction is admitted only when
 its normalized event descriptor is one of the six reference descriptors and its
 bit in `M` is not yet set. An admitted copy or identity leaves `M` unchanged.
+Normalization is used for event descriptors and the residual goal; raw terms
+retain the literal ordered sum condition. The state does not merge every pair
+of quotient-equal register expressions.
 
 Register permutation is sound for this class because none of its instructions
 has an implicit register operand. In particular, the full grammar's legacy

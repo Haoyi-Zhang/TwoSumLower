@@ -14,6 +14,7 @@ import argparse
 import csv
 import json
 import re
+from datetime import date
 from pathlib import Path
 from typing import Any
 
@@ -241,7 +242,14 @@ def audit() -> dict[str, Any]:
         require(row["identifier"].casefold() == expected_identifier.casefold(), f"ledger identifier mismatch for {key}")
         require(row["metadata_status"] == "verified", f"unverified ledger row {key}")
         require(row["verification_source"].startswith("https://"), f"non-HTTPS verification source for {key}")
-        require(row["verification_date"] == "2026-09-16", f"stale verification date for {key}")
+        # This is provenance, not an invariant that forbids later corrections.
+        # Validate the recorded date without pretending to resolve the source.
+        try:
+            verified_on = date.fromisoformat(row["verification_date"])
+        except ValueError:
+            raise AuditError(f"invalid verification date for {key}")
+        require(date(1900, 1, 1) <= verified_on <= date(2026, 12, 31),
+                f"implausible verification date for {key}")
         level = row["verification_level"]
         require(level in {"official-current-document", "publisher-or-primary-metadata", "primary-preprint", "authoritative-book-record"}, f"unknown verification level for {key}")
         levels[level] = levels.get(level, 0) + 1
@@ -260,6 +268,10 @@ def audit() -> dict[str, Any]:
     souper = entries["Souper"]
     require(souper["doi"].casefold() == "10.48550/arxiv.1711.04422".casefold(), "Souper DOI regressed")
     require("Raimondas Sasnauskas" in souper["author"] and "John Regehr" in souper["author"], "Souper author list regressed")
+    green = entries["GreenThumb"]
+    require(green["doi"] == "10.1145/2892208.2892233", "GreenThumb DOI regressed")
+    require("Aditya V. Thakur" in green["author"] and "Dinakar Dhurjati" in green["author"],
+            "GreenThumb CC author list regressed")
     intel = entries["IntelSDM"]
     require(intel["year"] == "2026" and "Version 092" in intel["note"], "Intel manual is not the verified 2026 Version 092 record")
     smtlib = entries["SMTLIB"]
@@ -279,6 +291,7 @@ def audit() -> dict[str, Any]:
         "known_corrections_locked": [
             "Handbook second-edition author list",
             "Souper arXiv authors and DOI",
+            "GreenThumb CC 2016 authors and DOI",
             "Intel SDM Version 092 (2026)",
             "SMT-LIB Version 2.7 (2026)",
         ],

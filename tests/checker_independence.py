@@ -66,7 +66,7 @@ def audit(path: Path) -> dict[str, object]:
             "external_calls": sorted(external_calls),
         })
     return {
-        "file": str(path.relative_to(ROOT)),
+        "file": path.relative_to(ROOT).as_posix(),
         "imports": sorted(imports),
         "forbidden_imports": [],
         "dynamic_code_calls": [],
