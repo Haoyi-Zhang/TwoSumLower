@@ -32,6 +32,10 @@ jobs:
           export TWOSUM_OUTPUT="$out/replay"
           ulimit -v 2300000
           ulimit -t 2600
+          timeout --signal=TERM --kill-after=10s 110s bash -euo pipefail -c '
+            ulimit -t 105
+            python -B tests/regression_search_accounting.py
+          ' > "$out/search-accounting.log" 2>&1
           timeout --signal=TERM --kill-after=10s 2700s \
             python -B reproduce.py --mode full --output "$TWOSUM_OUTPUT" \
             > "$out/whole-run.log" 2>&1

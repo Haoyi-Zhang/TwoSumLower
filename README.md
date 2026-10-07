@@ -128,6 +128,8 @@ runs hardware mode nor retries the historical unrestricted solver searches.
 Raw output is uploaded even after failure. A workflow definition is not evidence
 that a remote run has occurred.
 
+`python -B tests/regression_search_accounting.py` runs three supplementary methods, explicitly invoked in scientific CI under a separate 110-second bound. Four isolated certificate changes attack a middle transition count, a pre-prune new-state count, cumulative seen states and a nonterminal zero-goal count. An independent literal first-step multiset also checks the distinction between generated transitions, newly seen states and the post-prune frontier. The original producer/checker are unchanged: this is additional coverage of already enforced fields, not a discovered acceptance defect, new minimum proof, larger grammar result or speed measurement. The frozen 46-search/206-total mutation inventory and all original negative/accepted-variant evidence remain unchanged.
+
 ## Evidence map
 
 | Evidence | Retained outcome | Main files |
