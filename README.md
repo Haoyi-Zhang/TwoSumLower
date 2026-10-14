@@ -122,6 +122,11 @@ a search-only replay does not report the combined strong-class minimum. Its
 observations are model-generated on the unchanged frozen pool; it executes no
 native instruction and leaves its fixtures beside the requested output.
 
+`python -B tests/test_bibliography_audit.py` runs two source-edition-sensitive
+metadata regressions in memory: Kahan's 1997 lecture-note date and the published
+POPL title of *Sound Compilation of Reals*. Scientific CI runs the same test;
+neither case changes the frozen bibliography or source ledger.
+
 The `scientific-checks.yml` workflow replays full mode from this flat artifact
 root on Ubuntu 24.04, with bounded stages and a bounded whole run. It neither
 runs hardware mode nor retries the historical unrestricted solver searches.

@@ -38,6 +38,7 @@ jobs:
           ' > "$out/search-accounting.log" 2>&1
           timeout --signal=TERM --kill-after=10s 110s bash -euo pipefail -c '
             ulimit -t 105
+            python -B tests/test_bibliography_audit.py
             python -B tests/checker_schema.py
             python -B -O tests/checker_schema.py
           ' > "$out/checker-schema.log" 2>&1

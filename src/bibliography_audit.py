@@ -251,7 +251,7 @@ def audit() -> dict[str, Any]:
         require(date(1900, 1, 1) <= verified_on <= date(2026, 12, 31),
                 f"implausible verification date for {key}")
         level = row["verification_level"]
-        require(level in {"official-current-document", "publisher-or-primary-metadata", "primary-preprint", "authoritative-book-record"}, f"unknown verification level for {key}")
+        require(level in {"official-current-document", "publisher-or-primary-metadata", "primary-preprint", "authoritative-book-record", "author-hosted-lecture-notes"}, f"unknown verification level for {key}")
         levels[level] = levels.get(level, 0) + 1
         group = row["calibration_group"]
         require(group in {"toplas", "foundational", "adjacent", "none"}, f"unknown calibration group for {key}")
@@ -289,6 +289,16 @@ def audit() -> dict[str, Any]:
     require(intel["year"] == "2026" and "Version 092" in intel["note"], "Intel manual is not the verified 2026 Version 092 record")
     smtlib = entries["SMTLIB"]
     require("Version 2.7" in smtlib["title"] and smtlib["year"] == "2026", "SMT-LIB record is not current")
+    kahan = entries["IEEEExceptions"]
+    require(kahan.get("author") == "William Kahan" and kahan.get("year") == "1997"
+            and kahan.get("url") == "https://people.eecs.berkeley.edu/~wkahan/ieee754status/IEEE754.PDF",
+            "Kahan 1997 author-dated lecture-note record regressed")
+    require(ledger["IEEEExceptions"]["verification_level"] == "author-hosted-lecture-notes",
+            "Kahan lecture notes mislabeled as an official standard")
+    darulova = entries["SoundCompilationReals"]
+    require(darulova.get("title") == "Sound Compilation of Reals"
+            and darulova.get("doi") == "10.1145/2535838.2535874",
+            "published POPL 2014 Darulova-Kuncak title/DOI regressed")
 
     return {
         "schema": "bibliography-audit-result-v1",
@@ -311,6 +321,8 @@ def audit() -> dict[str, Any]:
             "GreenThumb CC 2016 authors and DOI",
             "Intel SDM Version 092 (2026)",
             "SMT-LIB Version 2.7 (2026)",
+            "Kahan author-dated 1997 lecture notes",
+            "POPL 2014 published Sound Compilation of Reals title and DOI",
         ],
         "interpretation": (
             "Offline replay of a source-verified bibliography snapshot and ledger. It checks retained "

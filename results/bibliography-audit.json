@@ -21,7 +21,9 @@
     "Souper arXiv authors and DOI",
     "GreenThumb CC 2016 authors and DOI",
     "Intel SDM Version 092 (2026)",
-    "SMT-LIB Version 2.7 (2026)"
+    "SMT-LIB Version 2.7 (2026)",
+    "Kahan author-dated 1997 lecture notes",
+    "POPL 2014 published Sound Compilation of Reals title and DOI"
   ],
   "ledger_rows": 70,
   "passed": true,
@@ -30,8 +32,9 @@
   "unique_cited_keys": 70,
   "unknown_citations": [],
   "verification_levels": {
+    "author-hosted-lecture-notes": 1,
     "authoritative-book-record": 2,
-    "official-current-document": 5,
+    "official-current-document": 4,
     "primary-preprint": 3,
     "publisher-or-primary-metadata": 60
   }
