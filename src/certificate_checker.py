@@ -144,7 +144,9 @@ def verify(cert):
     require(cert.get('rounding')=='RNE' and cert.get('ftz') is False and cert.get('daz') is False,
             'rounding and gradual-underflow contract mismatch')
     require(cert.get('exception_masks')=='all-masked','unmasked traps are outside this proof')
-    require(cert.get('format')==[8,23],'this certificate targets binary32 only')
+    fmt=cert.get('format')
+    require(type(fmt) is list and len(fmt)==2 and all(type(x) is int for x in fmt) and fmt==[8,23],
+            'this certificate targets binary32 only')
     require(cert.get('entry')==['a','b','+0','+0','+0','+0'],'entry register contract mismatch')
     require(cert.get('upper_lanes')=='all-zero','upper-lane invariant mismatch')
     require(cert.get('observed_flags')==['invalid','divide-by-zero','overflow','underflow','inexact'],
@@ -179,12 +181,17 @@ def verify(cert):
         needed=force_negative_zero(term)
         require(needed is None or {'a','b'}<=needed,'negative-zero residual not excluded by the supplied argument')
         require(not zero_sign(term),'all-negative-zero case has a negative-zero residual')
-    require(cert.get('zero_case_s_word')==0x80000000 and zero_sign(candidate[0]),'zero sum witness differs')
-    require(cert.get('zero_case_e_word')==0,'zero residual witness differs')
-    require(cert.get('zero_case_final_flags')==list(range(32)),'sticky initial-flag extension differs')
+    s_word=cert.get('zero_case_s_word');e_word=cert.get('zero_case_e_word')
+    require(type(s_word) is int and s_word==0x80000000 and zero_sign(candidate[0]),'zero sum witness differs')
+    require(type(e_word) is int and e_word==0,'zero residual witness differs')
+    flags=cert.get('zero_case_final_flags')
+    require(type(flags) is list and all(type(x) is int for x in flags) and flags==list(range(32)),
+            'sticky initial-flag extension differs')
     rows=check_nan_cases(candidate,c_all_nodes)
     require(rows==check_nan_cases(target,t_nodes),'source NaN cases differ')
-    require(cert.get('nan_cases')==rows,'NaN provenance evidence is inconsistent')
+    nan_cases=cert.get('nan_cases')
+    require(type(nan_cases) is list and all(type(row) is dict and type(row.get('invalid')) is int for row in nan_cases)
+            and nan_cases==rows,'NaN provenance evidence is inconsistent')
     return dict(accepted=True,instructions=len(decoded),bytes=len(code),arithmetic_pairs=len(mapping),
                 nan_symbolic_patterns=len(rows),initial_flag_masks=32,arithmetic_zero_additions=len(c_all_nodes)-len(c_nodes),
                 scope='all binary32 input words under the explicitly defined masked Intel-SSE semantics',

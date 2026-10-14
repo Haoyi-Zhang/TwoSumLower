@@ -196,6 +196,8 @@ def decode_legacy(hex_text):
 
 
 def candidate_membership(candidate):
+    if type(candidate) is not dict or type(candidate.get("program_hex")) is not str:
+        raise ValueError("candidate must be an object with hexadecimal code")
     code, program = decode_legacy(candidate["program_hex"])
     regs = [X, Y, O, O, O, O]
     used = 0
@@ -221,19 +223,22 @@ def candidate_membership(candidate):
         else:
             raise ValueError("candidate identity step is outside the declared class")
     outputs = candidate["output_registers"]
-    if len(outputs) != 2 or any(type(x) is not int or not 0 <= x < 6 for x in outputs):
+    if type(outputs) is not list or len(outputs) != 2 or any(type(x) is not int or not 0 <= x < 6 for x in outputs):
         raise ValueError("invalid candidate outputs")
     if regs[outputs[0]] != OUTS[0] or norm(regs[outputs[1]]) != norm(OUTS[1]):
         raise ValueError("candidate does not reach the relaxed class goal")
     if used != FULL:
         raise ValueError("candidate does not consume all reference events")
     cost = [len(program), len(code)]
-    if candidate["cost"] != cost:
+    if type(candidate["cost"]) is not list or len(candidate["cost"]) != 2 or \
+            any(type(x) is not int for x in candidate["cost"]) or candidate["cost"] != cost:
         raise ValueError("candidate cost mismatch")
     return {"class_member": True, "instructions": cost[0], "bytes": cost[1]}
 
 
 def verify(document):
+    if type(document) is not dict:
+        raise ValueError("certificate must be a JSON object")
     if document.get("schema") != "exception-bijective-two-address-minimality-v1":
         raise ValueError("unexpected schema")
     expected_specs = [
@@ -258,7 +263,7 @@ def verify(document):
     )
     if document.get("scope") != expected_scope:
         raise ValueError("scope mismatch")
-    if document.get("reference_event_count") != len(EVENTS):
+    if type(document.get("reference_event_count")) is not int or document.get("reference_event_count") != len(EVENTS):
         raise ValueError("reference event count mismatch")
     expected_byte_argument = (
         "Every class member consumes all six four-byte arithmetic-event "
@@ -284,6 +289,17 @@ def verify(document):
         "duplicate-both-control": ["i:a", "i:a", "i:b", "i:b", "z", "z"],
     }
     for stored, (name, initial, limit) in zip(retained, expected_specs):
+        if type(stored) is not dict:
+            raise ValueError("retained variants must be objects")
+        for field in ("maximum_length", "unique_states_seen_including_feasibility_pruned",
+                      "minimum_relaxed_goal_length"):
+            if type(stored.get(field)) is not int:
+                raise ValueError(f"integer field required for {name}: {field}")
+        for field in ("frontier_counts", "goal_counts", "generated_transition_counts",
+                      "admitted_new_state_counts_before_feasibility_pruning"):
+            counts = stored.get(field)
+            if type(counts) is not list or any(type(count) is not int for count in counts):
+                raise ValueError(f"integer count array required for {name}: {field}")
         actual = replay(initial, limit)
         if stored.get("name") != name:
             raise ValueError("variant name mismatch")
@@ -301,12 +317,14 @@ def verify(document):
     if [x["minimum_relaxed_goal_length"] for x in replayed[1:]] != [7, 7, 6]:
         raise ValueError("duplicate-input controls did not discriminate")
     member = candidate_membership(document["candidate"])
-    if document.get("declared_entry_minimum_instructions") != 8:
+    if type(document.get("declared_entry_minimum_instructions")) is not int or \
+            document.get("declared_entry_minimum_instructions") != 8:
         raise ValueError("declared instruction minimum mismatch")
     # Six scalar arithmetic instructions are four bytes each; every admitted
     # auxiliary identity/copy instruction is at least three bytes.
     derived_bytes = 6 * 4 + 2 * 3
-    if document.get("declared_entry_minimum_bytes") != derived_bytes:
+    if type(document.get("declared_entry_minimum_bytes")) is not int or \
+            document.get("declared_entry_minimum_bytes") != derived_bytes:
         raise ValueError("declared byte minimum mismatch")
     if member["instructions"] != 8 or member["bytes"] != derived_bytes:
         raise ValueError("candidate does not attain the lexicographic lower bound")

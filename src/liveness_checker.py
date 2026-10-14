@@ -226,8 +226,8 @@ def verify(data: dict[str, Any]) -> dict[str, Any]:
     }
     reject(set(data) == expected_top, "unexpected top-level liveness fields")
     reject(data["schema"] == "two-address-liveness-barriers-v2", "wrong liveness schema")
-    reject(data["register_count"] == 6, "wrong register count")
-    reject(data["reference_arithmetic_events"] == 6, "wrong event count")
+    reject(type(data["register_count"]) is int and data["register_count"] == 6, "wrong register count")
+    reject(type(data["reference_arithmetic_events"]) is int and data["reference_arithmetic_events"] == 6, "wrong event count")
     reject(data["scope"] == "strong event-bijective six-register destructive two-address class only", "wrong scope")
     reject(
         data["relaxed_auxiliary"]
@@ -237,12 +237,15 @@ def verify(data: dict[str, Any]) -> dict[str, Any]:
 
     raw_events = data["forced_events"]
     reject(isinstance(raw_events, list) and len(raw_events) == 2, "two forced events required")
+    reject(all(type(event) is dict for event in raw_events), "forced events must be objects")
     events = tuple(raw_events)
     expected_events, forced_prefix = derive_forced_prefix()
     reject(events == expected_events, "forced-event or live-set mismatch")
 
     rows = data["variants"]
     reject(isinstance(rows, list) and len(rows) == 4, "four entry variants required")
+    reject(all(type(row) is dict for row in rows), "entry variants must be objects")
+    reject(all(type(row.get("name")) is str for row in rows), "entry variant names must be strings")
     reject({row.get("name") for row in rows} == set(EXPECTED_VARIANTS), "entry variants mismatch")
     minima: dict[str, int] = {}
     for row in rows:
@@ -256,6 +259,16 @@ def verify(data: dict[str, Any]) -> dict[str, Any]:
         }
         reject(set(row) == expected_fields, "unexpected variant fields")
         name = row["name"]
+        reject(type(row["initial_multiset"]) is list,
+               f"invalid initial multiset for {name}")
+        reject(type(row["witness"]) is list and all(type(step) is str for step in row["witness"]),
+               f"invalid witness for {name}")
+        reject(type(row["terminal_multiset"]) is list and
+               all(type(value) is str for value in row["terminal_multiset"]),
+               f"invalid terminal multiset for {name}")
+        reject(type(row["expected_minimum_relaxed_auxiliaries"]) is int and
+               type(row["minimum_relaxed_auxiliaries"]) is int,
+               f"minimum must be an integer for {name}")
         initial = canon(row["initial_multiset"])
         reject(initial == EXPECTED_VARIANTS[name], f"wrong initial multiset for {name}")
         minimum = minimum_copies(initial, events)
@@ -272,8 +285,10 @@ def verify(data: dict[str, Any]) -> dict[str, Any]:
         "duplicate-b-control": 1,
         "duplicate-both-control": 0,
     }, "control minima do not match 2/1/1/0")
-    reject(data["declared_entry_auxiliary_lower_bound"] == 2, "wrong auxiliary lower bound")
-    reject(data["declared_entry_instruction_lower_bound"] == 8, "wrong instruction lower bound")
+    reject(type(data["declared_entry_auxiliary_lower_bound"]) is int and
+           data["declared_entry_auxiliary_lower_bound"] == 2, "wrong auxiliary lower bound")
+    reject(type(data["declared_entry_instruction_lower_bound"]) is int and
+           data["declared_entry_instruction_lower_bound"] == 8, "wrong instruction lower bound")
     reject(
         data["declared_entry_instruction_lower_bound"]
         == data["reference_arithmetic_events"] + data["declared_entry_auxiliary_lower_bound"],
