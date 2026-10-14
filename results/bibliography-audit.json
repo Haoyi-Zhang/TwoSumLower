@@ -13,6 +13,10 @@
   },
   "interpretation": "Offline replay of a source-verified bibliography snapshot and ledger. It checks retained metadata, identifiers, citation coverage, and calibration counts; it does not perform live DOI resolution. Inside the complete project it also requires exact agreement with the paper sources.",
   "known_corrections_locked": [
+    "Boldo-Graillat-Muller TOMS Article 4, 14 pages",
+    "PLDI 2021 RLibm published title and pages 359-374",
+    "POPL 2022 RLibm-All two-author byline and Article 3, 28 pages",
+    "CAV 2015 published synthesis title in SMT",
     "Handbook second-edition author list",
     "Souper arXiv authors and DOI",
     "GreenThumb CC 2016 authors and DOI",
