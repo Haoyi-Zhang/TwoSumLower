@@ -1,4 +1,4 @@
-"""Regression guards for two source-edition-sensitive bibliography records.
+"""Regression guards for source-edition-sensitive bibliography records.
 
 Mutations are in memory. Matching ledger mutations bypass generic snapshot/ledger
 agreement, so each case reaches the record-specific guard in standalone replay.
@@ -53,6 +53,24 @@ class BibliographyHighRiskRegression(unittest.TestCase):
         self.assert_record_rejected(
             "SoundCompilationReals", "title", "On Sound Compilation of Reals",
             "published POPL 2014 Darulova-Kuncak title/DOI regressed",
+        )
+
+    def test_intel_rejects_unexamined_previous_edition(self) -> None:
+        self.assert_record_rejected(
+            "IntelSDM", "note", "Version 092; official manual set updated August 19, 2026",
+            "Intel manual is not the examined 2026 Version 093 record",
+        )
+
+    def test_intel_rejects_missing_body_locator(self) -> None:
+        self.assert_record_rejected(
+            "IntelSDM", "notes", "Version 093; September 2026",
+            "Intel manual fixed body URLs or claim-bearing locators are missing",
+        )
+
+    def test_armed_cats_rejects_changed_title_spelling(self) -> None:
+        self.assert_record_rejected(
+            "ArmedCats", "title", "Armed Cats: Formal Concurrency Modeling at Arm",
+            "published Armed Cats title spelling regressed",
         )
 
 

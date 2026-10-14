@@ -286,7 +286,13 @@ def audit() -> dict[str, Any]:
     require("Aditya V. Thakur" in green["author"] and "Dinakar Dhurjati" in green["author"],
             "GreenThumb CC author list regressed")
     intel = entries["IntelSDM"]
-    require(intel["year"] == "2026" and "Version 092" in intel["note"], "Intel manual is not the verified 2026 Version 092 record")
+    require(intel["year"] == "2026" and intel["note"] == "Version 093, September 2026",
+            "Intel manual is not the examined 2026 Version 093 record")
+    intel_notes = ledger["IntelSDM"]["notes"]
+    require(all(locator in intel_notes for locator in
+                ("253665-093-sdm-vol-1.pdf", "325383-093-sdm-vol-2abcd.pdf",
+                 "Table D-17", "Table 3-8", "MINSS", "MAXSS")),
+            "Intel manual fixed body URLs or claim-bearing locators are missing")
     smtlib = entries["SMTLIB"]
     require("Version 2.7" in smtlib["title"] and smtlib["year"] == "2026", "SMT-LIB record is not current")
     kahan = entries["IEEEExceptions"]
@@ -299,6 +305,8 @@ def audit() -> dict[str, Any]:
     require(darulova.get("title") == "Sound Compilation of Reals"
             and darulova.get("doi") == "10.1145/2535838.2535874",
             "published POPL 2014 Darulova-Kuncak title/DOI regressed")
+    require(entries["ArmedCats"].get("title") == "Armed Cats: Formal Concurrency Modelling at Arm",
+            "published Armed Cats title spelling regressed")
 
     return {
         "schema": "bibliography-audit-result-v1",
@@ -319,10 +327,11 @@ def audit() -> dict[str, Any]:
             "Handbook second-edition author list",
             "Souper arXiv authors and DOI",
             "GreenThumb CC 2016 authors and DOI",
-            "Intel SDM Version 092 (2026)",
+            "Intel SDM Version 093 (September 2026), examined Volumes 1 and 2",
             "SMT-LIB Version 2.7 (2026)",
             "Kahan author-dated 1997 lecture notes",
             "POPL 2014 published Sound Compilation of Reals title and DOI",
+            "Armed Cats published Modelling subtitle",
         ],
         "interpretation": (
             "Offline replay of a source-verified bibliography snapshot and ledger. It checks retained "

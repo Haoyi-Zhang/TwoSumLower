@@ -20,10 +20,11 @@
     "Handbook second-edition author list",
     "Souper arXiv authors and DOI",
     "GreenThumb CC 2016 authors and DOI",
-    "Intel SDM Version 092 (2026)",
+    "Intel SDM Version 093 (September 2026), examined Volumes 1 and 2",
     "SMT-LIB Version 2.7 (2026)",
     "Kahan author-dated 1997 lecture notes",
-    "POPL 2014 published Sound Compilation of Reals title and DOI"
+    "POPL 2014 published Sound Compilation of Reals title and DOI",
+    "Armed Cats published Modelling subtitle"
   ],
   "ledger_rows": 70,
   "passed": true,
