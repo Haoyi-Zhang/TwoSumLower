@@ -187,12 +187,13 @@
       "year": "2009"
     },
     "BoldoGraillatMuller2017": {
-      "articleno": "1",
+      "articleno": "4",
       "author": "Sylvie Boldo and Stef Graillat and Jean-Michel Muller",
       "doi": "10.1145/3054947",
       "entry_type": "article",
       "journal": "ACM Transactions on Mathematical Software",
       "number": "1",
+      "numpages": "14",
       "title": "On the Robustness of the 2Sum and Fast2Sum Algorithms",
       "volume": "44",
       "year": "2017"
@@ -225,7 +226,7 @@
       "entry_type": "inproceedings",
       "pages": "198--216",
       "publisher": "Springer",
-      "title": "Counterexample-Guided Quantifier Instantiation for Synthesis in {CVC4}",
+      "title": "Counterexample-Guided Quantifier Instantiation for Synthesis in {SMT}",
       "year": "2015"
     },
     "CertificateChecking": {
@@ -568,19 +569,21 @@
       "booktitle": "Proceedings of the 42nd ACM SIGPLAN International Conference on Programming Language Design and Implementation",
       "doi": "10.1145/3453483.3454049",
       "entry_type": "inproceedings",
-      "pages": "288--302",
-      "title": "{RLibm}: A Correctly Rounded Math Library for Multiple Floating-Point Representations",
+      "pages": "359--374",
+      "title": "High Performance Correctly Rounded Math Libraries for 32-Bit Floating Point Representations",
       "year": "2021"
     },
     "RLibmAll": {
-      "author": "Jay P. Lim and Mridul Aanjaneya and John Gustafson and Santosh Nagarakatte",
+      "author": "Jay P. Lim and Santosh Nagarakatte",
       "doi": "10.1145/3498664",
       "entry_type": "article",
       "journal": "Proc. ACM Program. Lang.",
       "number": "POPL",
-      "title": "{RLibm-All}: A Novel Polynomial Approximation Method to Produce Correctly Rounded Results for Multiple Representations and Rounding Modes",
+      "title": "One Polynomial Approximation to Produce Correctly Rounded Results of an Elementary Function for Multiple Representations and Rounding Modes",
       "volume": "6",
-      "year": "2022"
+      "year": "2022",
+      "articleno": "3",
+      "numpages": "28"
     },
     "ReproducibleResearch": {
       "author": "Christian Collberg and Todd Proebsting",

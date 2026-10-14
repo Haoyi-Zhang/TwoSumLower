@@ -260,6 +260,19 @@ def audit() -> dict[str, Any]:
     require(groups == {"toplas": 12, "foundational": 5, "adjacent": 5, "none": 48}, f"calibration counts mismatch: {groups}")
 
     # High-risk records that were corrected after source verification.
+    boldo = entries["BoldoGraillatMuller2017"]
+    require(boldo.get("articleno") == "4" and boldo.get("numpages") == "14",
+            "Boldo-Graillat-Muller Article 4 / 14-page metadata regressed")
+    rlibm = entries["RLibm"]
+    require(rlibm.get("pages") == "359--374"
+            and rlibm.get("title") == "High Performance Correctly Rounded Math Libraries for 32-Bit Floating Point Representations",
+            "PLDI 2021 RLibm title or pages regressed")
+    rlibmall = entries["RLibmAll"]
+    require(rlibmall.get("author") == "Jay P. Lim and Santosh Nagarakatte"
+            and rlibmall.get("articleno") == "3" and rlibmall.get("numpages") == "28",
+            "POPL 2022 RLibm-All authors or article metadata regressed")
+    require(entries["CVC4SyGuS"].get("title") == "Counterexample-Guided Quantifier Instantiation for Synthesis in {SMT}",
+            "CAV 2015 published synthesis title regressed")
     handbook = entries["MullerHandbook"]["author"]
     for author in ("Nicolas Brunie", "Mioara Joldes", "Serge Torres"):
         require(author in handbook, f"correct Handbook author missing: {author}")
@@ -289,6 +302,10 @@ def audit() -> dict[str, Any]:
         "verification_levels": levels,
         "calibration_counts": groups,
         "known_corrections_locked": [
+            "Boldo-Graillat-Muller TOMS Article 4, 14 pages",
+            "PLDI 2021 RLibm published title and pages 359-374",
+            "POPL 2022 RLibm-All two-author byline and Article 3, 28 pages",
+            "CAV 2015 published synthesis title in SMT",
             "Handbook second-edition author list",
             "Souper arXiv authors and DOI",
             "GreenThumb CC 2016 authors and DOI",
