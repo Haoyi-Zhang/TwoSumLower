@@ -60,7 +60,7 @@ lower-bound paths cross-check preservation cost without using an SMT verdict.
 
 ## Reproduction
 
-From a fresh extraction, enter this repository root. Use Python 3 with assertions
+From a fresh extraction, enter this repository root. Use Python 3.12 (the CI version) with assertions
 enabled, a Linux `/proc`, GNU `as`, and `objcopy`. Quick, full, and solver-control
 modes use no network, account, GPU, model API, or target-code execution. A local Z3
 library is optional and needed only for the fixed solver controls. The separate
@@ -196,7 +196,7 @@ states the research scope; the retained provenance records are in `../paper/prov
   assembly comparison, and the optional host-conformance driver.
 - `inputs/`: exact frozen diagnostic and historical solver inputs.
 - `results/`: retained raw JSON and resource records.
-- `REVIEWER-GUIDE.md`: concise trust map, nine-perspective self-audit, skeptical-review questions, and exact external-use holds.
+- `REVIEWER-GUIDE.md`: replay commands, claim-critical trust map, and technical reviewer questions.
 - `claim_evidence_ledger.csv`: claim-to-evidence mapping.
 - `reference_snapshot.json`: exact parsed bibliography metadata and cited-key set needed for standalone replay.
 - `reference_audit.csv`: one-row-per-citation metadata, identifier, verification, and calibration ledger.
