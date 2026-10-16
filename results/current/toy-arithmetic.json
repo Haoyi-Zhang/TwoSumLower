@@ -1,0 +1,17 @@
+{
+  "checks": 196608,
+  "counts": {
+    "ADDSS": 65536,
+    "MULSS": 65536,
+    "SUBSS": 65536
+  },
+  "disagreement_count": 0,
+  "first_disagreements": [],
+  "format": {
+    "exponent_bits": 4,
+    "fraction_bits": 3,
+    "words": 256
+  },
+  "group": "arithmetic",
+  "interpretation": "complete pairwise reduced-format cross-check, not a binary32 proof"
+}

@@ -1,0 +1,12 @@
+{
+  "accepted": true,
+  "instructions": 8,
+  "bytes": 30,
+  "arithmetic_pairs": 6,
+  "nan_symbolic_patterns": 8,
+  "initial_flag_masks": 32,
+  "arithmetic_zero_additions": 0,
+  "scope": "all binary32 input words under the explicitly defined masked Intel-SSE semantics",
+  "result": "equivalence upper-bound certificate; NOT a minimum-cost certificate",
+  "trust": "symbolic checker plus mathematical soundness lemmas; not a proof-assistant kernel or external review"
+}

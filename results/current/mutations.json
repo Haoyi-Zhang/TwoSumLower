@@ -1,0 +1,2972 @@
+{
+  "accepted": 4,
+  "categories": {
+    "cost-evidence": 32,
+    "flag-evidence": 32,
+    "opcode": 32,
+    "result-evidence": 32
+  },
+  "classification_counts": {
+    "corrupted evidence rejected": 96,
+    "proved equivalent by restricted checker": 4,
+    "refuted by concrete case": 28
+  },
+  "interpretation": "proof rejection alone does not establish program inequivalence; survivors and unclassified cases are retained",
+  "opcode_diagnostic_evaluations": 32000,
+  "rejected": 124,
+  "rows": [
+    {
+      "accepted": false,
+      "category": "result-evidence",
+      "classification": "corrupted evidence rejected",
+      "id": "R01",
+      "rejection": "zero residual witness differs"
+    },
+    {
+      "accepted": false,
+      "category": "result-evidence",
+      "classification": "corrupted evidence rejected",
+      "id": "R02",
+      "rejection": "zero residual witness differs"
+    },
+    {
+      "accepted": false,
+      "category": "result-evidence",
+      "classification": "corrupted evidence rejected",
+      "id": "R03",
+      "rejection": "zero residual witness differs"
+    },
+    {
+      "accepted": false,
+      "category": "result-evidence",
+      "classification": "corrupted evidence rejected",
+      "id": "R04",
+      "rejection": "zero residual witness differs"
+    },
+    {
+      "accepted": false,
+      "category": "result-evidence",
+      "classification": "corrupted evidence rejected",
+      "id": "R05",
+      "rejection": "zero residual witness differs"
+    },
+    {
+      "accepted": false,
+      "category": "result-evidence",
+      "classification": "corrupted evidence rejected",
+      "id": "R06",
+      "rejection": "zero residual witness differs"
+    },
+    {
+      "accepted": false,
+      "category": "result-evidence",
+      "classification": "corrupted evidence rejected",
+      "id": "R07",
+      "rejection": "zero residual witness differs"
+    },
+    {
+      "accepted": false,
+      "category": "result-evidence",
+      "classification": "corrupted evidence rejected",
+      "id": "R08",
+      "rejection": "zero residual witness differs"
+    },
+    {
+      "accepted": false,
+      "category": "result-evidence",
+      "classification": "corrupted evidence rejected",
+      "id": "R09",
+      "rejection": "zero residual witness differs"
+    },
+    {
+      "accepted": false,
+      "category": "result-evidence",
+      "classification": "corrupted evidence rejected",
+      "id": "R10",
+      "rejection": "zero residual witness differs"
+    },
+    {
+      "accepted": false,
+      "category": "result-evidence",
+      "classification": "corrupted evidence rejected",
+      "id": "R11",
+      "rejection": "zero residual witness differs"
+    },
+    {
+      "accepted": false,
+      "category": "result-evidence",
+      "classification": "corrupted evidence rejected",
+      "id": "R12",
+      "rejection": "zero residual witness differs"
+    },
+    {
+      "accepted": false,
+      "category": "result-evidence",
+      "classification": "corrupted evidence rejected",
+      "id": "R13",
+      "rejection": "zero residual witness differs"
+    },
+    {
+      "accepted": false,
+      "category": "result-evidence",
+      "classification": "corrupted evidence rejected",
+      "id": "R14",
+      "rejection": "zero residual witness differs"
+    },
+    {
+      "accepted": false,
+      "category": "result-evidence",
+      "classification": "corrupted evidence rejected",
+      "id": "R15",
+      "rejection": "zero residual witness differs"
+    },
+    {
+      "accepted": false,
+      "category": "result-evidence",
+      "classification": "corrupted evidence rejected",
+      "id": "R16",
+      "rejection": "zero residual witness differs"
+    },
+    {
+      "accepted": false,
+      "category": "result-evidence",
+      "classification": "corrupted evidence rejected",
+      "id": "R17",
+      "rejection": "zero residual witness differs"
+    },
+    {
+      "accepted": false,
+      "category": "result-evidence",
+      "classification": "corrupted evidence rejected",
+      "id": "R18",
+      "rejection": "zero residual witness differs"
+    },
+    {
+      "accepted": false,
+      "category": "result-evidence",
+      "classification": "corrupted evidence rejected",
+      "id": "R19",
+      "rejection": "zero residual witness differs"
+    },
+    {
+      "accepted": false,
+      "category": "result-evidence",
+      "classification": "corrupted evidence rejected",
+      "id": "R20",
+      "rejection": "zero residual witness differs"
+    },
+    {
+      "accepted": false,
+      "category": "result-evidence",
+      "classification": "corrupted evidence rejected",
+      "id": "R21",
+      "rejection": "zero residual witness differs"
+    },
+    {
+      "accepted": false,
+      "category": "result-evidence",
+      "classification": "corrupted evidence rejected",
+      "id": "R22",
+      "rejection": "zero residual witness differs"
+    },
+    {
+      "accepted": false,
+      "category": "result-evidence",
+      "classification": "corrupted evidence rejected",
+      "id": "R23",
+      "rejection": "zero residual witness differs"
+    },
+    {
+      "accepted": false,
+      "category": "result-evidence",
+      "classification": "corrupted evidence rejected",
+      "id": "R24",
+      "rejection": "zero residual witness differs"
+    },
+    {
+      "accepted": false,
+      "category": "result-evidence",
+      "classification": "corrupted evidence rejected",
+      "id": "R25",
+      "rejection": "zero residual witness differs"
+    },
+    {
+      "accepted": false,
+      "category": "result-evidence",
+      "classification": "corrupted evidence rejected",
+      "id": "R26",
+      "rejection": "zero residual witness differs"
+    },
+    {
+      "accepted": false,
+      "category": "result-evidence",
+      "classification": "corrupted evidence rejected",
+      "id": "R27",
+      "rejection": "zero residual witness differs"
+    },
+    {
+      "accepted": false,
+      "category": "result-evidence",
+      "classification": "corrupted evidence rejected",
+      "id": "R28",
+      "rejection": "zero residual witness differs"
+    },
+    {
+      "accepted": false,
+      "category": "result-evidence",
+      "classification": "corrupted evidence rejected",
+      "id": "R29",
+      "rejection": "zero residual witness differs"
+    },
+    {
+      "accepted": false,
+      "category": "result-evidence",
+      "classification": "corrupted evidence rejected",
+      "id": "R30",
+      "rejection": "zero residual witness differs"
+    },
+    {
+      "accepted": false,
+      "category": "result-evidence",
+      "classification": "corrupted evidence rejected",
+      "id": "R31",
+      "rejection": "zero residual witness differs"
+    },
+    {
+      "accepted": false,
+      "category": "result-evidence",
+      "classification": "corrupted evidence rejected",
+      "id": "R32",
+      "rejection": "zero residual witness differs"
+    },
+    {
+      "accepted": false,
+      "category": "flag-evidence",
+      "classification": "corrupted evidence rejected",
+      "id": "F01",
+      "rejection": "sticky initial-flag extension differs"
+    },
+    {
+      "accepted": false,
+      "category": "flag-evidence",
+      "classification": "corrupted evidence rejected",
+      "id": "F02",
+      "rejection": "sticky initial-flag extension differs"
+    },
+    {
+      "accepted": false,
+      "category": "flag-evidence",
+      "classification": "corrupted evidence rejected",
+      "id": "F03",
+      "rejection": "sticky initial-flag extension differs"
+    },
+    {
+      "accepted": false,
+      "category": "flag-evidence",
+      "classification": "corrupted evidence rejected",
+      "id": "F04",
+      "rejection": "sticky initial-flag extension differs"
+    },
+    {
+      "accepted": false,
+      "category": "flag-evidence",
+      "classification": "corrupted evidence rejected",
+      "id": "F05",
+      "rejection": "sticky initial-flag extension differs"
+    },
+    {
+      "accepted": false,
+      "category": "flag-evidence",
+      "classification": "corrupted evidence rejected",
+      "id": "F06",
+      "rejection": "sticky initial-flag extension differs"
+    },
+    {
+      "accepted": false,
+      "category": "flag-evidence",
+      "classification": "corrupted evidence rejected",
+      "id": "F07",
+      "rejection": "sticky initial-flag extension differs"
+    },
+    {
+      "accepted": false,
+      "category": "flag-evidence",
+      "classification": "corrupted evidence rejected",
+      "id": "F08",
+      "rejection": "sticky initial-flag extension differs"
+    },
+    {
+      "accepted": false,
+      "category": "flag-evidence",
+      "classification": "corrupted evidence rejected",
+      "id": "F09",
+      "rejection": "sticky initial-flag extension differs"
+    },
+    {
+      "accepted": false,
+      "category": "flag-evidence",
+      "classification": "corrupted evidence rejected",
+      "id": "F10",
+      "rejection": "sticky initial-flag extension differs"
+    },
+    {
+      "accepted": false,
+      "category": "flag-evidence",
+      "classification": "corrupted evidence rejected",
+      "id": "F11",
+      "rejection": "sticky initial-flag extension differs"
+    },
+    {
+      "accepted": false,
+      "category": "flag-evidence",
+      "classification": "corrupted evidence rejected",
+      "id": "F12",
+      "rejection": "sticky initial-flag extension differs"
+    },
+    {
+      "accepted": false,
+      "category": "flag-evidence",
+      "classification": "corrupted evidence rejected",
+      "id": "F13",
+      "rejection": "sticky initial-flag extension differs"
+    },
+    {
+      "accepted": false,
+      "category": "flag-evidence",
+      "classification": "corrupted evidence rejected",
+      "id": "F14",
+      "rejection": "sticky initial-flag extension differs"
+    },
+    {
+      "accepted": false,
+      "category": "flag-evidence",
+      "classification": "corrupted evidence rejected",
+      "id": "F15",
+      "rejection": "sticky initial-flag extension differs"
+    },
+    {
+      "accepted": false,
+      "category": "flag-evidence",
+      "classification": "corrupted evidence rejected",
+      "id": "F16",
+      "rejection": "sticky initial-flag extension differs"
+    },
+    {
+      "accepted": false,
+      "category": "flag-evidence",
+      "classification": "corrupted evidence rejected",
+      "id": "F17",
+      "rejection": "sticky initial-flag extension differs"
+    },
+    {
+      "accepted": false,
+      "category": "flag-evidence",
+      "classification": "corrupted evidence rejected",
+      "id": "F18",
+      "rejection": "sticky initial-flag extension differs"
+    },
+    {
+      "accepted": false,
+      "category": "flag-evidence",
+      "classification": "corrupted evidence rejected",
+      "id": "F19",
+      "rejection": "sticky initial-flag extension differs"
+    },
+    {
+      "accepted": false,
+      "category": "flag-evidence",
+      "classification": "corrupted evidence rejected",
+      "id": "F20",
+      "rejection": "sticky initial-flag extension differs"
+    },
+    {
+      "accepted": false,
+      "category": "flag-evidence",
+      "classification": "corrupted evidence rejected",
+      "id": "F21",
+      "rejection": "sticky initial-flag extension differs"
+    },
+    {
+      "accepted": false,
+      "category": "flag-evidence",
+      "classification": "corrupted evidence rejected",
+      "id": "F22",
+      "rejection": "sticky initial-flag extension differs"
+    },
+    {
+      "accepted": false,
+      "category": "flag-evidence",
+      "classification": "corrupted evidence rejected",
+      "id": "F23",
+      "rejection": "sticky initial-flag extension differs"
+    },
+    {
+      "accepted": false,
+      "category": "flag-evidence",
+      "classification": "corrupted evidence rejected",
+      "id": "F24",
+      "rejection": "sticky initial-flag extension differs"
+    },
+    {
+      "accepted": false,
+      "category": "flag-evidence",
+      "classification": "corrupted evidence rejected",
+      "id": "F25",
+      "rejection": "sticky initial-flag extension differs"
+    },
+    {
+      "accepted": false,
+      "category": "flag-evidence",
+      "classification": "corrupted evidence rejected",
+      "id": "F26",
+      "rejection": "sticky initial-flag extension differs"
+    },
+    {
+      "accepted": false,
+      "category": "flag-evidence",
+      "classification": "corrupted evidence rejected",
+      "id": "F27",
+      "rejection": "sticky initial-flag extension differs"
+    },
+    {
+      "accepted": false,
+      "category": "flag-evidence",
+      "classification": "corrupted evidence rejected",
+      "id": "F28",
+      "rejection": "sticky initial-flag extension differs"
+    },
+    {
+      "accepted": false,
+      "category": "flag-evidence",
+      "classification": "corrupted evidence rejected",
+      "id": "F29",
+      "rejection": "sticky initial-flag extension differs"
+    },
+    {
+      "accepted": false,
+      "category": "flag-evidence",
+      "classification": "corrupted evidence rejected",
+      "id": "F30",
+      "rejection": "sticky initial-flag extension differs"
+    },
+    {
+      "accepted": false,
+      "category": "flag-evidence",
+      "classification": "corrupted evidence rejected",
+      "id": "F31",
+      "rejection": "sticky initial-flag extension differs"
+    },
+    {
+      "accepted": false,
+      "category": "flag-evidence",
+      "classification": "corrupted evidence rejected",
+      "id": "F32",
+      "rejection": "sticky initial-flag extension differs"
+    },
+    {
+      "accepted": true,
+      "category": "opcode",
+      "classification": "proved equivalent by restricted checker",
+      "first_counterexample": null,
+      "id": "O01",
+      "mismatches": 0,
+      "program": [
+        [
+          "XORPS",
+          2,
+          1,
+          0
+        ],
+        [
+          "ORPS",
+          3,
+          0,
+          0
+        ],
+        [
+          "ADDSS",
+          0,
+          1,
+          0
+        ],
+        [
+          "SUBSS",
+          2,
+          0,
+          0
+        ],
+        [
+          "ADDSS",
+          3,
+          2,
+          0
+        ],
+        [
+          "ADDSS",
+          2,
+          0,
+          0
+        ],
+        [
+          "SUBSS",
+          1,
+          2,
+          0
+        ],
+        [
+          "ADDSS",
+          3,
+          1,
+          0
+        ]
+      ],
+      "rejection": null
+    },
+    {
+      "accepted": true,
+      "category": "opcode",
+      "classification": "proved equivalent by restricted checker",
+      "first_counterexample": null,
+      "id": "O02",
+      "mismatches": 0,
+      "program": [
+        [
+          "ADDSS",
+          2,
+          1,
+          0
+        ],
+        [
+          "ORPS",
+          3,
+          0,
+          0
+        ],
+        [
+          "ADDSS",
+          0,
+          1,
+          0
+        ],
+        [
+          "SUBSS",
+          2,
+          0,
+          0
+        ],
+        [
+          "ADDSS",
+          3,
+          2,
+          0
+        ],
+        [
+          "ADDSS",
+          2,
+          0,
+          0
+        ],
+        [
+          "SUBSS",
+          1,
+          2,
+          0
+        ],
+        [
+          "ADDSS",
+          3,
+          1,
+          0
+        ]
+      ],
+      "rejection": null
+    },
+    {
+      "accepted": false,
+      "category": "opcode",
+      "classification": "refuted by concrete case",
+      "first_counterexample": {
+        "a": "0x00000000",
+        "b": "0x7f7fffff",
+        "case": "C0013",
+        "observed": [
+          2139095039,
+          4290772992,
+          21
+        ],
+        "reference": [
+          2139095039,
+          0,
+          0
+        ]
+      },
+      "id": "O03",
+      "mismatches": 324,
+      "program": [
+        [
+          "SUBSS",
+          2,
+          1,
+          0
+        ],
+        [
+          "ORPS",
+          3,
+          0,
+          0
+        ],
+        [
+          "ADDSS",
+          0,
+          1,
+          0
+        ],
+        [
+          "SUBSS",
+          2,
+          0,
+          0
+        ],
+        [
+          "ADDSS",
+          3,
+          2,
+          0
+        ],
+        [
+          "ADDSS",
+          2,
+          0,
+          0
+        ],
+        [
+          "SUBSS",
+          1,
+          2,
+          0
+        ],
+        [
+          "ADDSS",
+          3,
+          1,
+          0
+        ]
+      ],
+      "rejection": "rounded-value identity does not replay"
+    },
+    {
+      "accepted": false,
+      "category": "opcode",
+      "classification": "refuted by concrete case",
+      "first_counterexample": {
+        "a": "0x00000001",
+        "b": "0x3f800000",
+        "case": "C0057",
+        "observed": [
+          1065353216,
+          0,
+          16
+        ],
+        "reference": [
+          1065353216,
+          1,
+          16
+        ]
+      },
+      "id": "O04",
+      "mismatches": 281,
+      "program": [
+        [
+          "ANDPS",
+          2,
+          1,
+          0
+        ],
+        [
+          "ORPS",
+          3,
+          0,
+          0
+        ],
+        [
+          "ADDSS",
+          0,
+          1,
+          0
+        ],
+        [
+          "SUBSS",
+          2,
+          0,
+          0
+        ],
+        [
+          "ADDSS",
+          3,
+          2,
+          0
+        ],
+        [
+          "ADDSS",
+          2,
+          0,
+          0
+        ],
+        [
+          "SUBSS",
+          1,
+          2,
+          0
+        ],
+        [
+          "ADDSS",
+          3,
+          1,
+          0
+        ]
+      ],
+      "rejection": "rounded-value identity does not replay"
+    },
+    {
+      "accepted": true,
+      "category": "opcode",
+      "classification": "proved equivalent by restricted checker",
+      "first_counterexample": null,
+      "id": "O05",
+      "mismatches": 0,
+      "program": [
+        [
+          "ORPS",
+          2,
+          1,
+          0
+        ],
+        [
+          "XORPS",
+          3,
+          0,
+          0
+        ],
+        [
+          "ADDSS",
+          0,
+          1,
+          0
+        ],
+        [
+          "SUBSS",
+          2,
+          0,
+          0
+        ],
+        [
+          "ADDSS",
+          3,
+          2,
+          0
+        ],
+        [
+          "ADDSS",
+          2,
+          0,
+          0
+        ],
+        [
+          "SUBSS",
+          1,
+          2,
+          0
+        ],
+        [
+          "ADDSS",
+          3,
+          1,
+          0
+        ]
+      ],
+      "rejection": null
+    },
+    {
+      "accepted": true,
+      "category": "opcode",
+      "classification": "proved equivalent by restricted checker",
+      "first_counterexample": null,
+      "id": "O06",
+      "mismatches": 0,
+      "program": [
+        [
+          "ORPS",
+          2,
+          1,
+          0
+        ],
+        [
+          "ADDSS",
+          3,
+          0,
+          0
+        ],
+        [
+          "ADDSS",
+          0,
+          1,
+          0
+        ],
+        [
+          "SUBSS",
+          2,
+          0,
+          0
+        ],
+        [
+          "ADDSS",
+          3,
+          2,
+          0
+        ],
+        [
+          "ADDSS",
+          2,
+          0,
+          0
+        ],
+        [
+          "SUBSS",
+          1,
+          2,
+          0
+        ],
+        [
+          "ADDSS",
+          3,
+          1,
+          0
+        ]
+      ],
+      "rejection": null
+    },
+    {
+      "accepted": false,
+      "category": "opcode",
+      "classification": "refuted by concrete case",
+      "first_counterexample": {
+        "a": "0x00000001",
+        "b": "0x00000000",
+        "case": "C0049",
+        "observed": [
+          1,
+          2147483650,
+          0
+        ],
+        "reference": [
+          1,
+          0,
+          0
+        ]
+      },
+      "id": "O07",
+      "mismatches": 700,
+      "program": [
+        [
+          "ORPS",
+          2,
+          1,
+          0
+        ],
+        [
+          "SUBSS",
+          3,
+          0,
+          0
+        ],
+        [
+          "ADDSS",
+          0,
+          1,
+          0
+        ],
+        [
+          "SUBSS",
+          2,
+          0,
+          0
+        ],
+        [
+          "ADDSS",
+          3,
+          2,
+          0
+        ],
+        [
+          "ADDSS",
+          2,
+          0,
+          0
+        ],
+        [
+          "SUBSS",
+          1,
+          2,
+          0
+        ],
+        [
+          "ADDSS",
+          3,
+          1,
+          0
+        ]
+      ],
+      "rejection": "rounded-value identity does not replay"
+    },
+    {
+      "accepted": false,
+      "category": "opcode",
+      "classification": "refuted by concrete case",
+      "first_counterexample": {
+        "a": "0x00000001",
+        "b": "0x00000000",
+        "case": "C0049",
+        "observed": [
+          1,
+          2147483649,
+          0
+        ],
+        "reference": [
+          1,
+          0,
+          0
+        ]
+      },
+      "id": "O08",
+      "mismatches": 708,
+      "program": [
+        [
+          "ORPS",
+          2,
+          1,
+          0
+        ],
+        [
+          "ANDPS",
+          3,
+          0,
+          0
+        ],
+        [
+          "ADDSS",
+          0,
+          1,
+          0
+        ],
+        [
+          "SUBSS",
+          2,
+          0,
+          0
+        ],
+        [
+          "ADDSS",
+          3,
+          2,
+          0
+        ],
+        [
+          "ADDSS",
+          2,
+          0,
+          0
+        ],
+        [
+          "SUBSS",
+          1,
+          2,
+          0
+        ],
+        [
+          "ADDSS",
+          3,
+          1,
+          0
+        ]
+      ],
+      "rejection": "rounded-value identity does not replay"
+    },
+    {
+      "accepted": false,
+      "category": "opcode",
+      "classification": "refuted by concrete case",
+      "first_counterexample": {
+        "a": "0x00000000",
+        "b": "0x00000001",
+        "case": "C0003",
+        "observed": [
+          2147483649,
+          2,
+          0
+        ],
+        "reference": [
+          1,
+          0,
+          0
+        ]
+      },
+      "id": "O09",
+      "mismatches": 485,
+      "program": [
+        [
+          "ORPS",
+          2,
+          1,
+          0
+        ],
+        [
+          "ORPS",
+          3,
+          0,
+          0
+        ],
+        [
+          "SUBSS",
+          0,
+          1,
+          0
+        ],
+        [
+          "SUBSS",
+          2,
+          0,
+          0
+        ],
+        [
+          "ADDSS",
+          3,
+          2,
+          0
+        ],
+        [
+          "ADDSS",
+          2,
+          0,
+          0
+        ],
+        [
+          "SUBSS",
+          1,
+          2,
+          0
+        ],
+        [
+          "ADDSS",
+          3,
+          1,
+          0
+        ]
+      ],
+      "rejection": "sum output is not the same ordered addition"
+    },
+    {
+      "accepted": false,
+      "category": "opcode",
+      "classification": "refuted by concrete case",
+      "first_counterexample": {
+        "a": "0x00000000",
+        "b": "0x80000000",
+        "case": "C0002",
+        "observed": [
+          2147483648,
+          0,
+          0
+        ],
+        "reference": [
+          0,
+          0,
+          0
+        ]
+      },
+      "id": "O10",
+      "mismatches": 779,
+      "program": [
+        [
+          "ORPS",
+          2,
+          1,
+          0
+        ],
+        [
+          "ORPS",
+          3,
+          0,
+          0
+        ],
+        [
+          "MULSS",
+          0,
+          1,
+          0
+        ],
+        [
+          "SUBSS",
+          2,
+          0,
+          0
+        ],
+        [
+          "ADDSS",
+          3,
+          2,
+          0
+        ],
+        [
+          "ADDSS",
+          2,
+          0,
+          0
+        ],
+        [
+          "SUBSS",
+          1,
+          2,
+          0
+        ],
+        [
+          "ADDSS",
+          3,
+          1,
+          0
+        ]
+      ],
+      "rejection": "instruction is valid but not justified by this restricted proof language"
+    },
+    {
+      "accepted": false,
+      "category": "opcode",
+      "classification": "refuted by concrete case",
+      "first_counterexample": {
+        "a": "0x00000000",
+        "b": "0x80000000",
+        "case": "C0002",
+        "observed": [
+          2147483648,
+          0,
+          0
+        ],
+        "reference": [
+          0,
+          0,
+          0
+        ]
+      },
+      "id": "O11",
+      "mismatches": 790,
+      "program": [
+        [
+          "ORPS",
+          2,
+          1,
+          0
+        ],
+        [
+          "ORPS",
+          3,
+          0,
+          0
+        ],
+        [
+          "MINSS",
+          0,
+          1,
+          0
+        ],
+        [
+          "SUBSS",
+          2,
+          0,
+          0
+        ],
+        [
+          "ADDSS",
+          3,
+          2,
+          0
+        ],
+        [
+          "ADDSS",
+          2,
+          0,
+          0
+        ],
+        [
+          "SUBSS",
+          1,
+          2,
+          0
+        ],
+        [
+          "ADDSS",
+          3,
+          1,
+          0
+        ]
+      ],
+      "rejection": "instruction is valid but not justified by this restricted proof language"
+    },
+    {
+      "accepted": false,
+      "category": "opcode",
+      "classification": "refuted by concrete case",
+      "first_counterexample": {
+        "a": "0x00000000",
+        "b": "0x80000000",
+        "case": "C0002",
+        "observed": [
+          2147483648,
+          0,
+          0
+        ],
+        "reference": [
+          0,
+          0,
+          0
+        ]
+      },
+      "id": "O12",
+      "mismatches": 795,
+      "program": [
+        [
+          "ORPS",
+          2,
+          1,
+          0
+        ],
+        [
+          "ORPS",
+          3,
+          0,
+          0
+        ],
+        [
+          "MAXSS",
+          0,
+          1,
+          0
+        ],
+        [
+          "SUBSS",
+          2,
+          0,
+          0
+        ],
+        [
+          "ADDSS",
+          3,
+          2,
+          0
+        ],
+        [
+          "ADDSS",
+          2,
+          0,
+          0
+        ],
+        [
+          "SUBSS",
+          1,
+          2,
+          0
+        ],
+        [
+          "ADDSS",
+          3,
+          1,
+          0
+        ]
+      ],
+      "rejection": "instruction is valid but not justified by this restricted proof language"
+    },
+    {
+      "accepted": false,
+      "category": "opcode",
+      "classification": "refuted by concrete case",
+      "first_counterexample": {
+        "a": "0x00000000",
+        "b": "0x007fffff",
+        "case": "C0005",
+        "observed": [
+          8388607,
+          1,
+          16
+        ],
+        "reference": [
+          8388607,
+          0,
+          0
+        ]
+      },
+      "id": "O13",
+      "mismatches": 641,
+      "program": [
+        [
+          "ORPS",
+          2,
+          1,
+          0
+        ],
+        [
+          "ORPS",
+          3,
+          0,
+          0
+        ],
+        [
+          "ADDSS",
+          0,
+          1,
+          0
+        ],
+        [
+          "ADDSS",
+          2,
+          0,
+          0
+        ],
+        [
+          "ADDSS",
+          3,
+          2,
+          0
+        ],
+        [
+          "ADDSS",
+          2,
+          0,
+          0
+        ],
+        [
+          "SUBSS",
+          1,
+          2,
+          0
+        ],
+        [
+          "ADDSS",
+          3,
+          1,
+          0
+        ]
+      ],
+      "rejection": "rounded-value identity does not replay"
+    },
+    {
+      "accepted": false,
+      "category": "opcode",
+      "classification": "refuted by concrete case",
+      "first_counterexample": {
+        "a": "0x00000000",
+        "b": "0x00000001",
+        "case": "C0003",
+        "observed": [
+          1,
+          0,
+          24
+        ],
+        "reference": [
+          1,
+          0,
+          0
+        ]
+      },
+      "id": "O14",
+      "mismatches": 659,
+      "program": [
+        [
+          "ORPS",
+          2,
+          1,
+          0
+        ],
+        [
+          "ORPS",
+          3,
+          0,
+          0
+        ],
+        [
+          "ADDSS",
+          0,
+          1,
+          0
+        ],
+        [
+          "MULSS",
+          2,
+          0,
+          0
+        ],
+        [
+          "ADDSS",
+          3,
+          2,
+          0
+        ],
+        [
+          "ADDSS",
+          2,
+          0,
+          0
+        ],
+        [
+          "SUBSS",
+          1,
+          2,
+          0
+        ],
+        [
+          "ADDSS",
+          3,
+          1,
+          0
+        ]
+      ],
+      "rejection": "instruction is valid but not justified by this restricted proof language"
+    },
+    {
+      "accepted": false,
+      "category": "opcode",
+      "classification": "refuted by concrete case",
+      "first_counterexample": {
+        "a": "0x00000000",
+        "b": "0x7f7fffff",
+        "case": "C0013",
+        "observed": [
+          2139095039,
+          4286578688,
+          20
+        ],
+        "reference": [
+          2139095039,
+          0,
+          0
+        ]
+      },
+      "id": "O15",
+      "mismatches": 702,
+      "program": [
+        [
+          "ORPS",
+          2,
+          1,
+          0
+        ],
+        [
+          "ORPS",
+          3,
+          0,
+          0
+        ],
+        [
+          "ADDSS",
+          0,
+          1,
+          0
+        ],
+        [
+          "MINSS",
+          2,
+          0,
+          0
+        ],
+        [
+          "ADDSS",
+          3,
+          2,
+          0
+        ],
+        [
+          "ADDSS",
+          2,
+          0,
+          0
+        ],
+        [
+          "SUBSS",
+          1,
+          2,
+          0
+        ],
+        [
+          "ADDSS",
+          3,
+          1,
+          0
+        ]
+      ],
+      "rejection": "instruction is valid but not justified by this restricted proof language"
+    },
+    {
+      "accepted": false,
+      "category": "opcode",
+      "classification": "refuted by concrete case",
+      "first_counterexample": {
+        "a": "0x00000000",
+        "b": "0x7f7fffff",
+        "case": "C0013",
+        "observed": [
+          2139095039,
+          4286578688,
+          20
+        ],
+        "reference": [
+          2139095039,
+          0,
+          0
+        ]
+      },
+      "id": "O16",
+      "mismatches": 702,
+      "program": [
+        [
+          "ORPS",
+          2,
+          1,
+          0
+        ],
+        [
+          "ORPS",
+          3,
+          0,
+          0
+        ],
+        [
+          "ADDSS",
+          0,
+          1,
+          0
+        ],
+        [
+          "MAXSS",
+          2,
+          0,
+          0
+        ],
+        [
+          "ADDSS",
+          3,
+          2,
+          0
+        ],
+        [
+          "ADDSS",
+          2,
+          0,
+          0
+        ],
+        [
+          "SUBSS",
+          1,
+          2,
+          0
+        ],
+        [
+          "ADDSS",
+          3,
+          1,
+          0
+        ]
+      ],
+      "rejection": "instruction is valid but not justified by this restricted proof language"
+    },
+    {
+      "accepted": false,
+      "category": "opcode",
+      "classification": "refuted by concrete case",
+      "first_counterexample": {
+        "a": "0x80000000",
+        "b": "0x80000000",
+        "case": "C0026",
+        "observed": [
+          2147483648,
+          2147483648,
+          0
+        ],
+        "reference": [
+          2147483648,
+          0,
+          0
+        ]
+      },
+      "id": "O17",
+      "mismatches": 451,
+      "program": [
+        [
+          "ORPS",
+          2,
+          1,
+          0
+        ],
+        [
+          "ORPS",
+          3,
+          0,
+          0
+        ],
+        [
+          "ADDSS",
+          0,
+          1,
+          0
+        ],
+        [
+          "SUBSS",
+          2,
+          0,
+          0
+        ],
+        [
+          "SUBSS",
+          3,
+          2,
+          0
+        ],
+        [
+          "ADDSS",
+          2,
+          0,
+          0
+        ],
+        [
+          "SUBSS",
+          1,
+          2,
+          0
+        ],
+        [
+          "ADDSS",
+          3,
+          1,
+          0
+        ]
+      ],
+      "rejection": "rounded-value identity does not replay"
+    },
+    {
+      "accepted": false,
+      "category": "opcode",
+      "classification": "refuted by concrete case",
+      "first_counterexample": {
+        "a": "0x00000000",
+        "b": "0x80000000",
+        "case": "C0002",
+        "observed": [
+          0,
+          2147483648,
+          0
+        ],
+        "reference": [
+          0,
+          0,
+          0
+        ]
+      },
+      "id": "O18",
+      "mismatches": 700,
+      "program": [
+        [
+          "ORPS",
+          2,
+          1,
+          0
+        ],
+        [
+          "ORPS",
+          3,
+          0,
+          0
+        ],
+        [
+          "ADDSS",
+          0,
+          1,
+          0
+        ],
+        [
+          "SUBSS",
+          2,
+          0,
+          0
+        ],
+        [
+          "MULSS",
+          3,
+          2,
+          0
+        ],
+        [
+          "ADDSS",
+          2,
+          0,
+          0
+        ],
+        [
+          "SUBSS",
+          1,
+          2,
+          0
+        ],
+        [
+          "ADDSS",
+          3,
+          1,
+          0
+        ]
+      ],
+      "rejection": "instruction is valid but not justified by this restricted proof language"
+    },
+    {
+      "accepted": false,
+      "category": "opcode",
+      "classification": "refuted by concrete case",
+      "first_counterexample": {
+        "a": "0x00000000",
+        "b": "0x80000000",
+        "case": "C0002",
+        "observed": [
+          0,
+          2147483648,
+          0
+        ],
+        "reference": [
+          0,
+          0,
+          0
+        ]
+      },
+      "id": "O19",
+      "mismatches": 675,
+      "program": [
+        [
+          "ORPS",
+          2,
+          1,
+          0
+        ],
+        [
+          "ORPS",
+          3,
+          0,
+          0
+        ],
+        [
+          "ADDSS",
+          0,
+          1,
+          0
+        ],
+        [
+          "SUBSS",
+          2,
+          0,
+          0
+        ],
+        [
+          "MINSS",
+          3,
+          2,
+          0
+        ],
+        [
+          "ADDSS",
+          2,
+          0,
+          0
+        ],
+        [
+          "SUBSS",
+          1,
+          2,
+          0
+        ],
+        [
+          "ADDSS",
+          3,
+          1,
+          0
+        ]
+      ],
+      "rejection": "instruction is valid but not justified by this restricted proof language"
+    },
+    {
+      "accepted": false,
+      "category": "opcode",
+      "classification": "refuted by concrete case",
+      "first_counterexample": {
+        "a": "0x00000000",
+        "b": "0x80000000",
+        "case": "C0002",
+        "observed": [
+          0,
+          2147483648,
+          0
+        ],
+        "reference": [
+          0,
+          0,
+          0
+        ]
+      },
+      "id": "O20",
+      "mismatches": 659,
+      "program": [
+        [
+          "ORPS",
+          2,
+          1,
+          0
+        ],
+        [
+          "ORPS",
+          3,
+          0,
+          0
+        ],
+        [
+          "ADDSS",
+          0,
+          1,
+          0
+        ],
+        [
+          "SUBSS",
+          2,
+          0,
+          0
+        ],
+        [
+          "MAXSS",
+          3,
+          2,
+          0
+        ],
+        [
+          "ADDSS",
+          2,
+          0,
+          0
+        ],
+        [
+          "SUBSS",
+          1,
+          2,
+          0
+        ],
+        [
+          "ADDSS",
+          3,
+          1,
+          0
+        ]
+      ],
+      "rejection": "instruction is valid but not justified by this restricted proof language"
+    },
+    {
+      "accepted": false,
+      "category": "opcode",
+      "classification": "refuted by concrete case",
+      "first_counterexample": {
+        "a": "0x00000000",
+        "b": "0x00000001",
+        "case": "C0003",
+        "observed": [
+          1,
+          2,
+          0
+        ],
+        "reference": [
+          1,
+          0,
+          0
+        ]
+      },
+      "id": "O21",
+      "mismatches": 716,
+      "program": [
+        [
+          "ORPS",
+          2,
+          1,
+          0
+        ],
+        [
+          "ORPS",
+          3,
+          0,
+          0
+        ],
+        [
+          "ADDSS",
+          0,
+          1,
+          0
+        ],
+        [
+          "SUBSS",
+          2,
+          0,
+          0
+        ],
+        [
+          "ADDSS",
+          3,
+          2,
+          0
+        ],
+        [
+          "SUBSS",
+          2,
+          0,
+          0
+        ],
+        [
+          "SUBSS",
+          1,
+          2,
+          0
+        ],
+        [
+          "ADDSS",
+          3,
+          1,
+          0
+        ]
+      ],
+      "rejection": "rounded-value identity does not replay"
+    },
+    {
+      "accepted": false,
+      "category": "opcode",
+      "classification": "refuted by concrete case",
+      "first_counterexample": {
+        "a": "0x00000000",
+        "b": "0x00000001",
+        "case": "C0003",
+        "observed": [
+          1,
+          1,
+          0
+        ],
+        "reference": [
+          1,
+          0,
+          0
+        ]
+      },
+      "id": "O22",
+      "mismatches": 735,
+      "program": [
+        [
+          "ORPS",
+          2,
+          1,
+          0
+        ],
+        [
+          "ORPS",
+          3,
+          0,
+          0
+        ],
+        [
+          "ADDSS",
+          0,
+          1,
+          0
+        ],
+        [
+          "SUBSS",
+          2,
+          0,
+          0
+        ],
+        [
+          "ADDSS",
+          3,
+          2,
+          0
+        ],
+        [
+          "MULSS",
+          2,
+          0,
+          0
+        ],
+        [
+          "SUBSS",
+          1,
+          2,
+          0
+        ],
+        [
+          "ADDSS",
+          3,
+          1,
+          0
+        ]
+      ],
+      "rejection": "instruction is valid but not justified by this restricted proof language"
+    },
+    {
+      "accepted": false,
+      "category": "opcode",
+      "classification": "refuted by concrete case",
+      "first_counterexample": {
+        "a": "0x00000000",
+        "b": "0x00000001",
+        "case": "C0003",
+        "observed": [
+          1,
+          1,
+          0
+        ],
+        "reference": [
+          1,
+          0,
+          0
+        ]
+      },
+      "id": "O23",
+      "mismatches": 671,
+      "program": [
+        [
+          "ORPS",
+          2,
+          1,
+          0
+        ],
+        [
+          "ORPS",
+          3,
+          0,
+          0
+        ],
+        [
+          "ADDSS",
+          0,
+          1,
+          0
+        ],
+        [
+          "SUBSS",
+          2,
+          0,
+          0
+        ],
+        [
+          "ADDSS",
+          3,
+          2,
+          0
+        ],
+        [
+          "MINSS",
+          2,
+          0,
+          0
+        ],
+        [
+          "SUBSS",
+          1,
+          2,
+          0
+        ],
+        [
+          "ADDSS",
+          3,
+          1,
+          0
+        ]
+      ],
+      "rejection": "instruction is valid but not justified by this restricted proof language"
+    },
+    {
+      "accepted": false,
+      "category": "opcode",
+      "classification": "refuted by concrete case",
+      "first_counterexample": {
+        "a": "0x00000000",
+        "b": "0x80000001",
+        "case": "C0004",
+        "observed": [
+          2147483649,
+          2147483649,
+          0
+        ],
+        "reference": [
+          2147483649,
+          0,
+          0
+        ]
+      },
+      "id": "O24",
+      "mismatches": 671,
+      "program": [
+        [
+          "ORPS",
+          2,
+          1,
+          0
+        ],
+        [
+          "ORPS",
+          3,
+          0,
+          0
+        ],
+        [
+          "ADDSS",
+          0,
+          1,
+          0
+        ],
+        [
+          "SUBSS",
+          2,
+          0,
+          0
+        ],
+        [
+          "ADDSS",
+          3,
+          2,
+          0
+        ],
+        [
+          "MAXSS",
+          2,
+          0,
+          0
+        ],
+        [
+          "SUBSS",
+          1,
+          2,
+          0
+        ],
+        [
+          "ADDSS",
+          3,
+          1,
+          0
+        ]
+      ],
+      "rejection": "instruction is valid but not justified by this restricted proof language"
+    },
+    {
+      "accepted": false,
+      "category": "opcode",
+      "classification": "refuted by concrete case",
+      "first_counterexample": {
+        "a": "0x00000000",
+        "b": "0x00000001",
+        "case": "C0003",
+        "observed": [
+          1,
+          2,
+          0
+        ],
+        "reference": [
+          1,
+          0,
+          0
+        ]
+      },
+      "id": "O25",
+      "mismatches": 433,
+      "program": [
+        [
+          "ORPS",
+          2,
+          1,
+          0
+        ],
+        [
+          "ORPS",
+          3,
+          0,
+          0
+        ],
+        [
+          "ADDSS",
+          0,
+          1,
+          0
+        ],
+        [
+          "SUBSS",
+          2,
+          0,
+          0
+        ],
+        [
+          "ADDSS",
+          3,
+          2,
+          0
+        ],
+        [
+          "ADDSS",
+          2,
+          0,
+          0
+        ],
+        [
+          "ADDSS",
+          1,
+          2,
+          0
+        ],
+        [
+          "ADDSS",
+          3,
+          1,
+          0
+        ]
+      ],
+      "rejection": "rounded-value identity does not replay"
+    },
+    {
+      "accepted": false,
+      "category": "opcode",
+      "classification": "refuted by concrete case",
+      "first_counterexample": {
+        "a": "0x00000000",
+        "b": "0x00000001",
+        "case": "C0003",
+        "observed": [
+          1,
+          0,
+          24
+        ],
+        "reference": [
+          1,
+          0,
+          0
+        ]
+      },
+      "id": "O26",
+      "mismatches": 697,
+      "program": [
+        [
+          "ORPS",
+          2,
+          1,
+          0
+        ],
+        [
+          "ORPS",
+          3,
+          0,
+          0
+        ],
+        [
+          "ADDSS",
+          0,
+          1,
+          0
+        ],
+        [
+          "SUBSS",
+          2,
+          0,
+          0
+        ],
+        [
+          "ADDSS",
+          3,
+          2,
+          0
+        ],
+        [
+          "ADDSS",
+          2,
+          0,
+          0
+        ],
+        [
+          "MULSS",
+          1,
+          2,
+          0
+        ],
+        [
+          "ADDSS",
+          3,
+          1,
+          0
+        ]
+      ],
+      "rejection": "instruction is valid but not justified by this restricted proof language"
+    },
+    {
+      "accepted": false,
+      "category": "opcode",
+      "classification": "refuted by concrete case",
+      "first_counterexample": {
+        "a": "0x00000000",
+        "b": "0x00000001",
+        "case": "C0003",
+        "observed": [
+          1,
+          1,
+          0
+        ],
+        "reference": [
+          1,
+          0,
+          0
+        ]
+      },
+      "id": "O27",
+      "mismatches": 653,
+      "program": [
+        [
+          "ORPS",
+          2,
+          1,
+          0
+        ],
+        [
+          "ORPS",
+          3,
+          0,
+          0
+        ],
+        [
+          "ADDSS",
+          0,
+          1,
+          0
+        ],
+        [
+          "SUBSS",
+          2,
+          0,
+          0
+        ],
+        [
+          "ADDSS",
+          3,
+          2,
+          0
+        ],
+        [
+          "ADDSS",
+          2,
+          0,
+          0
+        ],
+        [
+          "MINSS",
+          1,
+          2,
+          0
+        ],
+        [
+          "ADDSS",
+          3,
+          1,
+          0
+        ]
+      ],
+      "rejection": "instruction is valid but not justified by this restricted proof language"
+    },
+    {
+      "accepted": false,
+      "category": "opcode",
+      "classification": "refuted by concrete case",
+      "first_counterexample": {
+        "a": "0x00000000",
+        "b": "0x00000001",
+        "case": "C0003",
+        "observed": [
+          1,
+          1,
+          0
+        ],
+        "reference": [
+          1,
+          0,
+          0
+        ]
+      },
+      "id": "O28",
+      "mismatches": 652,
+      "program": [
+        [
+          "ORPS",
+          2,
+          1,
+          0
+        ],
+        [
+          "ORPS",
+          3,
+          0,
+          0
+        ],
+        [
+          "ADDSS",
+          0,
+          1,
+          0
+        ],
+        [
+          "SUBSS",
+          2,
+          0,
+          0
+        ],
+        [
+          "ADDSS",
+          3,
+          2,
+          0
+        ],
+        [
+          "ADDSS",
+          2,
+          0,
+          0
+        ],
+        [
+          "MAXSS",
+          1,
+          2,
+          0
+        ],
+        [
+          "ADDSS",
+          3,
+          1,
+          0
+        ]
+      ],
+      "rejection": "instruction is valid but not justified by this restricted proof language"
+    },
+    {
+      "accepted": false,
+      "category": "opcode",
+      "classification": "refuted by concrete case",
+      "first_counterexample": {
+        "a": "0x3f800000",
+        "b": "0x00000001",
+        "case": "C0195",
+        "observed": [
+          1065353216,
+          2147483649,
+          16
+        ],
+        "reference": [
+          1065353216,
+          1,
+          16
+        ]
+      },
+      "id": "O29",
+      "mismatches": 317,
+      "program": [
+        [
+          "ORPS",
+          2,
+          1,
+          0
+        ],
+        [
+          "ORPS",
+          3,
+          0,
+          0
+        ],
+        [
+          "ADDSS",
+          0,
+          1,
+          0
+        ],
+        [
+          "SUBSS",
+          2,
+          0,
+          0
+        ],
+        [
+          "ADDSS",
+          3,
+          2,
+          0
+        ],
+        [
+          "ADDSS",
+          2,
+          0,
+          0
+        ],
+        [
+          "SUBSS",
+          1,
+          2,
+          0
+        ],
+        [
+          "SUBSS",
+          3,
+          1,
+          0
+        ]
+      ],
+      "rejection": "rounded-value identity does not replay"
+    },
+    {
+      "accepted": false,
+      "category": "opcode",
+      "classification": "refuted by concrete case",
+      "first_counterexample": {
+        "a": "0x00000000",
+        "b": "0x80000000",
+        "case": "C0002",
+        "observed": [
+          0,
+          2147483648,
+          0
+        ],
+        "reference": [
+          0,
+          0,
+          0
+        ]
+      },
+      "id": "O30",
+      "mismatches": 622,
+      "program": [
+        [
+          "ORPS",
+          2,
+          1,
+          0
+        ],
+        [
+          "ORPS",
+          3,
+          0,
+          0
+        ],
+        [
+          "ADDSS",
+          0,
+          1,
+          0
+        ],
+        [
+          "SUBSS",
+          2,
+          0,
+          0
+        ],
+        [
+          "ADDSS",
+          3,
+          2,
+          0
+        ],
+        [
+          "ADDSS",
+          2,
+          0,
+          0
+        ],
+        [
+          "SUBSS",
+          1,
+          2,
+          0
+        ],
+        [
+          "MULSS",
+          3,
+          1,
+          0
+        ]
+      ],
+      "rejection": "instruction is valid but not justified by this restricted proof language"
+    },
+    {
+      "accepted": false,
+      "category": "opcode",
+      "classification": "refuted by concrete case",
+      "first_counterexample": {
+        "a": "0x00000000",
+        "b": "0x80000000",
+        "case": "C0002",
+        "observed": [
+          0,
+          2147483648,
+          0
+        ],
+        "reference": [
+          0,
+          0,
+          0
+        ]
+      },
+      "id": "O31",
+      "mismatches": 423,
+      "program": [
+        [
+          "ORPS",
+          2,
+          1,
+          0
+        ],
+        [
+          "ORPS",
+          3,
+          0,
+          0
+        ],
+        [
+          "ADDSS",
+          0,
+          1,
+          0
+        ],
+        [
+          "SUBSS",
+          2,
+          0,
+          0
+        ],
+        [
+          "ADDSS",
+          3,
+          2,
+          0
+        ],
+        [
+          "ADDSS",
+          2,
+          0,
+          0
+        ],
+        [
+          "SUBSS",
+          1,
+          2,
+          0
+        ],
+        [
+          "MINSS",
+          3,
+          1,
+          0
+        ]
+      ],
+      "rejection": "instruction is valid but not justified by this restricted proof language"
+    },
+    {
+      "accepted": false,
+      "category": "opcode",
+      "classification": "refuted by concrete case",
+      "first_counterexample": {
+        "a": "0x00000000",
+        "b": "0x80000000",
+        "case": "C0002",
+        "observed": [
+          0,
+          2147483648,
+          0
+        ],
+        "reference": [
+          0,
+          0,
+          0
+        ]
+      },
+      "id": "O32",
+      "mismatches": 406,
+      "program": [
+        [
+          "ORPS",
+          2,
+          1,
+          0
+        ],
+        [
+          "ORPS",
+          3,
+          0,
+          0
+        ],
+        [
+          "ADDSS",
+          0,
+          1,
+          0
+        ],
+        [
+          "SUBSS",
+          2,
+          0,
+          0
+        ],
+        [
+          "ADDSS",
+          3,
+          2,
+          0
+        ],
+        [
+          "ADDSS",
+          2,
+          0,
+          0
+        ],
+        [
+          "SUBSS",
+          1,
+          2,
+          0
+        ],
+        [
+          "MAXSS",
+          3,
+          1,
+          0
+        ]
+      ],
+      "rejection": "instruction is valid but not justified by this restricted proof language"
+    },
+    {
+      "accepted": false,
+      "category": "cost-evidence",
+      "classification": "corrupted evidence rejected",
+      "id": "C01",
+      "rejection": "declared cost does not match independent decoding"
+    },
+    {
+      "accepted": false,
+      "category": "cost-evidence",
+      "classification": "corrupted evidence rejected",
+      "id": "C02",
+      "rejection": "declared cost does not match independent decoding"
+    },
+    {
+      "accepted": false,
+      "category": "cost-evidence",
+      "classification": "corrupted evidence rejected",
+      "id": "C03",
+      "rejection": "declared cost does not match independent decoding"
+    },
+    {
+      "accepted": false,
+      "category": "cost-evidence",
+      "classification": "corrupted evidence rejected",
+      "id": "C04",
+      "rejection": "declared cost does not match independent decoding"
+    },
+    {
+      "accepted": false,
+      "category": "cost-evidence",
+      "classification": "corrupted evidence rejected",
+      "id": "C05",
+      "rejection": "declared cost does not match independent decoding"
+    },
+    {
+      "accepted": false,
+      "category": "cost-evidence",
+      "classification": "corrupted evidence rejected",
+      "id": "C06",
+      "rejection": "declared cost does not match independent decoding"
+    },
+    {
+      "accepted": false,
+      "category": "cost-evidence",
+      "classification": "corrupted evidence rejected",
+      "id": "C07",
+      "rejection": "declared cost does not match independent decoding"
+    },
+    {
+      "accepted": false,
+      "category": "cost-evidence",
+      "classification": "corrupted evidence rejected",
+      "id": "C08",
+      "rejection": "declared cost does not match independent decoding"
+    },
+    {
+      "accepted": false,
+      "category": "cost-evidence",
+      "classification": "corrupted evidence rejected",
+      "id": "C09",
+      "rejection": "declared cost does not match independent decoding"
+    },
+    {
+      "accepted": false,
+      "category": "cost-evidence",
+      "classification": "corrupted evidence rejected",
+      "id": "C10",
+      "rejection": "declared cost does not match independent decoding"
+    },
+    {
+      "accepted": false,
+      "category": "cost-evidence",
+      "classification": "corrupted evidence rejected",
+      "id": "C11",
+      "rejection": "declared cost does not match independent decoding"
+    },
+    {
+      "accepted": false,
+      "category": "cost-evidence",
+      "classification": "corrupted evidence rejected",
+      "id": "C12",
+      "rejection": "declared cost does not match independent decoding"
+    },
+    {
+      "accepted": false,
+      "category": "cost-evidence",
+      "classification": "corrupted evidence rejected",
+      "id": "C13",
+      "rejection": "declared cost does not match independent decoding"
+    },
+    {
+      "accepted": false,
+      "category": "cost-evidence",
+      "classification": "corrupted evidence rejected",
+      "id": "C14",
+      "rejection": "declared cost does not match independent decoding"
+    },
+    {
+      "accepted": false,
+      "category": "cost-evidence",
+      "classification": "corrupted evidence rejected",
+      "id": "C15",
+      "rejection": "declared cost does not match independent decoding"
+    },
+    {
+      "accepted": false,
+      "category": "cost-evidence",
+      "classification": "corrupted evidence rejected",
+      "id": "C16",
+      "rejection": "declared cost does not match independent decoding"
+    },
+    {
+      "accepted": false,
+      "category": "cost-evidence",
+      "classification": "corrupted evidence rejected",
+      "id": "C17",
+      "rejection": "declared cost does not match independent decoding"
+    },
+    {
+      "accepted": false,
+      "category": "cost-evidence",
+      "classification": "corrupted evidence rejected",
+      "id": "C18",
+      "rejection": "declared cost does not match independent decoding"
+    },
+    {
+      "accepted": false,
+      "category": "cost-evidence",
+      "classification": "corrupted evidence rejected",
+      "id": "C19",
+      "rejection": "declared cost does not match independent decoding"
+    },
+    {
+      "accepted": false,
+      "category": "cost-evidence",
+      "classification": "corrupted evidence rejected",
+      "id": "C20",
+      "rejection": "declared cost does not match independent decoding"
+    },
+    {
+      "accepted": false,
+      "category": "cost-evidence",
+      "classification": "corrupted evidence rejected",
+      "id": "C21",
+      "rejection": "declared cost does not match independent decoding"
+    },
+    {
+      "accepted": false,
+      "category": "cost-evidence",
+      "classification": "corrupted evidence rejected",
+      "id": "C22",
+      "rejection": "declared cost does not match independent decoding"
+    },
+    {
+      "accepted": false,
+      "category": "cost-evidence",
+      "classification": "corrupted evidence rejected",
+      "id": "C23",
+      "rejection": "declared cost does not match independent decoding"
+    },
+    {
+      "accepted": false,
+      "category": "cost-evidence",
+      "classification": "corrupted evidence rejected",
+      "id": "C24",
+      "rejection": "declared cost does not match independent decoding"
+    },
+    {
+      "accepted": false,
+      "category": "cost-evidence",
+      "classification": "corrupted evidence rejected",
+      "id": "C25",
+      "rejection": "declared cost does not match independent decoding"
+    },
+    {
+      "accepted": false,
+      "category": "cost-evidence",
+      "classification": "corrupted evidence rejected",
+      "id": "C26",
+      "rejection": "declared cost does not match independent decoding"
+    },
+    {
+      "accepted": false,
+      "category": "cost-evidence",
+      "classification": "corrupted evidence rejected",
+      "id": "C27",
+      "rejection": "declared cost does not match independent decoding"
+    },
+    {
+      "accepted": false,
+      "category": "cost-evidence",
+      "classification": "corrupted evidence rejected",
+      "id": "C28",
+      "rejection": "declared cost does not match independent decoding"
+    },
+    {
+      "accepted": false,
+      "category": "cost-evidence",
+      "classification": "corrupted evidence rejected",
+      "id": "C29",
+      "rejection": "declared cost does not match independent decoding"
+    },
+    {
+      "accepted": false,
+      "category": "cost-evidence",
+      "classification": "corrupted evidence rejected",
+      "id": "C30",
+      "rejection": "declared cost does not match independent decoding"
+    },
+    {
+      "accepted": false,
+      "category": "cost-evidence",
+      "classification": "corrupted evidence rejected",
+      "id": "C31",
+      "rejection": "declared cost does not match independent decoding"
+    },
+    {
+      "accepted": false,
+      "category": "cost-evidence",
+      "classification": "corrupted evidence rejected",
+      "id": "C32",
+      "rejection": "declared cost does not match independent decoding"
+    }
+  ],
+  "total": 128
+}

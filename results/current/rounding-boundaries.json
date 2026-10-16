@@ -1,0 +1,50 @@
+{
+  "exact_rounding_cases": [
+    {
+      "dyadic": {
+        "flags": 16,
+        "word": "0x7f7fffff"
+      },
+      "exact_integer": "340282351709131260724621789471329746944",
+      "expected": {
+        "flags": 16,
+        "word": "0x7f7fffff"
+      },
+      "name": "M_plus_2^102",
+      "rational": {
+        "flags": 16,
+        "word": "0x7f7fffff"
+      }
+    },
+    {
+      "dyadic": {
+        "flags": 20,
+        "word": "0x7f800000"
+      },
+      "exact_integer": "340282356779733661637539395458142568448",
+      "expected": {
+        "flags": 20,
+        "word": "0x7f800000"
+      },
+      "name": "M_plus_2^103_threshold",
+      "rational": {
+        "flags": 20,
+        "word": "0x7f800000"
+      }
+    }
+  ],
+  "execution_scope": "Two exact binary32 rounding-helper inputs and one retained program trace. This regression checks the written boundary and implementations; it is not a new universal proof.",
+  "finite_sum_internal_overflow_witness": {
+    "a": "0x7f7fffff",
+    "b": "0xf3c00000",
+    "candidate_matches_reference": true,
+    "final_flags": 21,
+    "final_residual": "0xffc00000",
+    "reference_x": "0x7f800000",
+    "reference_x_flags": 20,
+    "sum": "0x7f7ffffe"
+  },
+  "maximum_finite": "2^128-2^104",
+  "overflow_threshold": "M+2^103=2^128-2^103",
+  "passed": true
+}

@@ -1,0 +1,24 @@
+{
+  "checks": 655360,
+  "counts": {
+    "CMPSS/0": 65536,
+    "CMPSS/1": 65536,
+    "CMPSS/2": 65536,
+    "CMPSS/3": 65536,
+    "CMPSS/4": 65536,
+    "CMPSS/5": 65536,
+    "CMPSS/6": 65536,
+    "CMPSS/7": 65536,
+    "MAXSS": 65536,
+    "MINSS": 65536
+  },
+  "disagreement_count": 0,
+  "first_disagreements": [],
+  "format": {
+    "exponent_bits": 4,
+    "fraction_bits": 3,
+    "words": 256
+  },
+  "group": "selection",
+  "interpretation": "complete pairwise reduced-format cross-check, not a binary32 proof"
+}

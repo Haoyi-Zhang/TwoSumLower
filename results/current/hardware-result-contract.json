@@ -1,0 +1,16 @@
+{
+  "execution_scope": "Four small JSON fixtures test comparison semantics only. No processor instructions are executed and no new hardware observations are claimed.",
+  "load_bearing_examples": [
+    "primitive.observations",
+    "complete_blocks.observations",
+    "mismatch counts"
+  ],
+  "mismatch_change_rejected": true,
+  "observation_count_change_rejected": true,
+  "passed": true,
+  "provenance_fields": [
+    "host_architecture",
+    "host_cpu_vendor"
+  ],
+  "provenance_only_change_accepted": true
+}

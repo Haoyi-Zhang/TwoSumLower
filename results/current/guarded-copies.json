@@ -1,0 +1,142 @@
+{
+  "derived_variants": 9,
+  "total_toy_evaluations": 589824,
+  "rows": [
+    {
+      "copies": [
+        "ORPS",
+        "ORPS"
+      ],
+      "cost": [
+        8,
+        30
+      ],
+      "certificate_accepted": true,
+      "zero_additions": 0,
+      "toy_pairs": 65536,
+      "mismatches": 0,
+      "first_counterexample": null
+    },
+    {
+      "copies": [
+        "ORPS",
+        "XORPS"
+      ],
+      "cost": [
+        8,
+        30
+      ],
+      "certificate_accepted": true,
+      "zero_additions": 0,
+      "toy_pairs": 65536,
+      "mismatches": 0,
+      "first_counterexample": null
+    },
+    {
+      "copies": [
+        "ORPS",
+        "ADDSS"
+      ],
+      "cost": [
+        8,
+        31
+      ],
+      "certificate_accepted": true,
+      "zero_additions": 1,
+      "toy_pairs": 65536,
+      "mismatches": 0,
+      "first_counterexample": null
+    },
+    {
+      "copies": [
+        "XORPS",
+        "ORPS"
+      ],
+      "cost": [
+        8,
+        30
+      ],
+      "certificate_accepted": true,
+      "zero_additions": 0,
+      "toy_pairs": 65536,
+      "mismatches": 0,
+      "first_counterexample": null
+    },
+    {
+      "copies": [
+        "XORPS",
+        "XORPS"
+      ],
+      "cost": [
+        8,
+        30
+      ],
+      "certificate_accepted": true,
+      "zero_additions": 0,
+      "toy_pairs": 65536,
+      "mismatches": 0,
+      "first_counterexample": null
+    },
+    {
+      "copies": [
+        "XORPS",
+        "ADDSS"
+      ],
+      "cost": [
+        8,
+        31
+      ],
+      "certificate_accepted": true,
+      "zero_additions": 1,
+      "toy_pairs": 65536,
+      "mismatches": 0,
+      "first_counterexample": null
+    },
+    {
+      "copies": [
+        "ADDSS",
+        "ORPS"
+      ],
+      "cost": [
+        8,
+        31
+      ],
+      "certificate_accepted": true,
+      "zero_additions": 1,
+      "toy_pairs": 65536,
+      "mismatches": 0,
+      "first_counterexample": null
+    },
+    {
+      "copies": [
+        "ADDSS",
+        "XORPS"
+      ],
+      "cost": [
+        8,
+        31
+      ],
+      "certificate_accepted": true,
+      "zero_additions": 1,
+      "toy_pairs": 65536,
+      "mismatches": 0,
+      "first_counterexample": null
+    },
+    {
+      "copies": [
+        "ADDSS",
+        "ADDSS"
+      ],
+      "cost": [
+        8,
+        32
+      ],
+      "certificate_accepted": true,
+      "zero_additions": 2,
+      "toy_pairs": 65536,
+      "mismatches": 0,
+      "first_counterexample": null
+    }
+  ],
+  "interpretation": "Nine specified copy choices only, not enumeration of the full instruction grammar."
+}

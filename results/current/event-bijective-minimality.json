@@ -1,0 +1,37 @@
+{
+  "accepted": true,
+  "scope": "Two-address ADDSS/SUBSS reorientations with a bijection to the six reference arithmetic-event descriptors and only certified quotient copy/identity auxiliaries",
+  "minimum_instructions": 8,
+  "minimum_bytes": 30,
+  "declared_entry_goal_states_at_depth_eight": 34,
+  "controls": [
+    {
+      "name": "duplicate-a-control",
+      "minimum_relaxed_goal_length": 7,
+      "goal_states_at_bound": 17
+    },
+    {
+      "name": "duplicate-b-control",
+      "minimum_relaxed_goal_length": 7,
+      "goal_states_at_bound": 6
+    },
+    {
+      "name": "duplicate-both-control",
+      "minimum_relaxed_goal_length": 6,
+      "goal_states_at_bound": 3
+    }
+  ],
+  "candidate": {
+    "class_member": true,
+    "instructions": 8,
+    "bytes": 30
+  },
+  "search_relaxations_rechecked": [
+    "NaN provenance constraints omitted",
+    "signed-zero constraints omitted",
+    "exact invalid-union constraints omitted",
+    "register names quotiented by permutation",
+    "removable quotient no-ops omitted"
+  ],
+  "interpretation": "Complete finite replay for the declared class; not full ten-opcode optimality."
+}

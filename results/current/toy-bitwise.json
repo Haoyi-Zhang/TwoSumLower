@@ -1,0 +1,17 @@
+{
+  "checks": 196608,
+  "counts": {
+    "ANDPS": 65536,
+    "ORPS": 65536,
+    "XORPS": 65536
+  },
+  "disagreement_count": 0,
+  "first_disagreements": [],
+  "format": {
+    "exponent_bits": 4,
+    "fraction_bits": 3,
+    "words": 256
+  },
+  "group": "bitwise",
+  "interpretation": "complete pairwise reduced-format cross-check, not a binary32 proof"
+}

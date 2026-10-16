@@ -1,0 +1,47 @@
+{
+  "boundary": "Static source-structure audit only. It does not establish checker soundness, independent authorship, proof-assistant verification, or absence of correlated conceptual errors.",
+  "checkers": {
+    "all-input-equivalence": {
+      "dynamic_code_calls": [],
+      "external_process_or_network_calls": [],
+      "file": "src/certificate_checker.py",
+      "forbidden_imports": [],
+      "imports": [
+        "argparse",
+        "functools",
+        "json",
+        "pathlib"
+      ]
+    },
+    "event-bijective-minimality": {
+      "dynamic_code_calls": [],
+      "external_process_or_network_calls": [],
+      "file": "src/event_bijective_checker.py",
+      "forbidden_imports": [],
+      "imports": [
+        "__future__",
+        "argparse",
+        "functools",
+        "json",
+        "pathlib"
+      ]
+    },
+    "liveness-lower-bound": {
+      "dynamic_code_calls": [],
+      "external_process_or_network_calls": [],
+      "file": "src/liveness_checker.py",
+      "forbidden_imports": [],
+      "imports": [
+        "__future__",
+        "argparse",
+        "collections",
+        "json",
+        "pathlib",
+        "typing"
+      ]
+    }
+  },
+  "passed": true,
+  "schema": "checker-independence-audit-v1",
+  "verified_boundary": "No claim-critical checker imports a certificate producer, the project floating-point models/oracle, solver bindings, or process/network facilities; no dynamic code execution primitive appears in their AST."
+}

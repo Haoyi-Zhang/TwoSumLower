@@ -1,0 +1,381 @@
+{
+  "classes": 1000,
+  "disagreements": 0,
+  "first_disagreements": [],
+  "initial_mask_checks": 32000,
+  "input_class_counts": {
+    "inf/inf": 4,
+    "inf/normal": 24,
+    "inf/qnan": 4,
+    "inf/snan": 4,
+    "inf/subnormal": 8,
+    "inf/zero": 4,
+    "normal/inf": 24,
+    "normal/normal": 561,
+    "normal/qnan": 25,
+    "normal/snan": 24,
+    "normal/subnormal": 51,
+    "normal/zero": 24,
+    "qnan/inf": 4,
+    "qnan/normal": 24,
+    "qnan/qnan": 4,
+    "qnan/snan": 4,
+    "qnan/subnormal": 8,
+    "qnan/zero": 4,
+    "snan/inf": 4,
+    "snan/normal": 27,
+    "snan/qnan": 4,
+    "snan/snan": 4,
+    "snan/subnormal": 8,
+    "snan/zero": 4,
+    "subnormal/inf": 8,
+    "subnormal/normal": 48,
+    "subnormal/qnan": 8,
+    "subnormal/snan": 8,
+    "subnormal/subnormal": 16,
+    "subnormal/zero": 8,
+    "zero/inf": 4,
+    "zero/normal": 24,
+    "zero/qnan": 4,
+    "zero/snan": 4,
+    "zero/subnormal": 8,
+    "zero/zero": 4
+  },
+  "interpretation": "fixed binary32 finite diagnostics; all-input proof is separate",
+  "orientation_witness": {
+    "a": "0x73c00000",
+    "b": "0xff7fffff",
+    "candidate": [
+      4286578686,
+      1929379840,
+      16,
+      [
+        {
+          "a": 0,
+          "b": 4286578687,
+          "dst": 2,
+          "imm": 0,
+          "mask": 1941962752,
+          "op": "ORPS",
+          "raised": 0,
+          "result": 4286578687,
+          "src": 1,
+          "sticky": 0
+        },
+        {
+          "a": 0,
+          "b": 1941962752,
+          "dst": 3,
+          "imm": 0,
+          "mask": 1941962752,
+          "op": "ORPS",
+          "raised": 0,
+          "result": 1941962752,
+          "src": 0,
+          "sticky": 0
+        },
+        {
+          "a": 1941962752,
+          "b": 4286578687,
+          "dst": 0,
+          "imm": 0,
+          "mask": 1941962752,
+          "op": "ADDSS",
+          "raised": 16,
+          "result": 4286578686,
+          "src": 1,
+          "sticky": 16
+        },
+        {
+          "a": 4286578687,
+          "b": 4286578686,
+          "dst": 2,
+          "imm": 0,
+          "mask": 4286578686,
+          "op": "SUBSS",
+          "raised": 0,
+          "result": 4085252096,
+          "src": 0,
+          "sticky": 16
+        },
+        {
+          "a": 1941962752,
+          "b": 4085252096,
+          "dst": 3,
+          "imm": 0,
+          "mask": 4286578686,
+          "op": "ADDSS",
+          "raised": 0,
+          "result": 1929379840,
+          "src": 2,
+          "sticky": 16
+        },
+        {
+          "a": 4085252096,
+          "b": 4286578686,
+          "dst": 2,
+          "imm": 0,
+          "mask": 4286578686,
+          "op": "ADDSS",
+          "raised": 0,
+          "result": 4286578687,
+          "src": 0,
+          "sticky": 16
+        },
+        {
+          "a": 4286578687,
+          "b": 4286578687,
+          "dst": 1,
+          "imm": 0,
+          "mask": 4286578686,
+          "op": "SUBSS",
+          "raised": 0,
+          "result": 0,
+          "src": 2,
+          "sticky": 16
+        },
+        {
+          "a": 1929379840,
+          "b": 0,
+          "dst": 3,
+          "imm": 0,
+          "mask": 4286578686,
+          "op": "ADDSS",
+          "raised": 0,
+          "result": 1929379840,
+          "src": 1,
+          "sticky": 16
+        }
+      ]
+    ],
+    "reference": [
+      4286578686,
+      1929379840,
+      16,
+      [
+        {
+          "a": 1941962752,
+          "b": 4286578687,
+          "name": "s",
+          "op": "ADDSS",
+          "raised": 16,
+          "result": 4286578686,
+          "sticky": 16
+        },
+        {
+          "a": 4286578686,
+          "b": 4286578687,
+          "name": "xeff",
+          "op": "SUBSS",
+          "raised": 0,
+          "result": 1937768448,
+          "sticky": 16
+        },
+        {
+          "a": 4286578686,
+          "b": 1937768448,
+          "name": "yeff",
+          "op": "SUBSS",
+          "raised": 0,
+          "result": 4286578687,
+          "sticky": 16
+        },
+        {
+          "a": 1941962752,
+          "b": 1937768448,
+          "name": "dx",
+          "op": "SUBSS",
+          "raised": 0,
+          "result": 1929379840,
+          "sticky": 16
+        },
+        {
+          "a": 4286578687,
+          "b": 4286578687,
+          "name": "dy",
+          "op": "SUBSS",
+          "raised": 0,
+          "result": 0,
+          "sticky": 16
+        },
+        {
+          "a": 1929379840,
+          "b": 0,
+          "name": "e",
+          "op": "ADDSS",
+          "raised": 0,
+          "result": 1929379840,
+          "sticky": 16
+        }
+      ]
+    ],
+    "wrong_orientation": [
+      4286578686,
+      4290772992,
+      21,
+      [
+        {
+          "a": 0,
+          "b": 1941962752,
+          "dst": 2,
+          "imm": 0,
+          "mask": 1941962752,
+          "op": "ORPS",
+          "raised": 0,
+          "result": 1941962752,
+          "src": 0,
+          "sticky": 0
+        },
+        {
+          "a": 0,
+          "b": 1941962752,
+          "dst": 3,
+          "imm": 0,
+          "mask": 1941962752,
+          "op": "ORPS",
+          "raised": 0,
+          "result": 1941962752,
+          "src": 0,
+          "sticky": 0
+        },
+        {
+          "a": 1941962752,
+          "b": 4286578687,
+          "dst": 0,
+          "imm": 0,
+          "mask": 1941962752,
+          "op": "ADDSS",
+          "raised": 16,
+          "result": 4286578686,
+          "src": 1,
+          "sticky": 16
+        },
+        {
+          "a": 1941962752,
+          "b": 4286578686,
+          "dst": 2,
+          "imm": 0,
+          "mask": 4286578686,
+          "op": "SUBSS",
+          "raised": 20,
+          "result": 2139095040,
+          "src": 0,
+          "sticky": 20
+        },
+        {
+          "a": 4286578687,
+          "b": 2139095040,
+          "dst": 1,
+          "imm": 0,
+          "mask": 4286578686,
+          "op": "ADDSS",
+          "raised": 0,
+          "result": 2139095040,
+          "src": 2,
+          "sticky": 20
+        },
+        {
+          "a": 2139095040,
+          "b": 4286578686,
+          "dst": 2,
+          "imm": 0,
+          "mask": 4286578686,
+          "op": "ADDSS",
+          "raised": 0,
+          "result": 2139095040,
+          "src": 0,
+          "sticky": 20
+        },
+        {
+          "a": 1941962752,
+          "b": 2139095040,
+          "dst": 3,
+          "imm": 0,
+          "mask": 4286578686,
+          "op": "SUBSS",
+          "raised": 0,
+          "result": 4286578688,
+          "src": 2,
+          "sticky": 20
+        },
+        {
+          "a": 4286578688,
+          "b": 2139095040,
+          "dst": 3,
+          "imm": 0,
+          "mask": 4286578686,
+          "op": "ADDSS",
+          "raised": 1,
+          "result": 4290772992,
+          "src": 1,
+          "sticky": 21
+        }
+      ]
+    ]
+  },
+  "primitive_checks": 18000,
+  "program_pair_checks": 1000,
+  "wrong_orientation_examples": [
+    {
+      "a": "0x7f7fffff",
+      "b": "0xf3c00000",
+      "id": "C0304",
+      "observed": [
+        2139095038,
+        4076863488,
+        16
+      ],
+      "reference": [
+        2139095038,
+        4290772992,
+        21
+      ]
+    },
+    {
+      "a": "0xff7fffff",
+      "b": "0x73c00000",
+      "id": "C0327",
+      "observed": [
+        4286578686,
+        1929379840,
+        16
+      ],
+      "reference": [
+        4286578686,
+        4290772992,
+        21
+      ]
+    },
+    {
+      "a": "0x73c00000",
+      "b": "0xff7fffff",
+      "id": "C0350",
+      "observed": [
+        4286578686,
+        4290772992,
+        21
+      ],
+      "reference": [
+        4286578686,
+        1929379840,
+        16
+      ]
+    },
+    {
+      "a": "0xf3c00000",
+      "b": "0x7f7fffff",
+      "id": "C0373",
+      "observed": [
+        2139095038,
+        4290772992,
+        21
+      ],
+      "reference": [
+        2139095038,
+        4076863488,
+        16
+      ]
+    }
+  ],
+  "wrong_orientation_mismatches": 4
+}

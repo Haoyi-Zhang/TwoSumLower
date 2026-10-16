@@ -45,6 +45,10 @@ jobs:
           timeout --signal=TERM --kill-after=10s 2700s \
             python -B reproduce.py --mode full --output "$TWOSUM_OUTPUT" \
             > "$out/whole-run.log" 2>&1
+      - name: Check direct Python manuscript diagrams
+        run: |
+          python -m pip install "matplotlib==3.10.7"
+          python -B figures/draw_diagrams.py --check
       - name: Retain raw stage results, diagnostics and partial progress
         if: always()
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02

@@ -60,6 +60,8 @@ lower-bound paths cross-check preservation cost without using an SMT verdict.
 
 ## Reproduction
 
+The optional manuscript diagrams are self-contained Python vector drawings. Install `matplotlib==3.10.7`, then run `python -B figures/draw_diagrams.py` (or `--output-dir ../paper/figures` for the full project). `--check` validates clipping and deterministic fresh exports without rerunning scientific experiments.
+
 From a fresh extraction, enter this repository root. Use Python 3.12 (the CI version) with assertions
 enabled, a Linux `/proc`, GNU `as`, and `objcopy`. Quick, full, and solver-control
 modes use no network, account, GPU, model API, or target-code execution. A local Z3
